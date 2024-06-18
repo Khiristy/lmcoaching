@@ -8,6 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <div>coucou</div>
     </BrowserRouter>
   </React.StrictMode>
 );
