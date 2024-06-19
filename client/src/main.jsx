@@ -1,18 +1,17 @@
-import ReactDOM from "react-dom";
-
+import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-
-
-// import "./main.scss";
+import "./assets/styles/reset.scss";
+import "./assets/styles/main.scss";
+import "./assets/styles/mixins.scss";
 
 export default function Root() {
-
   return (
     // <React.StrictMode>
-    < App />
+      <App />
     // </React.StrictMode>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 root.render(<Root />);

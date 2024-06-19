@@ -1,0 +1,14 @@
+/* FONT */
+
+@mixin strong-font {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin subtitle-font {
+    font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+

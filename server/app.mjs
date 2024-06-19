@@ -8,7 +8,10 @@ import authRoutes from './routes/authRoutes.mjs';
 
 dotenv.config();
 
+const express = require('express');
+const path = require('path');
 const app = express();
+
 connectDB();
 
 app.use(cors()); // Activer CORS pour toutes les requêtes
@@ -20,6 +23,16 @@ app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
   res.send('API is running...');
+});
+
+app.get('*.jsx', (req, res, next) => {
+  req.url = req.url + '.js';
+  res.setHeader('Content-Type', 'application/javascript');
+  next();
+});
+
+app.listen(5173, () => {
+  console.log('Server is running on port 5173');
 });
 
 export default app;

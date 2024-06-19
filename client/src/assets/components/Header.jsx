@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import "./Header.scss";
+import styles from"./Header.module.scss";
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className={styles.header}>
             <nav>
-                <ul>
+                <ul className={styles.mainMenu}>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <Link to="/about">Qui suis-je ?</Link>
                     </li>
                     <li>
                         <Link to="/Contact">About</Link>

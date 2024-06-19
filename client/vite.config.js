@@ -5,7 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
 
   plugins: [react()],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   server: {
+    mimeTypes: {
+      '.jsx': 'application/javascript',
+    },
     allowedHosts: [".localhost"],
     host: true,
     port: 5173,
