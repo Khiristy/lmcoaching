@@ -1,14 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import './assets/styles/main.scss'; // Importer le fichier Sass principal
+import ReactDOM from "react-dom";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-      <div>coucou</div>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+import App from "./App.jsx";
+
+
+// import "./main.scss";
+
+export default function Root() {
+
+  return (
+    // <React.StrictMode>
+    < App />
+    // </React.StrictMode>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Root />);
