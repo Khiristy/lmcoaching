@@ -1,14 +1,34 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
 .header {
     width: 100%;
-    height: 200px;
+    height: 150px;
     background-color: black;
+    padding-top: 75px;
+    border-bottom: $red-border;
 }
 
 
 .mainMenu {
-    width: 100%;
-    height: 100px;
+
+    margin: auto;
+    width: 75%;
+    height: 75px;
     display: flex;
-    justify-content: space-between;
+    
+    align-items: center;
+    justify-content: space-around;
     text-decoration: none;
+    border-bottom: $red-border;
+
+    li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
 }

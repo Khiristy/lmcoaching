@@ -1,7 +1,11 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+
 .home {
     text-align: center;
-  
-    h1 {
-      color: #007bff;
-    }
+   h1 {
+    padding-top: 100px;
+    color: white;
+   }
   }
