@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import "./assets/styles/reset.scss";
-import "./assets/styles/main.scss";
-import "./assets/styles/mixins.scss";
+import './styles/reset.scss';
+import './styles/main.scss';
+import './styles/mixins.scss';
 
 export default function Root() {
   return (
