@@ -5,5 +5,7 @@ const router = express.Router();
 
 router.post('/upload', storeDynamicImage);
 router.get('/download/:name', getDynamicImage);
+router.delete('/delete/:name', deleteDynamicImage);
+
 
 export default router;
