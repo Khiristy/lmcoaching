@@ -1,7 +1,6 @@
-const DynamicString = require('../models/DynamicString');
+import DynamicString from '../models/DynamicString.js';
 
-// Fonction pour stocker une chaîne de caractères dynamique
-const storeDynamicString = async (req, res) => {
+export const storeDynamicString = async (req, res) => {
   const { key, value } = req.body;
 
   try {
@@ -18,8 +17,7 @@ const storeDynamicString = async (req, res) => {
   }
 };
 
-// Fonction pour récupérer une chaîne de caractères par sa clé
-const getDynamicString = async (req, res) => {
+export const getDynamicString = async (req, res) => {
   try {
     const string = await DynamicString.findOne({ key: req.params.key });
     if (!string) {
@@ -31,5 +29,3 @@ const getDynamicString = async (req, res) => {
     res.status(500).send('Server error');
   }
 };
-
-module.exports = { storeDynamicString, getDynamicString };

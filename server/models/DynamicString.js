@@ -1,8 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const dynamicStringSchema = new mongoose.Schema({
   key: { type: String, required: true },
   value: { type: String, required: true }
 });
 
-module.exports = mongoose.model('DynamicString', dynamicStringSchema);
+const DynamicString = mongoose.model('DynamicString', dynamicStringSchema);
+
+export default DynamicString;

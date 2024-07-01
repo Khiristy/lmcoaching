@@ -1,8 +1,9 @@
-const express = require('express');
+import express from 'express';
+import { storeDynamicString, getDynamicString } from '../controllers/dynamicStringController.js';
+
 const router = express.Router();
-const { storeDynamicString, getDynamicString } = require('../controllers/dynamicStringController');
 
 router.post('/store', storeDynamicString);
 router.get('/get/:key', getDynamicString);
 
-module.exports = router;
+export default router;
