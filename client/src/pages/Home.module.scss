@@ -1,11 +1,13 @@
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";
 
-
 .home {
-    text-align: center;
-   h1 {
+  padding: 20px;
+  text-align: center;
+
+  h1 {
     padding-top: 100px;
-    color: white;
-   }
+    color: $text-color;
   }
+}
+
