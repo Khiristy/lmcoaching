@@ -1,5 +1,6 @@
 import express from 'express';
 import { storeDynamicImage, getDynamicImage } from '../controllers/base64Controller.js';
+import { deleteDynamicImage } from '../controllers/fileController.js';
 
 const router = express.Router();
 

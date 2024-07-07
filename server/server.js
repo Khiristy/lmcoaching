@@ -22,11 +22,13 @@ import imageRoutes from './routes/imageRoutes.js';
 import stringRoutes from './routes/stringRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import configRoutes from './routes/configRoutes.js';
+import authRoutes from './routes/authRoutes.js';  
 
 app.use('/api/images', imageRoutes);
 app.use('/api/strings', stringRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/config', configRoutes);
+app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
