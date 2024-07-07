@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Modal from 'react-modal';
 import styles from './ModalComponent.module.scss';
 
-Modal.setAppElement('#root'); // Assurez-vous que #root est l'élément principal dans index.html
+Modal.setAppElement('#root');
 
 const ModalComponent = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);

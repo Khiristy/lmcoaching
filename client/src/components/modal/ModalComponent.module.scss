@@ -1,0 +1,30 @@
+.openButton {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.75);
+  }
+  
+  .closeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
