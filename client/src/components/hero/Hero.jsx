@@ -1,5 +1,6 @@
 import "./Hero.module.scss";
 // import heroImg from "/media/hero_img.png";
+import heroImg from "/media/img_hero-test.jpg";
 
 const Hero = () => {
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
       <div className="right_side-container">
         {/* <div className="divider_top" />
         <div className="divider_bottom" /> */}
-        {/* <img src={heroImg} alt="" className="hero_img" /> */}
+        <img src={heroImg} alt="" className="hero_img" />
       </div>
     </section>
   );

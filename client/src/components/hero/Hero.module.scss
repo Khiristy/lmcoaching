@@ -3,13 +3,13 @@
 
 .hero {
     display: flex;
-
     color: white;
     top: 20px;
     width: 1452px;
     height: 846px;
     margin: auto;
     background-color: #1E1E1E;
+    border-radius: 20px;
 
 }
 
@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    z-index: 2;
 
     & h1 {
 
@@ -67,7 +68,12 @@
 }
 
 .hero_img {
-    width: 1270px;
+    position: absolute;
+    margin-left: -100px;
+    width: 833px;
     height: 846px;
-
+    z-index: 1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(270deg, rgba(30, 30, 30, 0) 39.35%, #1E1E1E 100%);
 }
