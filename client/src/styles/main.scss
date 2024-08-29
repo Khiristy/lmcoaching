@@ -2,19 +2,17 @@
 @import "../styles/mixins.scss";
 
 
-root {
-  @include strong-font;
+body {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  background-color: #141414;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    @include strong-font;
-    text-decoration: none;
-    background-color:#141414;
-    ;
-    margin: 0;
-    padding: 0;
-  }
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+}
 
-  h1 {
-    color: #333;
-  }
