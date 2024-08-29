@@ -1,4 +1,5 @@
 import "./Hero.module.scss";
+import MainBtn from "../btnComponents/MainBtn.jsx"
 // import heroImg from "/media/hero_img.png";
 import heroImg from "/media/img_hero-test.jpg";
 
@@ -15,9 +16,7 @@ const Hero = () => {
           industry. Lorem Ipsum has been the industrys standard dummy text ever
           since the 1500s, when an unknown printer took a galley
         </p>
-        <a href="" className="main_btn">
-          Réserver maintenant !
-        </a>
+        <MainBtn />  
       </div>
       <div className="right_side-container">
         {/* <div className="divider_top" />
