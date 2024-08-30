@@ -1,4 +1,5 @@
 import "./PriceCard.module.scss";
+import PriceBtn from "../btnComponents/PriceBtn.jsx"
 
 const PriceCard = () => {
   return (
@@ -9,9 +10,8 @@ const PriceCard = () => {
         readable content of a page
       </p>
       <h5>$50</h5>
-      <p>Pause or Cancel anytime.
-      7 Days money back guarantee</p>
-      <a href="">Get Started</a>
+      <span>Pause or Cancel anytime.<br/> 7 Days money back guarantee<br/></span>
+      <PriceBtn />
       <ul>
         <li>Fusce accumsan nulla.</li>
         <li>Aliquam non metus a risus.</li>
