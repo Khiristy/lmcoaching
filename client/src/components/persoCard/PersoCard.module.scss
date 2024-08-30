@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.perso_card {
+
+    text-align: center;
+    width: 424px;
+    height: 349px;
+    border: 1px;
+    margin: auto;
+    background-color: #1E1E1E;
+    border-radius: 16px;
+    padding: 0 20px 0 20px;
+
+    &-img {
+        margin-top: -70px;
+    }
+
+    h3 {
+        @include strong-font3;
+        padding-bottom: 25px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+}

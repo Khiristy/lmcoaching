@@ -19,8 +19,6 @@ const Hero = () => {
         <MainBtn />  
       </div>
       <div className="right_side-container">
-        {/* <div className="divider_top" />
-        <div className="divider_bottom" /> */}
         <img src={heroImg} alt="" className="hero_img" />
       </div>
     </section>
