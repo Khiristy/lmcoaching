@@ -1,15 +1,15 @@
 import "./Hero.module.scss";
 import MainBtn from "../btnComponents/MainBtn.jsx"
 // import heroImg from "/media/hero_img.png";
-import heroImg from "/media/img_hero-test.jpg";
+import heroImg from "/media/img_hero_test-1.jpg";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="left_side-container">
         <h1>
-          Achieve Your
-          <br /> Goals Faster
+        Atteignez vos objectifs 
+          <br />plus rapidement
         </h1>
         <p>
           Lorem Ipsumis simply dummy text of the printing and typesetting

@@ -1,4 +1,4 @@
-import "./Journey.module.scss"
+import "./Journey.module.scss";
 import journeyImg from "/media/journey_img.jpg";
 
 const Journey = () => {
@@ -8,12 +8,12 @@ const Journey = () => {
         <img src={journeyImg} alt="" className="journey_img" />
       </figure>
       <div className="journey_right">
-        <h2>Welcome to my website! Let me tell you about my journey.</h2>
-        <h3>My Beginnings</h3>
+        <h2>Bienvenue sur mon site!</h2>
+        <h3>Mes Débuts</h3>
         <p>
-          My passion for sports started with martial arts like judo, boxing, and
-          sanda. These disciplines taught me discipline, resilience, and respect
-          for others.
+          Ma passion pour le sport a commencé avec les arts martiaux comme le
+          judo, la boxe et le sanda. Ces disciplines m&apos;ont appris la discipline,
+          la résilience et le respect des autres.
         </p>
       </div>
     </section>
