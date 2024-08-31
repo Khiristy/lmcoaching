@@ -1,3 +1,7 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+
 .main_btn {
     display: flex;
     justify-content: center;
@@ -10,4 +14,9 @@
     border-radius: 10px;
     text-decoration: none;
     color: white;
+    transition: 500ms;
+
+    &:hover {
+        @include red-hover;
+    }
 }

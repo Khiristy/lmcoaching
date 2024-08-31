@@ -44,6 +44,13 @@
         a {
             text-decoration: none;
             color: white;
+            transition: 400ms;
+            border-radius: 10px;
+            padding: 5px;
+            &:hover {
+                @include red-hover;
+                border: none;
+            }
         }
     }
 
@@ -61,4 +68,8 @@
     margin-right: 10px;
     color: #FFFFFF;
     text-decoration: none;
+    transition: 500ms;
+    &:hover {
+        @include empty-hover;
+    }
 }

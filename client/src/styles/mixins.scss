@@ -12,3 +12,13 @@
   font-family: $typo-1;
   font-size: 36px;
 }
+
+@mixin red-hover {
+  background-color: #808080;
+  border: 1px solid #FFFFFF;
+}
+
+@mixin empty-hover {
+  background-color: #E20D0F;
+  border: 1px solid #FFFFFF;
+}

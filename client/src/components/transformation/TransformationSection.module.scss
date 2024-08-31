@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.transformation_section {
+    width: 1452px;
+    height: 1028px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &-layer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &-title {
+        position: absolute;
+        @include strong-font2;
+        top: 0;
+        left: 67px;
+    }
+}
+
+.versus_logo {
+    width: 200px;
+    height: 230px;
+}

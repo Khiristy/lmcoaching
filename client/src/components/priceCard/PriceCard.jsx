@@ -13,10 +13,10 @@ const PriceCard = () => {
       <span>Pause or Cancel anytime.<br/> 7 Days money back guarantee<br/></span>
       <PriceBtn />
       <ul>
-        <li>Fusce accumsan nulla.</li>
-        <li>Aliquam non metus a risus.</li>
-        <li>Ut ut libero eget massa.</li>
-        <li>Cras euismod lorem in.</li>
+        <li><i className="fa-regular fa-circle-check"></i>Fusce accumsan nulla.</li>
+        <li><i className="fa-regular fa-circle-check"></i>Aliquam non metus a risus.</li>
+        <li><i className="fa-regular fa-circle-check"></i>Ut ut libero eget massa.</li>
+        <li><i className="fa-regular fa-circle-check"></i>Cras euismod lorem in.</li>
       </ul>
     </div>
   );
