@@ -1,22 +1,23 @@
 import "./Hero.module.scss";
-import MainBtn from "../btnComponents/MainBtn.jsx"
+import MainBtn from "../btnComponents/MainBtn.jsx";
 // import heroImg from "/media/hero_img.png";
-import heroImg from "/media/img_hero_test-1.jpg";
+import heroImg from "/media/hero_img_test-3.jpg";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="left_side-container">
         <h1>
-        Atteignez vos objectifs 
-          <br />plus rapidement
+          Atteignez vos objectifs
+          <br />
+          plus rapidement
         </h1>
         <p>
-          Lorem Ipsumis simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s, when an unknown printer took a galley
+          Transforme ton corps avec notre coaching en musculation, que ce soit
+          pour la prise de masse, la perte de poids, ou le développement de tes
+          capacités physiques : force, endurance, et bien plus encore.
         </p>
-        <MainBtn />  
+        <MainBtn />
       </div>
       <div className="right_side-container">
         <img src={heroImg} alt="" className="hero_img" />

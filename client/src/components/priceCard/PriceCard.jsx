@@ -6,20 +6,27 @@ const PriceCard = () => {
     <div className="price_card">
       <h4>Online</h4>
       <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page
+      Réservez maintenant pour profiter de ces offres et commencer votre aventure !
       </p>
-      <h5>$50</h5>
-      <span>Pause or Cancel anytime.<br/> 7 Days money back guarantee<br/></span>
+      <h5>150€/mois</h5>
+      <span>Arrêtez ou suspendez votre abonnementà tout moment.<br/><br/></span>
       <PriceBtn />
       <ul>
-        <li><i className="fa-regular fa-circle-check"></i>Fusce accumsan nulla.</li>
-        <li><i className="fa-regular fa-circle-check"></i>Aliquam non metus a risus.</li>
-        <li><i className="fa-regular fa-circle-check"></i>Ut ut libero eget massa.</li>
-        <li><i className="fa-regular fa-circle-check"></i>Cras euismod lorem in.</li>
+        <li><i className="fa-regular fa-circle-check"></i>programme d&apos;entrainement sur-mesure</li>
+        <li><i className="fa-regular fa-circle-check"></i>progamme nutritionnel adapté à vos besoins</li>
+        <li><i className="fa-regular fa-circle-check"></i>suivi de votre évolution via une application dédiée</li>
+        <li><i className="fa-regular fa-circle-check"></i>bilan hebdomadaire en visio ou par téléphone</li>
       </ul>
     </div>
   );
 };
 
 export default PriceCard;
+
+{/* <h5>150€/mois</h5>
+<span>Arrêtez ou suspendez votre abonnementà tout moment.<br/><br/></span>
+<PriceBtn />
+        <li><i className="fa-regular fa-circle-check"></i>programme d&apos;entrainement sur-mesure</li>
+        <li><i className="fa-regular fa-circle-check"></i>progamme nutritionnel adapté à vos besoins</li>
+</ul>
+</div> */}

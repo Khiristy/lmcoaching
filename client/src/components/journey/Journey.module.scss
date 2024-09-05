@@ -4,20 +4,24 @@
 
 .journey {
     width: 1280px;
-    height: 561px;
+    min-height: 561px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: auto;
     gap: 100px;
 
     &_left {}
 
     &_img {
-        width: 575px;
-        height: 561px;
+        width: 1280px;
+        // height: 561px;
         border-radius: 16px;
     }
 
     &_right {
+        margin: auto;
         width: 605px;
         height: 474px;
         display: flex;

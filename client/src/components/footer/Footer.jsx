@@ -20,6 +20,9 @@ const Footer = () => {
           <a href="">
             <i className="fa-brands fa-snapchat"></i>
           </a>
+          <a href="">
+          <i className="fa-brands fa-tiktok"></i>
+          </a>
         </div>
         {/* <div className="footer_nav"></div> */}
       </div>
