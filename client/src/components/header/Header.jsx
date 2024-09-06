@@ -26,7 +26,7 @@ const Header = () => {
         </ul>
       </nav>
       <img src={mainLogo} alt="" className="header-main_logo" />
-      <a href="#" className="btn_header">Réserver maintenant !</a>
+      {/* <a href="#" className="btn_header">Réserver maintenant !</a> */}
     </header>
   );
 };
