@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
-import Result from "./pages/Result";
-
+import Header from '../features/Shared/Header/Header';
+import Footer from '../features/Shared/Footer/Footer';
 import OnlineForm from "./pages/Form";
 
 import Header from './components/header/Header';
