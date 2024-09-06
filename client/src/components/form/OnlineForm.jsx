@@ -7,7 +7,7 @@ const FormComponent = () => {
     firstName: "",
     email: "",
     genre: "",
-    age: "50",
+    age: "",
     sports: "",
     sportsActivities: "",
     objectives: "",
@@ -94,36 +94,69 @@ const FormComponent = () => {
           value={formData.genre}
           onChange={handleChange}
         >
-          <option value="" selected></option>
+          <option value="" disabled></option>
           <option value="Femme">Femme</option>
           <option value="Homme">Homme</option>
-          {/* <option value="back-end">Back-end developer</option> */}
         </select>
       </p>
 
-      <div className="field">
-  <label className="label">Pratiquez-vous une activité sportive ?</label>
-  <ul className="sports">
-    {["OUI", "NON"].map((item, i) => (
-      <li className="sport" key={i}>
-        <input
-          className="sport-input"
-          type="radio"
-          name="sports"
-          value={item}  /* Utilisation de 'item' au lieu de 'i' */
-          id={`sports-${i}`}
-          checked={formData.sports === item}  /* Comparaison avec 'item' */
+      <div className="field required">
+        <label className="label">Pratiquez-vous une activité sportive ?</label>
+        <ul className="sports">
+          {["OUI", "NON"].map((item, i) => (
+            <li className="sport" key={i}>
+              <input
+                className="sport-input"
+                type="radio"
+                name="sports"
+                value={item} /* Utilisation de 'item' au lieu de 'i' */
+                id={`sports-${i}`}
+                checked={formData.sports === item} /* Comparaison avec 'item' */
+                onChange={handleChange}
+              />
+              <label htmlFor={`sports-${i}`}>{item}</label>
+            </li>
+          ))}
+        </ul>
+        {formData.sports === "OUI" && (
+          <p className="field">
+            <label className="label" htmlFor="sportsActivities">
+              Si oui, laquelle ?
+            </label>
+            <input
+              className="text-input "
+              id="sportsActivities"
+              type="text"
+              name="sportsActivities"
+              required
+              value={formData.sportsActivities}
+              onChange={handleChange}
+            />
+          </p>
+        )}
+      </div>
+
+      <p className="field required">
+        <label className="label" htmlFor="objectives">
+          Quel est votre objectif ?
+        </label>
+        <select
+          id="objectives"
+          className="select"
+          name="objectives"
+          value={formData.objectives}
           onChange={handleChange}
-        />
-        <label htmlFor={`sports-${i}`}>{item}</label>
-      </li>
-    ))}
-  </ul>
-</div>
+        >
+          <option value="" disabled></option>
+          <option value="La prise de masse">La prise de masse</option>
+          <option value="La perte de poids">La perte de poids</option>
+          <option value="Gain de force">Gain de force/performance</option>
+        </select>
+      </p>
 
       <p className="field">
         <label className="label" htmlFor="about">
-          About
+          A propos de vous :
         </label>
         <textarea
           className="textarea"
@@ -135,29 +168,9 @@ const FormComponent = () => {
           onChange={handleChange}
         />
       </p>
-{/* 
-      <p className="field half">
-        <label className="label" htmlFor="select">
-          Position
-        </label>
-        <select
-          id="select"
-          className="select"
-          name="position"
-          value={formData.position}
-          onChange={handleChange}
-        >
-          <option value="" selected>
-            Select a position
-          </option>
-          <option value="ceo">CEO</option>
-          <option value="front-end">Front-end developer</option>
-          <option value="back-end">Back-end developer</option>
-        </select>
-      </p> */}
 
       <p className="field half">
-        <input className="button" type="submit" value="Send" />
+        <input className="main_btn-form" type="submit" value="Send" />
       </p>
     </form>
   );

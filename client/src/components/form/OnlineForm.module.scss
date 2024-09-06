@@ -1,19 +1,25 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+
+
+
 html {
     -webkit-font-smoothing: antialiased;
-  }
-  
+}
+
 //   body {
 //     background-color: #111111;
 //     font-family: "Titillium Web", sans-serif;
 //   }
-  
-  @media screen and (min-width: 40em) {
-    body {
-      font-size: 1.25em;
-    }
-  }
 
-  .form {
+@media screen and (min-width: 40em) {
+    body {
+        font-size: 1.25em;
+    }
+}
+
+.form {
     background-color: #69696933;
     padding: 30px;
     border-radius: 20px;
@@ -24,20 +30,21 @@ html {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-end;
+
     &_pos {
         padding: 200px 0 100px 0;
     }
-  }
-  
-  .form .button, 
-  .form .message, 
-  .customSelect, 
-  .form .select, 
-  .form .textarea, 
-  .form .text-input, 
-  .form .option-input + label, 
-  .form .checkbox-input + label, 
-  .form .label {
+}
+
+.form .button,
+.form .message,
+.customSelect,
+.form .select,
+.form .textarea,
+.form .text-input,
+.form .option-input+label,
+.form .checkbox-input+label,
+.form .label {
     padding: 0.75em 1em;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -48,9 +55,9 @@ html {
     border: none;
     background: none;
     display: block;
-  }
-  
-  .form .label {
+}
+
+.form .label {
     font-weight: bold;
     color: white;
     padding-top: 0;
@@ -60,23 +67,23 @@ html {
     line-height: 1.25;
     position: relative;
     z-index: 100;
-  }
-  
-  .required .form .label:after, 
-  .form .required .label:after {
+}
+
+.required .form .label:after,
+.form .required .label:after {
     content: " *";
     color: #E8474C;
     font-weight: normal;
     font-size: 0.75em;
     vertical-align: top;
-  }
-  
-  .customSelect, 
-  .form .select, 
-  .form .textarea, 
-  .form .text-input, 
-  .form .option-input + label, 
-  .form .checkbox-input + label {
+}
+
+.customSelect,
+.form .select,
+.form .textarea,
+.form .text-input,
+.form .option-input+label,
+.form .checkbox-input+label {
     font: inherit;
     line-height: normal;
     width: 100%;
@@ -84,80 +91,79 @@ html {
     background: #69696933;
     color: white;
     position: relative;
-  }
-  
-  .customSelect:placeholder, 
-  .form .select:placeholder, 
-  .form .textarea:placeholder, 
-  .form .text-input:placeholder, 
-  .form .option-input + label:placeholder, 
-  .form .checkbox-input + label:placeholder {
+}
+
+.customSelect:placeholder,
+.form .select:placeholder,
+.form .textarea:placeholder,
+.form .text-input:placeholder,
+.form .option-input+label:placeholder,
+.form .checkbox-input+label:placeholder {
     color: white;
-  }
-  
-  .customSelect:-webkit-autofill, 
-  .form .select:-webkit-autofill, 
-  .form .textarea:-webkit-autofill, 
-  .form .text-input:-webkit-autofill, 
-  .form .option-input + label:-webkit-autofill, 
-  .form .checkbox-input + label:-webkit-autofill {
+}
+
+.customSelect:-webkit-autofill,
+.form .select:-webkit-autofill,
+.form .textarea:-webkit-autofill,
+.form .text-input:-webkit-autofill,
+.form .option-input+label:-webkit-autofill,
+.form .checkbox-input+label:-webkit-autofill {
     box-shadow: 0 0 0px 1000px #111111 inset;
     -webkit-text-fill-color: white;
     border-top-color: #111111;
     border-left-color: #111111;
     border-right-color: #111111;
-  }
-  
-  .customSelect:not(:focus):not(:active).error, 
-  .form .select:not(:focus):not(:active).error, 
-  .form .textarea:not(:focus):not(:active).error, 
-  .form .text-input:not(:focus):not(:active).error, 
-  .form .option-input + label:not(:focus):not(:active).error, 
-  .form .checkbox-input + label:not(:focus):not(:active).error, 
-  .error .customSelect:not(:focus):not(:active), 
-  .error .form .select:not(:focus):not(:active), 
-  .form .error .select:not(:focus):not(:active), 
-  .error .form .textarea:not(:focus):not(:active), 
-  .form .error .textarea:not(:focus):not(:active), 
-  .error .form .text-input:not(:focus):not(:active), 
-  .form .error .text-input:not(:focus):not(:active), 
-  .error .form .option-input + label:not(:focus):not(:active), 
-  .form .error .option-input + label:not(:focus):not(:active), 
-  .error .form .checkbox-input + label:not(:focus):not(:active), 
-  .form .error .checkbox-input + label:not(:focus):not(:active) {
+}
+
+.customSelect:not(:focus):not(:active).error,
+.form .select:not(:focus):not(:active).error,
+.form .textarea:not(:focus):not(:active).error,
+.form .text-input:not(:focus):not(:active).error,
+.form .option-input+label:not(:focus):not(:active).error,
+.form .checkbox-input+label:not(:focus):not(:active).error,
+.error .customSelect:not(:focus):not(:active),
+.error .form .select:not(:focus):not(:active),
+.form .error .select:not(:focus):not(:active),
+.error .form .textarea:not(:focus):not(:active),
+.form .error .textarea:not(:focus):not(:active),
+.error .form .text-input:not(:focus):not(:active),
+.form .error .text-input:not(:focus):not(:active),
+.error .form .option-input+label:not(:focus):not(:active),
+.form .error .option-input+label:not(:focus):not(:active),
+.error .form .checkbox-input+label:not(:focus):not(:active),
+.form .error .checkbox-input+label:not(:focus):not(:active) {
     background-size: 8px 8px;
     background-image: linear-gradient(135deg, rgba(232, 71, 76, 0.5), rgba(232, 71, 76, 0.5) 25%, transparent 25%, transparent 50%, rgba(232, 71, 76, 0.5) 50%, rgba(232, 71, 76, 0.5) 75%, transparent 75%, transparent);
     background-repeat: repeat;
-  }
-  
-  .form:not(.has-magic-focus) 
-  .customSelect.customSelectFocus, 
-  .form:not(.has-magic-focus) .customSelect:active, 
-  .form:not(.has-magic-focus) .select:active, 
-  .form:not(.has-magic-focus) .textarea:active, 
-  .form:not(.has-magic-focus) .text-input:active, 
-  .form:not(.has-magic-focus) .option-input + label:active, 
-  .form:not(.has-magic-focus) .checkbox-input + label:active, 
-  .form:not(.has-magic-focus) .customSelect:focus, 
-  .form:not(.has-magic-focus) .select:focus, 
-  .form:not(.has-magic-focus) .textarea:focus, 
-  .form:not(.has-magic-focus) .text-input:focus, 
-  .form:not(.has-magic-focus) .option-input + label:focus, 
-  .form:not(.has-magic-focus) .checkbox-input + label:focus {
+}
+
+.form:not(.has-magic-focus) .customSelect.customSelectFocus,
+.form:not(.has-magic-focus) .customSelect:active,
+.form:not(.has-magic-focus) .select:active,
+.form:not(.has-magic-focus) .textarea:active,
+.form:not(.has-magic-focus) .text-input:active,
+.form:not(.has-magic-focus) .option-input+label:active,
+.form:not(.has-magic-focus) .checkbox-input+label:active,
+.form:not(.has-magic-focus) .customSelect:focus,
+.form:not(.has-magic-focus) .select:focus,
+.form:not(.has-magic-focus) .textarea:focus,
+.form:not(.has-magic-focus) .text-input:focus,
+.form:not(.has-magic-focus) .option-input+label:focus,
+.form:not(.has-magic-focus) .checkbox-input+label:focus {
     background: #4E4E4E;
-  }
-  
-  .form .message {
+}
+
+.form .message {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 100;
     font-size: 0.625em;
     color: white;
-  }
-  
-  .form .option-input, 
-  .form .checkbox-input {
+}
+
+.form .option-input,
+.form .checkbox-input {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -166,10 +172,10 @@ html {
     padding: 0;
     position: absolute;
     width: 1px;
-  }
-  
-  .form .option-input + label, 
-  .form .checkbox-input + label {
+}
+
+.form .option-input+label,
+.form .checkbox-input+label {
     display: inline-block;
     width: auto;
     color: #4E4E4E;
@@ -179,97 +185,68 @@ html {
     -ms-user-select: none;
     user-select: none;
     cursor: pointer;
-  }
-  
-  .form .option-input:focus + label, 
-  .form .checkbox-input:focus + label, 
-  .form .option-input:active + label, 
-  .form .checkbox-input:active + label {
+}
+
+.form .option-input:focus+label,
+.form .checkbox-input:focus+label,
+.form .option-input:active+label,
+.form .checkbox-input:active+label {
     color: #4E4E4E;
-  }
-  
-  .form .option-input:checked + label, 
-  .form .checkbox-input:checked + label {
-    color: white;
-  }
-  
-  .form .button {
-    font: inherit;
-    line-height: normal;
-    cursor: pointer;
-    background: #E8474C;
-    color: white;
-    font-weight: bold;
-    width: auto;
-    margin-left: auto;
-    font-weight: bold;
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-  
-  .form .button:hover, 
-  .form .button:focus, 
-  .form .button:active {
-    color: white;
-    border-color: white;
-  }
-  
-  .form .button:active {
-    position: relative;
-    top: 1px;
-    left: 1px;
-  }
+}
 
-  
+.form .option-input:checked+label,
+.form .checkbox-input:checked+label {
+    color: white;
+}
 
-  .form .field {
+.form .field {
 
     width: 100%;
     margin: 0 0 1.5em 0;
-  }
-  
-  @media screen and (min-width: 40em) {
+}
+
+@media screen and (min-width: 40em) {
     .form .field.half {
-      width: calc(50% - 30px);
+        width: calc(50% - 30px);
     }
-  }
-  
-  .form .field.last {
+}
+
+.form .field.last {
     margin-left: auto;
-  }
-  
-  .form .textarea {
+}
+
+.form .textarea {
     max-width: 100%;
-  }
-  
-  .form .select {
+}
+
+.form .select {
     text-indent: 0.01px;
     text-overflow: "" !important;
-  }
-  
-  .form .select::-ms-expand {
+}
+
+.form .select::-ms-expand {
     display: none;
-  }
-  
-  .form .checkboxes, 
-  .form .options {
+}
+
+.form .checkboxes,
+.form .options {
     padding: 0;
     margin: 0;
     list-style-type: none;
     overflow: hidden;
-  }
-  
-  .form .checkbox, 
-  .form .option {
+}
+
+.form .checkbox,
+.form .option {
     float: left;
     margin: 1px;
-  }
-  
-  .customSelect {
+}
+
+.customSelect {
     pointer-events: none;
-  }
-  
-  .customSelect:after {
+}
+
+.customSelect:after {
     content: "";
     pointer-events: none;
     width: 0.5em;
@@ -283,13 +260,13 @@ html {
     right: 1em;
     transform-origin: 0 0;
     transform: rotate(45deg);
-  }
-  
-  .customSelect.customSelectFocus:after {
+}
+
+.customSelect.customSelectFocus:after {
     border-color: white;
-  }
-  
-  .magic-focus {
+}
+
+.magic-focus {
     position: absolute;
     z-index: 0;
     width: 0;
@@ -301,15 +278,66 @@ html {
     transform-style: preserve-3d;
     will-change: top, left, width;
     transform-origin: 0 0;
-  }
-  
+}
+
 .sports {
     display: flex;
     justify-content: left;
+    align-items: center;
+
     padding-top: 10px;
     gap: 40px;
+
+    & label {
+        margin-right: 15px;
+        line-height: 32px;
+    }
 }
 
-.sport-input {
-    padding-right: 10px;
+.sport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &-input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin-bottom: 3px;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+
+        border: 2px solid #999;
+        transition: 0.2s all linear;
+        margin-right: 5px;
+
+        &:checked {
+            border: 6px solid black;
+            background-color: white;
+        }
+    }
+}
+
+.main_btn-form {
+    margin: auto;
+    margin-left: 160px;
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 24px 20px 24px;
+    width: 240px;
+    height: 64px;
+    background-color: #E20D0F;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 500ms;
+
+    &:hover {
+        @include red-hover;
+    }
 }

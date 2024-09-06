@@ -5,7 +5,7 @@
 
     text-align: center;
     width: 424px;
-    height: 349px;
+    min-height: 349px;
     border: 1px;
     margin: auto;
     background-color: #1E1E1E;
@@ -26,5 +26,18 @@
         font-size: 18px;
         font-weight: 400;
         line-height: 36px;
+        word-wrap: break-word;
     }
 }
+
+.toggle-button {
+    background-color: transparent;
+    color: #e8474c;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .toggle-button:hover {
+    text-decoration: underline;
+  }
