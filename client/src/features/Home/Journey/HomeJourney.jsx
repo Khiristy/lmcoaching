@@ -1,4 +1,4 @@
-import "./Journey.scss";
+import "./HomeJourney.scss";
 import journeyImg from "/media/journey_img-2.jpg";
 
 const Journey = () => {

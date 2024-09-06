@@ -4,12 +4,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
-import Header from '../features/Shared/Header/Header';
-import Footer from '../features/Shared/Footer/Footer';
+import Header from './features/Shared/Header/Header';
+import Footer from './features/Shared/Footer/Footer';
 import OnlineForm from "./pages/Form";
-
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
 
 
 const App = () => {
@@ -22,7 +19,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<Faq />} />
-        <Route path="/result" element={<Result />} />
+        {/* <Route path="/result" element={<Result />} /> */}
 
         <Route path="/OnlineForm" element={<OnlineForm />} />
 

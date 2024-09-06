@@ -1,5 +1,5 @@
-import "./ReviewSection.scss";
-import ReviewCard from "../../../components/review/ReviewCard.jsx";
+import "./HomeReview.scss";
+import ReviewCard from "../../Shared/ReviewComponents/ReviewCard.jsx";
 
 const ReviewSection = () => {
   return (

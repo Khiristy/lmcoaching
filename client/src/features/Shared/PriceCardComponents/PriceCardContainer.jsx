@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import PriceCard from './PriceCard.jsx';
-import "./PriceCardLayer.scss";
+import "./PriceCardContainer.scss";
 
 const PriceCardLayer = () => {
   const [priceCards, setPriceCards] = useState([]);

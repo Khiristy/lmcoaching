@@ -1,12 +1,13 @@
 import "./Form.scss";
-import OnlineForm from "/src/components/form/OnlineForm.jsx"
+import MainForm from "../features/Form/MainForm/MainForm.jsx";
+
 
 
 const Form = () => {
     
     return (
       <div className="form_pos">
-          <OnlineForm />
+          <MainForm />
       </div>
     );
   };

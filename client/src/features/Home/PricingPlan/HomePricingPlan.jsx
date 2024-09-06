@@ -1,6 +1,6 @@
-import "./PricingPlanSection.scss";
+import "./HomePricingPlan.scss";
 import PriceCardLayer from "../../Shared/PriceCardComponents/PriceCardContainer.jsx";
-import MainBtn from "../btnComponents/MainBtn.jsx";
+import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
 
 const PricingPlanSection = () => {
   return (
