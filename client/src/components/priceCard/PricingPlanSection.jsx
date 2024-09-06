@@ -1,5 +1,5 @@
 import "./PricingPlanSection.module.scss";
-import PriceCard from "./PriceCard.jsx";
+import PriceCardLayer from "./PriceCardLayer.jsx";
 import MainBtn from "../btnComponents/MainBtn.jsx";
 
 const PricingPlanSection = () => {
@@ -14,10 +14,11 @@ const PricingPlanSection = () => {
           qu&apos;il vous faut.
         </h4>
         <MainBtn />
+        <p>voir plus d&apos;offres</p>
       </div>
-      <PriceCard />
-      <PriceCard />
+      <PriceCardLayer />
     </section>
+    
   );
 };
 

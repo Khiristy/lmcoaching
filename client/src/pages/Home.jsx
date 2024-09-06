@@ -7,7 +7,6 @@ import TransformationSection from "/src/components/transformation/Transformation
 import FaqSection from "/src/components/faq/FaqSection.jsx";
 import ReviewSection from "/src/components/review/ReviewSection.jsx";
 
-
 const Home = () => (
   
     <div className="home">

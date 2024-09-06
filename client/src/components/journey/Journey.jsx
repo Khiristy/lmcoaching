@@ -4,7 +4,7 @@ import journeyImg from "/media/journey_img-2.jpg";
 const Journey = () => {
   return (
     <section className="journey">
-      <div>
+      <div className="journey_content">
         <h2>Bienvenue sur mon site!</h2>
         <h3>Mes Débuts</h3>
         <p>

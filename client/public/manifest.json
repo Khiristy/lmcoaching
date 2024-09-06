@@ -1,0 +1,39 @@
+{
+    "name": "LM Coaching",
+    "short_name": "LMCoaching",
+    "description": "LM Coaching est une plateforme de coaching en ligne et en personne, offrant des programmes de fitness personnalisés, un suivi nutritionnel et des évaluations hebdomadaires.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#141414",
+    "theme_color": "#1E1E1E",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "permissions": [
+      "notifications",
+      "geolocation",
+      "camera"
+    ],
+    "lang": "fr-FR",
+    "categories": [
+      "fitness",
+      "coaching",
+      "nutrition",
+      "sport"
+    ],
+    "author": {
+      "name": "LM Coaching",
+      "email": "support@lmcoaching.com",
+      "url": "https://www.lmcoaching.com"
+    }
+  }

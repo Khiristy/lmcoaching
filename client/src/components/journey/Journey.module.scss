@@ -10,9 +10,9 @@
     align-items: center;
     flex-direction: column;
     margin: auto;
-    gap: 100px;
+    // gap: 100px;
 
-    &_left {}
+    // &_left {}
 
     &_img {
         width: 1280px;
@@ -20,7 +20,7 @@
         border-radius: 16px;
     }
 
-    &_right {
+    &_content {
         margin: auto;
         width: 605px;
         height: 474px;
