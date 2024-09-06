@@ -1,5 +1,5 @@
 import "./PricingPlanSection.scss";
-import PriceCardLayer from "./PriceCardLayer.jsx";
+import PriceCardLayer from "../../../components/priceCard/PriceCardLayer.jsx";
 import MainBtn from "../btnComponents/MainBtn.jsx";
 
 const PricingPlanSection = () => {

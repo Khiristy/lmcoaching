@@ -1,4 +1,4 @@
-import TransformationCard from "./TransformationCard.jsx";
+import TransformationCard from "../../../components/transformation/TransformationCard.jsx";
 import VersusLogo from "/media/versus_logo_1.png";
 import "./TransformationSection.scss";
 
