@@ -1,4 +1,4 @@
-import "./TransformationCard.module.scss";
+import "./TransformationCard.scss";
 import TransformationCardTest from "/media/transformation_card_test.png";
 
 const TransformationCard = () => {

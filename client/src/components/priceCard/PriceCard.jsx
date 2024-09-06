@@ -1,4 +1,4 @@
-import "./PriceCard.module.scss";
+import "./PriceCard.scss";
 // import PriceBtn from "../btnComponents/PriceBtn.jsx"
 import PropTypes from 'prop-types';
 

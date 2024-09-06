@@ -1,4 +1,4 @@
-import "./Form.module.scss";
+import "./Form.scss";
 import OnlineForm from "/src/components/form/OnlineForm.jsx"
 
 

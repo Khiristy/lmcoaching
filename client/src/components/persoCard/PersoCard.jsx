@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './PersoCard.module.scss';
+import './PersoCard.scss';
 import PropTypes from 'prop-types';
 
 const MAX_LENGTH = 150; // Nombre de caractères avant de tronquer le texte

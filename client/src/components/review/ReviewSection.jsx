@@ -1,4 +1,4 @@
-import "./ReviewSection.module.scss";
+import "./ReviewSection.scss";
 import ReviewCard from "./ReviewCard.jsx";
 
 const ReviewSection = () => {

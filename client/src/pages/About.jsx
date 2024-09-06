@@ -1,4 +1,4 @@
-import styles from "./About.module.scss";
+import styles from "./About.scss";
 
 const About = () => (
   <div className={styles.about}>

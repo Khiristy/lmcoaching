@@ -1,4 +1,4 @@
-import "./OnlineForm.module.scss";
+import "./OnlineForm.scss";
 import { useState } from "react";
 
 const FormComponent = () => {

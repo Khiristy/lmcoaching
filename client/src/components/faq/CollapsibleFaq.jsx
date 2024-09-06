@@ -1,4 +1,4 @@
-import "./CollapsibleFaq.module.scss";
+import "./CollapsibleFaq.scss";
 import Collapsible from "react-collapsible";
 
 const CollapsibleFaq = () => {

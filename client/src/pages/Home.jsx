@@ -1,4 +1,4 @@
-import "./Home.module.scss";
+import "./Home.scss";
 import Hero from "/src/components/hero/Hero.jsx";
 import Journey from "/src/components/journey/Journey.jsx";
 import PersoCardLayer from "/src/components/persoCard/PersoCardLayer.jsx";

@@ -1,6 +1,6 @@
 import TransformationCard from "./TransformationCard.jsx";
 import VersusLogo from "/media/versus_logo_1.png";
-import "./TransformationSection.module.scss";
+import "./TransformationSection.scss";
 
 const TransformationSection = () => {
   return (

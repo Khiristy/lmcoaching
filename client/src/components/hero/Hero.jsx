@@ -1,4 +1,4 @@
-import "./Hero.module.scss";
+import "./Hero.scss";
 import MainBtn from "../btnComponents/MainBtn.jsx";
 // import heroImg from "/media/hero_img.png";
 import heroImg from "/media/hero_img_test-3.jpg";

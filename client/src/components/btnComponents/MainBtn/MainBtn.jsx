@@ -1,4 +1,4 @@
-import "./MainBtn.scss";
+import './MainBtn.scss';
 import { useNavigate } from "react-router-dom";
 
 const MainBtn = () => {

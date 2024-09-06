@@ -1,4 +1,4 @@
-import "./ReviewCard.module.scss";
+import "./ReviewCard.scss";
 import mainLogo from "/media/main_logo.png";
 
 const ReviewCard = () => {

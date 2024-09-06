@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.price_btn {
+    width: 368px;
+    height: 56px;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #E20D0F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms;
+    &:hover {
+        @include empty-hover;
+    }
+}

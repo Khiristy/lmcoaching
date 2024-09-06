@@ -1,4 +1,4 @@
-import "./PersoCardLayer.module.scss";
+import "./PersoCardLayer.scss";
 import PersoCard from "./PersoCard.jsx";
 import { useEffect, useState } from "react";
 

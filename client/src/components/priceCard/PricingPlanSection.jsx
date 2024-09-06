@@ -1,4 +1,4 @@
-import "./PricingPlanSection.module.scss";
+import "./PricingPlanSection.scss";
 import PriceCardLayer from "./PriceCardLayer.jsx";
 import MainBtn from "../btnComponents/MainBtn.jsx";
 

@@ -1,5 +1,5 @@
 import "./FaqSection.scss";
-import CollapsibleFaq from "./CollapsibleFaq.jsx";
+import CollapsibleFaq from "../CollapsibleFaq.jsx";
 
 const FaqSection = () => {
   return (
