@@ -1,0 +1,42 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader.loaded {
+    opacity: 0;  /* Quand loaded = true, on fait disparaître le loader */
+    visibility: hidden;
+}
+
+.loader_leftside {
+    position: absolute;
+    z-index: 9998;
+    text-align: center;
+    left: 75px;
+
+    &.loaded {
+        animation: slide-out-left 1000ms ease-out forwards;
+    }
+}
+
+@keyframes slide-out-left {
+    from {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}

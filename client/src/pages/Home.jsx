@@ -1,5 +1,5 @@
 import "./Home.scss";
-import LoaderWrapper from "../features/Shared/Loader/LoaderWrapper.jsx";
+import LoaderWrapper from "../features/Shared/Loader/LoaderWithContent.jsx";
 import HomeHero from "../features/Home/Hero/HomeHero.jsx";
 import HomeJourney from "../features/Home/Journey/HomeJourney.jsx";
 import HomePersoCard from "../features/Home/PersoCard/HomePersoCard.jsx";
