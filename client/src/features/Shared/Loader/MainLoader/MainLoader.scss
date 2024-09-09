@@ -1,0 +1,105 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  /* Empêche le débordement horizontal */
+}
+
+/* Styles spécifiques au Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+ align-items: center;
+  background-color: #141414;
+  /* Couleur de fond */
+  z-index: 9999;
+  /* S'assure que le loader est au-dessus de tout */
+
+
+  &-block-left {
+    position: absolute;
+    text-align: center;
+    margin-left: 65px;
+    &-content {
+      position: absolute;
+      h1 {
+        text-align: center;
+        
+        @include strong-font2;
+      }
+  
+      img {
+        margin-bottom: 25px;
+        width: 200px;
+        height: auto;
+      }
+    }
+  }
+
+
+  &-image-right {
+    width: 100%;
+    /* Assurez-vous que l'image remplit toute la largeur */
+    height: 100vh;
+    /* Assurez-vous que l'image remplit toute la hauteur */
+    object-fit: cover;
+    /* Maintient les proportions de l'image tout en la couvrant */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Place l'image en arrière-plan, mais toujours visible */
+    // overflow: hidden; /* Empêche les débordements */
+  }
+
+  &-image-top,
+  &-image-bottom {
+    position: absolute;
+    z-index: 2;
+    /* Ces éléments doivent apparaître au-dessus de loader_img */
+    width: 100%;
+    /* Prend toute la largeur de l'écran */
+    height: auto;
+    // transition: transform 1s ease-in-out, opacity 0.5s ease;
+    overflow: hidden;
+    /* Empêche les débordements */
+  }
+
+  &-image-top {
+    top: 0;
+    /* Positionné en haut */
+  }
+
+  &-image-bottom {
+    bottom: 0;
+    /* Positionné en bas */
+  }
+
+  &.loaded {
+    opacity: 0;
+    /* Disparition du Loader après l'animation */
+    visibility: hidden;
+    // transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  .loader-image {
+    width: 100%;     /* Largeur de l'image, plein écran */
+    height: 100vh;    /* Hauteur de l'image, plein écran */
+    object-fit: cover; /* L'image couvre toute la zone sans déformation */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;       /* Place l'image en arrière-plan des sliders */
+    // transition: transform 1s ease-in-out;
+  }
+}

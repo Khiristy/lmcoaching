@@ -10,6 +10,9 @@ export default defineConfig({
   ],
 
   css: {
+    modules: {
+      scopeBehaviour: 'global', // Utilisez "global" si vous ne voulez pas de CSS Modules
+    },
     preprocessorOptions: {
       scss: {
         additionalData: `@import "./src/styles/variables.scss";`
