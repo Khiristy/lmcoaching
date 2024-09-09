@@ -1,8 +1,9 @@
-@import "../../../styles/variables.scss";
-@import "../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
 
 
 .price_btn {
+    cursor: pointer;
     width: 368px;
     height: 56px;
     gap: 10px;

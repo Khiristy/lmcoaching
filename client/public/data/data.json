@@ -28,10 +28,10 @@
                 "suivi de votre évolution via une application dédiée",
                 "bilan hebdomadaire en visio ou par téléphone"
             ],
-            "note": "Arrêtez ou suspendez votre abonnement à tout moment."
+            "note": "Arrêtez votre abonnement à tout moment."
         },
         {
-            "type": "Programme d'entrainements/nutritionnels personnalisés",
+            "type": "Programme d'entrainements / nutritionnels personnalisés",
             "description": "Venez rencontrer nos coachs en personne et bénéficiez d'un accompagnement personnalisé.",
             "price": "80€/mois",
             "details": [

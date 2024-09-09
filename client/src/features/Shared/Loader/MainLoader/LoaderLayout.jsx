@@ -21,7 +21,7 @@ const LoaderLayout = ({ startAnimation }) => {
             // Définir la fin de l'animation après le temps géré par LoaderWrapper
             setAnimationEnded(true);
             console.log("Animation ended, hiding loader.");
-          }, 5000); // Le temps ici doit correspondre au temps de LoaderWrapper
+          }, 3000); // Le temps ici doit correspondre au temps de LoaderWrapper
         }, 500); // Ajoute un délai avant que l'animation ne démarre
       } else {
         console.log("startAnimation is false, LoaderLayout not starting.");
