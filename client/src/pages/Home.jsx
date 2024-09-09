@@ -10,11 +10,10 @@ import "./Home.scss";
 
 const Home = () => {
   return (
-    <LoaderWrapper> {/* Le LoaderWrapper qui enveloppe tout le contenu */}
-      <div className="home">
-        {/* HomeHero est appelé ici */}
-        <HomeHero />
-
+<LoaderWrapper>
+      {(loaderFinished) => (
+        <div className="home">
+          <HomeHero loaderFinished={loaderFinished} /> 
         {/* Autres sections de la page Home */}
         <HomeJourney />
         <HomePersoCard />
@@ -23,6 +22,7 @@ const Home = () => {
         <HomeFaq />
         <HomeReview />
       </div>
+      )}
     </LoaderWrapper>
   );
 };
