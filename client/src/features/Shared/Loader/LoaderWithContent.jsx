@@ -20,9 +20,10 @@ const LoaderWithContent = ({ children }) => {
       console.log(`Temps écoulé : ${elapsed}ms, temps restant : ${remainingTime}ms`);
 
       setTimeout(() => {
-        console.log('Chargement terminé, lancé l\'animation');
+        console.log('Chargement terminé, animation va commencer');
         setLoading(false);  // Indique que le chargement est terminé
         setAnimationStarted(true);  // Démarre l'animation
+        console.log('État de animationStarted : ', animationStarted);
       }, remainingTime > 0 ? remainingTime : 0);
     };
 
@@ -36,26 +37,15 @@ const LoaderWithContent = ({ children }) => {
     return () => {
       window.removeEventListener('load', handleLoad);  // Nettoyage de l'event listener
     };
-  }, []);
+  }, [animationStarted]);  // Ajout de l'état pour forcer l'update
 
-  // Variants d'animation pour tester uniquement le mouvement
+  // Variants d'animation simplifiés
   const slideVariants = {
     initial: { x: 0, y: 0 },  // Position initiale (bloc dans la vue)
-    exit: (direction) => {  // Déplacement vers l'extérieur selon la direction
-      console.log('Animation déclenchée pour direction :', direction);
-      switch (direction) {
-        case 'left':
-          return { x: '-100%' };
-        case 'right':
-          return { x: '100%' };
-        case 'top':
-          return { y: '-100%' };
-        case 'bottom':
-          return { y: '100%' };
-        default:
-          return {};
-      }
-    }
+    exitLeft: { x: '-100%' },  // Glissement à gauche
+    exitRight: { x: '100%' },  // Glissement à droite
+    exitTop: { y: '-100%' },  // Glissement vers le haut
+    exitBottom: { y: '100%' },  // Glissement vers le bas
   };
 
   return (
@@ -65,48 +55,44 @@ const LoaderWithContent = ({ children }) => {
           {/* Bloc qui glisse vers l'extérieur (gauche) */}
           <motion.div
             className="loader-block-left"
-            custom="left"
             variants={slideVariants}
             initial="initial"
-            animate={animationStarted ? 'exit' : 'initial'}
+            animate={animationStarted ? 'exitLeft' : 'initial'}
             transition={{ duration: 1, ease: 'easeInOut' }}
-            style={{ willChange: 'transform' }}  // Limitation de `will-change`
+            style={{ willChange: 'transform', zIndex: 1000 }}  // Forcer z-index pour éviter les blocages
           />
 
           {/* Image qui glisse vers l'extérieur (haut) */}
           <motion.img
             className="loader-block-top"
             src="/path-to-your-image-top.png"
-            custom="top"
             variants={slideVariants}
             initial="initial"
-            animate={animationStarted ? 'exit' : 'initial'}
+            animate={animationStarted ? 'exitTop' : 'initial'}
             transition={{ duration: 1, ease: 'easeInOut', delay: 0.1 }}
-            style={{ willChange: 'transform' }}  // Limitation de `will-change`
+            style={{ willChange: 'transform', zIndex: 1000 }}
           />
 
           {/* Image qui glisse vers l'extérieur (bas) */}
           <motion.img
             className="loader-block-bottom"
             src="/path-to-your-image-bottom.png"
-            custom="bottom"
             variants={slideVariants}
             initial="initial"
-            animate={animationStarted ? 'exit' : 'initial'}
+            animate={animationStarted ? 'exitBottom' : 'initial'}
             transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
-            style={{ willChange: 'transform' }}  // Limitation de `will-change`
+            style={{ willChange: 'transform', zIndex: 1000 }}
           />
 
           {/* Image qui glisse vers l'extérieur (droite) */}
           <motion.img
             className="loader-block-right"
             src="/path-to-your-image-right.png"
-            custom="right"
             variants={slideVariants}
             initial="initial"
-            animate={animationStarted ? 'exit' : 'initial'}
+            animate={animationStarted ? 'exitRight' : 'initial'}
             transition={{ duration: 1, ease: 'easeInOut', delay: 0.3 }}
-            style={{ willChange: 'transform' }}  // Limitation de `will-change`
+            style={{ willChange: 'transform', zIndex: 1000 }}
           />
         </div>
       )}

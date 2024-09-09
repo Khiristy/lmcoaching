@@ -20,7 +20,7 @@ const App = () => {
           element={
             // <LoaderWithContent>
               <Home />
-            // </LoaderWithContent>
+            /* </LoaderWithContent> */
           }
         />
         <Route
