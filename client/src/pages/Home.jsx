@@ -1,4 +1,6 @@
-import LoaderWrapper from "../features/Shared/Loader/LoaderWapper.jsx";
+import { useState, useEffect } from "react"; // N'oubliez pas d'importer useState et useEffect
+import LoaderLayout from "../features/Shared/Loader/MainLoader/LoaderLayout.jsx";
+
 import HomeHero from "../features/Home/Hero/HomeHero.jsx";
 import HomeJourney from "../features/Home/Journey/HomeJourney.jsx";
 import HomePersoCard from "../features/Home/PersoCard/HomePersoCard.jsx";
@@ -9,21 +11,27 @@ import HomeReview from "../features/Home/Review/HomeReview.jsx";
 import "./Home.scss";
 
 const Home = () => {
+  const [startAnimation, setStartAnimation] = useState(false); // Déclarez un état pour l'animation
+
+  useEffect(() => {
+    // Vous pouvez ajouter une logique ici pour déclencher l'animation après un délai ou après que certains éléments soient prêts.
+    setTimeout(() => {
+      setStartAnimation(true); // Déclenchement de l'animation après un délai
+    }, 1000); // Délai d'une seconde (modifiable)
+  }, []);
+
   return (
-<LoaderWrapper>
-      {(loaderFinished) => (
-        <div className="home">
-          <HomeHero loaderFinished={loaderFinished} /> 
-        {/* Autres sections de la page Home */}
+    <div className="home">
+      <LoaderLayout startAnimation={startAnimation} />
+        <HomeHero />
         <HomeJourney />
         <HomePersoCard />
         <HomePricingPlan />
         <HomeTransformation />
         <HomeFaq />
         <HomeReview />
-      </div>
-      )}
-    </LoaderWrapper>
+      
+    </div>
   );
 };
 

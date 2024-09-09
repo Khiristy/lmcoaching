@@ -277,7 +277,7 @@ html {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    will-change: top, left, width;
+    
     transform-origin: 0 0;
 }
 

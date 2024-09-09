@@ -36,7 +36,7 @@ const LoaderImage = ({ src, direction, startAnimation }) => {
       initial="initial"
       animate={startAnimation ? getVariant() : 'initial'}
       transition={{ duration: 2, ease: 'easeInOut',  }}
-      style={{ willChange: 'transform', zIndex: 1000 }}
+      style={{ zIndex: 1000 }}
     />
   );
 };
