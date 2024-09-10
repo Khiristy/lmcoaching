@@ -15,7 +15,7 @@ const PersoCardLayer = () => {
       .catch((error) => {
         console.error("Erreur lors du chargement des données JSON:", error);
       });
-  });
+  }, []); // Tableau de dépendances vide pour éviter la boucle infinie
 
   return (
     <section className="perso_card-layer">

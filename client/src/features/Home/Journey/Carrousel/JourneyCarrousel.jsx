@@ -1,234 +1,61 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import fallbackImg from '/media/weight_card.png'; // Assure-toi que le chemin est correct
+import "./JourneyCarrousel.scss"; // Styles CSS
 
-const slideData = [
-  {
-    index: 0,
-    headline: 'New Fashion Apparel',
-    button: 'Shop now',
-    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg'
-  },
-  {
-    index: 1,
-    headline: 'In The Wilderness',
-    button: 'Book travel',
-    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/forest.jpg'
-  },
-  {
-    index: 2,
-    headline: 'For Your Current Mood',
-    button: 'Listen',
-    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/guitar.jpg'
-  },
-  {
-    index: 3,
-    headline: 'Focus On The Writing',
-    button: 'Get Focused',
-    src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg'
-  }
-]
+const ImageCarousel = () => {
+  const [loadedImages, setLoadedImages] = useState({});
 
-// =========================
-// Slide
-// =========================
+  // Fonction pour gérer les erreurs de chargement des images
+  const handleImageError = (index) => {
+    console.log(`Erreur lors du chargement de l'image à l'index ${index}, fallback activé.`);
+    setLoadedImages((prevState) => ({
+      ...prevState,
+      [index]: fallbackImg // Remplace par l'image de fallback
+    }));
+  };
 
-class Slide extends React.Component {
-  constructor(props) {
-    super(props)
+  // Paramètres du carrousel
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    lazyLoad: 'ondemand', // Active le lazy loading
+  };
 
-    this.handleMouseMove = this.handleMouseMove.bind(this)
-    this.handleMouseLeave = this.handleMouseLeave.bind(this)
-    this.handleSlideClick = this.handleSlideClick.bind(this)
-    this.imageLoaded = this.imageLoaded.bind(this)
-    this.slide = React.createRef()
-  }
-  
-  handleMouseMove(event) {
-    const el = this.slide.current
-    const r = el.getBoundingClientRect()
+  // Liste des chemins des images
+  const images = [
+    "/media/journey_imgTest-1.png",
+    "/media/journey_imgTest-2.png",
+    "/media/journey_imgTest-3.png"
+  ];
 
-    el.style.setProperty('--x', event.clientX - (r.left + Math.floor(r.width / 2)))
-    el.style.setProperty('--y', event.clientY - (r.top + Math.floor(r.height / 2)))
-  }
-  
-  handleMouseLeave() {    
-    this.slide.current.style.setProperty('--x', 0)
-    this.slide.current.style.setProperty('--y', 0)
-  }
-  
-  handleSlideClick() {
-    this.props.handleSlideClick(this.props.slide.index)
-  }
-  
-  imageLoaded(event) {
-    event.target.style.opacity = 1
-  }
-  
-  render() {
-    const { src, button, headline, index } = this.props.slide
-    const current = this.props.current
-    let classNames = 'slide'
-    
-    if (current === index) classNames += ' slide--current'
-    else if (current - 1 === index) classNames += ' slide--previous'
-    else if (current + 1 === index) classNames += ' slide--next'
-        
-    return (
-      <li 
-        ref={this.slide}
-        className={classNames} 
-        onClick={this.handleSlideClick}
-        onMouseMove={this.handleMouseMove}
-        onMouseLeave={this.handleMouseLeave}
-      >
-        <div className="slide__image-wrapper">
-          <img 
-            className="slide__image"
-            alt={headline}
-            src={src}
-            onLoad={this.imageLoaded}
-          />
-        </div>
-        
-        <article className="slide__content">
-          <h2 className="slide__headline">{headline}</h2>
-          <button className="slide__action btn">{button}</button>
-        </article>
-      </li>
-    )
-  }
-}
-
-// PropTypes validation for Slide component
-Slide.propTypes = {
-  slide: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    button: PropTypes.string.isRequired,
-    headline: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired
-  }).isRequired,
-  current: PropTypes.number.isRequired,
-  handleSlideClick: PropTypes.func.isRequired
-}
-
-// =========================
-// Slider control
-// =========================
-
-const SliderControl = ({ type, title, handleClick }) => {
   return (
-    <button className={`btn btn--${type}`} title={title} onClick={handleClick}>
-      <svg className="icon" viewBox="0 0 24 24">
-        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-      </svg>
-    </button>
-  )
-}
-
-// PropTypes validation for SliderControl component
-SliderControl.propTypes = {
-  type: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired
-}
-
-// =========================
-// Slider
-// =========================
-
-class Slider extends React.Component {
-  constructor(props) {
-    super(props)
-    
-    this.state = { current: 0 }
-    this.handlePreviousClick = this.handlePreviousClick.bind(this)
-    this.handleNextClick = this.handleNextClick.bind(this)
-    this.handleSlideClick = this.handleSlideClick.bind(this)
-  }
-  
-  handlePreviousClick() {
-    const previous = this.state.current - 1
-        
-    this.setState({ 
-      current: (previous < 0) 
-        ? this.props.slides.length - 1
-        : previous
-    })
-  }
-  
-  handleNextClick() {
-    const next = this.state.current + 1;
-    
-    this.setState({ 
-      current: (next === this.props.slides.length) 
-        ? 0
-        : next
-    })
-  }
-  
-  handleSlideClick(index) {
-    if (this.state.current !== index) {
-      this.setState({
-        current: index
-      })
-    }
-  }
-
-  render() {
-    const { current } = this.state
-    const { slides, heading } = this.props 
-    const headingId = `slider-heading__${heading.replace(/\s+/g, '-').toLowerCase()}`
-    const wrapperTransform = {
-      'transform': `translateX(-${current * (100 / slides.length)}%)`
-    }
-    
-    return (
-      <div className='slider' aria-labelledby={headingId}>
-        <ul className="slider__wrapper" style={wrapperTransform}>
-          <h3 id={headingId} className="visuallyhidden">{heading}</h3>
-          
-          {slides.map(slide => {
-            return (
-              <Slide
-                key={slide.index}
-                slide={slide}
-                current={current}
-                handleSlideClick={this.handleSlideClick}
+    <div className="carousel-container">
+      <Slider {...settings}>
+        {images.map((image, index) => {
+          console.log(`Rendu de l'image ${image} à l'index ${index}`);
+          return (
+            <div key={index}>
+              <img
+                src={loadedImages[index] || image}
+                alt={`Slide ${index + 1}`}
+                onError={() => handleImageError(index)}
               />
-            )
-          })}
-        </ul>
-        
-        <div className="slider__controls">
-          <SliderControl 
-            type="previous"
-            title="Go to previous slide"
-            handleClick={this.handlePreviousClick}
-          />
-          
-          <SliderControl 
-            type="next"
-            title="Go to next slide"
-            handleClick={this.handleNextClick}
-          />
-        </div>
-      </div>
-    )
-  }
-}
+            </div>
+          );
+        })}
+      </Slider>
+      <img src="/media/journey_imgTest-1.png" alt="Test Image" />
+    </div>
+  );
+};
 
-// PropTypes validation for Slider component
-Slider.propTypes = {
-  slides: PropTypes.arrayOf(
-    PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      button: PropTypes.string.isRequired,
-      headline: PropTypes.string.isRequired,
-      index: PropTypes.number.isRequired
-    })
-  ).isRequired,
-  heading: PropTypes.string.isRequired
-}
-
-ReactDOM.render(<Slider heading="Example Slider" slides={slideData} />, document.getElementById('app'));
+export default ImageCarousel;

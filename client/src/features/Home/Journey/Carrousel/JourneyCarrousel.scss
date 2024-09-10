@@ -1,0 +1,26 @@
+
+
+
+.carousel-container {
+    width: 80%;
+    margin: auto;
+    max-height: 1000px;
+  }
+  
+  .carousel-container img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;  /* Ajuste selon la taille souhaitée */
+    border-radius: 10px;
+    display: block;     /* S'assure que l'image est affichée */
+    visibility: visible; /* Pour éviter que l'image soit masquée */
+  }
+  .slick-slide {
+    display: block !important;  /* Assure que chaque slide est bien affichée */
+    height: auto !important;    /* Assure que les slides s'adaptent à leur contenu */
+    max-height: 500px;          /* Limite la hauteur des slides */
+  }
+
+  .slick-list {
+    overflow: visible !important;
+  }

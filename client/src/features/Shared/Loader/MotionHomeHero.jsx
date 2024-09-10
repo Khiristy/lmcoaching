@@ -18,7 +18,6 @@ const LoaderHero = forwardRef(({ children, direction, startAnimation }, ref) => 
       }
     };
   
-    console.log("startAnimation dans LoaderHero:", startAnimation); // Vérifiez la réception ici
     return (
       <motion.div
         className="loader_hero"

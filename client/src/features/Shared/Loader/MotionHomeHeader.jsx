@@ -6,7 +6,6 @@ import MainBtn from "../Buttons/MainBtn/MainBtn.jsx";
 import "./MotionHomeHeader.scss"; // Vos styles actuels
 
 const MotionHomeHeader = ({ startAnimation }) => {
-  console.log("startAnimation dans MotionHomeHeader:", startAnimation);
 
   return (
     <motion.header

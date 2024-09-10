@@ -13,16 +13,13 @@ const LoaderLayout = ({ startAnimation }) => {
   
     useEffect(() => {
       if (startAnimation) {
-        console.log("StartAnimation received in LoaderLayout, starting internal animations...");
         
         setTimeout(() => {
-          console.log("Setting readyToAnimate to true after delay.");
           setReadyToAnimate(true);
   
           setTimeout(() => {
             // Définir la fin de l'animation après le temps géré par LoaderWrapper
             setAnimationEnded(true);
-            console.log("Animation ended, hiding loader.");
           }, 3000); // Le temps ici doit correspondre au temps de LoaderWrapper
         }, 500); // Ajoute un délai avant que l'animation ne démarre
       } else {
@@ -30,7 +27,6 @@ const LoaderLayout = ({ startAnimation }) => {
       }
     }, [startAnimation]);
   
-    console.log("Rendering LoaderLayout with readyToAnimate:", readyToAnimate, "and animationEnded:", animationEnded);
   
     return (
       <div

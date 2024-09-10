@@ -1,6 +1,6 @@
 import "./HomeJourney.scss";
-import journeyImg from "/media/journey_img-2.jpg";
 
+import JourneyCarrousel from "./Carrousel/JourneyCarrousel";
 const Journey = () => {
   return (
     <section className="journey">
@@ -16,9 +16,9 @@ const Journey = () => {
           à tous ceux qui souhaitent les découvrir.
         </p>
       </div>
-      <figure>
-        <img src={journeyImg} alt="" className="journey_img" />
-      </figure>
+      <div className="journey_content-carrousel">
+        <JourneyCarrousel />
+      </div>
     </section>
   );
 };

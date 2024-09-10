@@ -25,8 +25,7 @@ const LoaderImage = ({ src, direction, startAnimation }) => {
     }
   };
 
-  console.log('startAnimation dans LoaderImage:', startAnimation); // Pour vérifier si startAnimation change bien
-  console.log('direction dans LoaderImage:', direction); // Vérification de la direction
+
 
   return (
     <motion.img
