@@ -6,11 +6,11 @@ const MainBtn = () => {
 
   const handleClick = () => {
     window.scrollTo(0, 0); // Scroller en haut de la page
-    navigate("/OnlineForm"); // Rediriger vers le formulaire
+    navigate("/Form"); // Rediriger vers le formulaire
   };
 
   return (
-    <button className="main_btn" onClick={handleClick}>
+    <button className="main_btn" onClick={handleClick} >
       Réserver maintenant !
     </button>
   );

@@ -6,7 +6,7 @@ const PriceBtn = () => {
 
   const handleClick = () => {
     window.scrollTo(0, 0); // Scroller en haut de la page
-    navigate("/OnlineForm"); // Rediriger vers le formulaire
+    navigate("/Form"); // Rediriger vers le formulaire
   };
 
   return (

@@ -1,13 +1,14 @@
 import "./Form.scss";
-import MainForm from "../../features/Form/MainForm/MainForm.jsx";
-
+// import MainForm from "../../features/Form/MainForm/MainForm.jsx";
+import TransitionPricing from "../../features/Form/TransitionPricing/TransitionPricing.jsx";
 
 
 const Form = () => {
     
     return (
-      <div className="form_pos">
-          <MainForm />
+      <div className="form">
+          <TransitionPricing />
+          {/* <MainForm /> */}
       </div>
     );
   };

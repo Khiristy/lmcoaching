@@ -37,7 +37,7 @@ const FormComponent = () => {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="main_form" onSubmit={handleSubmit}>
       <p className="field required half">
         <label className="label required" htmlFor="lastName">
           Nom

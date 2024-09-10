@@ -1,6 +1,7 @@
 import "./HomePricingPlan.scss";
 import PriceCardLayer from "../../Shared/PriceCardComponents/PriceCardContainer.jsx";
 import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
+import Transition from "../../Form/TransitionPricing/TransitionPricing.jsx";
 
 const PricingPlanSection = () => {
   return (
@@ -13,7 +14,7 @@ const PricingPlanSection = () => {
           option flexible qui s&apos;adapte à votre emploi du temps, nous avons ce
           qu&apos;il vous faut.
         </h4>
-        <MainBtn />
+        <MainBtn href={Transition} />
         <p>voir plus d&apos;offres</p>
       </div>
       <PriceCardLayer />

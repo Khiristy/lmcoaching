@@ -3,6 +3,7 @@ import PriceBtn from "../Buttons/PriceBtn/PriceBtn.jsx";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
+import Transition from "../../Form/TransitionPricing/TransitionPricing.jsx";
 
 const PriceCard = ({ type, description, price, details, note }) => {
   return (
@@ -11,7 +12,7 @@ const PriceCard = ({ type, description, price, details, note }) => {
 
       <p>{description}</p>
       <h5>{price}</h5>
-      <PriceBtn />
+      <PriceBtn href={Transition}/>
       <p>{note}</p>
       <ul>
         {details.map((detail, index) => (
