@@ -5,7 +5,7 @@
 
 .journey {
     width: 1280px;
-    min-height: 561px;
+    min-height: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@
     &_content {
         margin: auto;
         width: 1100px;
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -49,6 +49,11 @@
             font-weight: 400;
             line-height: 28px;
             text-align: center;
+        }
+        &-carrousel {
+            width: 100%;
+            margin: auto
+            ;
         }
     }
 }

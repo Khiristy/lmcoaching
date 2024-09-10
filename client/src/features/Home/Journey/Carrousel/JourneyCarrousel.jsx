@@ -1,61 +1,43 @@
-import { useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import fallbackImg from '/media/weight_card.png'; // Assure-toi que le chemin est correct
-import "./JourneyCarrousel.scss"; // Styles CSS
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const ImageCarousel = () => {
-  const [loadedImages, setLoadedImages] = useState({});
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-  // Fonction pour gérer les erreurs de chargement des images
-  const handleImageError = (index) => {
-    console.log(`Erreur lors du chargement de l'image à l'index ${index}, fallback activé.`);
-    setLoadedImages((prevState) => ({
-      ...prevState,
-      [index]: fallbackImg // Remplace par l'image de fallback
-    }));
-  };
+import './JourneyCarrousel.scss';
 
-  // Paramètres du carrousel
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    adaptiveHeight: true,
-    lazyLoad: 'ondemand', // Active le lazy loading
-  };
+// import required modules
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
-  // Liste des chemins des images
+const JourneyCarrousel = () => {
   const images = [
-    "/media/journey_imgTest-1.png",
-    "/media/journey_imgTest-2.png",
-    "/media/journey_imgTest-3.png"
+    '/media/journey_img-1.webp',
+    '/media/journey_img-2.webp',
+    '/media/journey_img-3.webp',
+    '/media/journey_img-4.webp',
+    '/media/journey_img-5.webp'
   ];
 
   return (
-    <div className="carousel-container">
-      <Slider {...settings}>
-        {images.map((image, index) => {
-          console.log(`Rendu de l'image ${image} à l'index ${index}`);
-          return (
-            <div key={index}>
-              <img
-                src={loadedImages[index] || image}
-                alt={`Slide ${index + 1}`}
-                onError={() => handleImageError(index)}
-              />
-            </div>
-          );
-        })}
-      </Slider>
-      <img src="/media/journey_imgTest-1.png" alt="Test Image" />
-    </div>
+    <Swiper
+      slidesPerView="auto"
+      spaceBetween={10}
+      centeredSlides={true}
+      loop={true}
+      autoplay={{ delay: 10000, disableOnInteraction: false }}
+      pagination={{ clickable: true }}
+      navigation={true}
+      modules={[Pagination, Navigation, Autoplay]}
+      className="mySwiper"
+    >
+      {images.map((image, index) => (
+        <SwiperSlide key={index}>
+          <img src={image} alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
-export default ImageCarousel;
+export default JourneyCarrousel;
