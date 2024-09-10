@@ -21,7 +21,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
- align-items: center;
+  align-items: center;
   background-color: #141414;
   /* Couleur de fond */
   z-index: 9999;
@@ -37,12 +37,13 @@
     &-content {
       position: absolute;
       top: 300px;
-      h1 {
+
+      &-title {
         text-align: center;
-        
+
         @include strong-font2;
       }
-  
+
       img {
         margin-bottom: 25px;
         width: 200px;
@@ -98,18 +99,26 @@
   }
 
   .loader-image {
-    width: 100%;     /* Largeur de l'image, plein écran */
-    height: 100vh;    /* Hauteur de l'image, plein écran */
-    object-fit: cover; /* L'image couvre toute la zone sans déformation */
+    width: 100%;
+    /* Largeur de l'image, plein écran */
+    height: 100vh;
+    /* Hauteur de l'image, plein écran */
+    object-fit: cover;
+    /* L'image couvre toute la zone sans déformation */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;       /* Place l'image en arrière-plan des sliders */
+    z-index: 1;
+    /* Place l'image en arrière-plan des sliders */
     // transition: transform 1s ease-in-out;
   }
 
   &_hero {
-    margin: auto;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
 
+    // translate: -50% -50%;
+    
   }
 }

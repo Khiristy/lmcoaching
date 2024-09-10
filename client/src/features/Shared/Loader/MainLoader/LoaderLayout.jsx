@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import LoaderBlock from "../LoaderBlock";
 import LoaderImage from "../LoaderImage";
-import MotionLoaderHero from "../LoaderHero";
+import MotionHomeHero from "../MotionHomeHero";
+import MotionHomeHeader from "../../Header/MotionHomeHeader";
+
 import "./LoaderLayout.scss";
 
 const LoaderLayout = ({ startAnimation }) => {
@@ -66,7 +68,13 @@ const LoaderLayout = ({ startAnimation }) => {
           delay={0}
         />
   
-        <MotionLoaderHero
+        <MotionHomeHero
+          className="loader-hero"
+          direction="left"
+          startAnimation={readyToAnimate}
+        />
+
+        <MotionHomeHeader
           className="loader-hero"
           direction="left"
           startAnimation={readyToAnimate}

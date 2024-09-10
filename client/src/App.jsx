@@ -4,14 +4,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
-import Header from "./features/Shared/Header/Header";
+import MotionHomeHeader from "./features/Shared/Header/MotionHomeHeader";
 import Footer from "./features/Shared/Footer/Footer";
 import OnlineForm from "./pages/Form";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <MotionHomeHeader startAnimation={true} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

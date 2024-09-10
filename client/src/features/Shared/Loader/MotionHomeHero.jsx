@@ -1,4 +1,3 @@
-import Header from "../Header/Header";
 import HomeHero from "../../Home/Hero/HomeHero";
 import { forwardRef } from "react";
 import PropTypes from "prop-types";
@@ -7,7 +6,7 @@ import { motion } from "framer-motion";
 const LoaderHero = forwardRef(({ children, direction, startAnimation }, ref) => {
     const slideVariants = {
       initial: { opacity: 0, x: "-100vw" }, // Commence hors de l'écran à gauche
-      enterLeft: { opacity: 1, x: 0 },      // Se déplace au centre de l'écran
+      enterLeft: { opacity: 1, x: "-8px" },      // Se déplace au centre de l'écran
     };
   
     const getVariant = () => {
@@ -28,9 +27,8 @@ const LoaderHero = forwardRef(({ children, direction, startAnimation }, ref) => 
         initial={{ opacity: 0, x: 0 }}
         animate={startAnimation ? getVariant() : "initial"} // Utilisez startAnimation ici
         exit={{ opacity: 0, y: 0 }} 
-        transition={{ duration: 3 }}
+        transition={{ duration: 2.5 }}
       >
-        <Header />
         <HomeHero />
         {children}
       </motion.div>

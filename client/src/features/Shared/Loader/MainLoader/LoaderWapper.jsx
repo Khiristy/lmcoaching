@@ -58,6 +58,7 @@ const LoaderWrapper = () => {
       {loading ? (
         <LoaderLayout startAnimation={startAnimation} />
       ) : (
+        
         <Home /> // Afficher la page Home une fois le chargement terminé
       )}
     </>

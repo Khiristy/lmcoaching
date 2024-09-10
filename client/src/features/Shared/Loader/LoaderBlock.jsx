@@ -46,7 +46,7 @@ const LoaderBlock = ({ direction, startAnimation, delay = 0 }) => {
         transition={{ duration: 0.5, ease: "easeInOut", delay }} // Applique un fondu à tout le contenu
       >
         <img src="/media/main_logo.png" alt="Logo" />
-        <h1>LmCoaching</h1>
+        <h1 className={`loader-block-${direction}-content-title`}>LmCoaching</h1>
       </motion.div>
     </motion.div>
   );
