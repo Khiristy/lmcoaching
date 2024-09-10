@@ -27,7 +27,8 @@ const LoaderHero = forwardRef(({ children, direction, startAnimation }, ref) => 
         initial={{ opacity: 0, x: 0 }}
         animate={startAnimation ? getVariant() : "initial"} // Utilisez startAnimation ici
         exit={{ opacity: 0, y: 0 }} 
-        transition={{ duration: 2.5 }}
+        transition={{ duration: 2.5,ease: "easeInOut" }}
+        style={{ willChange: 'opacity, transform' }}
       >
         <HomeHero />
         {children}

@@ -12,7 +12,7 @@ const MotionHomeHeader = ({ startAnimation }) => {
     <motion.header
       initial={{ opacity: 0 }} // Commence avec une opacité de 0 et hors écran vers le haut
       animate={startAnimation ? { opacity: 1, y: 0 } : {}} // Anime vers une opacité de 1 et revient à sa position d'origine
-      transition={{ duration: 2.5,delay: 2}} // L'animation dure 2 secondes
+      transition={{ duration: 2}} // L'animation dure 2 secondes
       style={{ willChange: 'opacity, transform' }}
       className="motionHeader"
     >

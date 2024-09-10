@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import LoaderBlock from "../LoaderBlock";
 import LoaderImage from "../LoaderImage";
 import MotionHomeHero from "../MotionHomeHero";
-import MotionHomeHeader from "../../Header/MotionHomeHeader";
+
 
 import "./LoaderLayout.scss";
 
@@ -69,12 +69,6 @@ const LoaderLayout = ({ startAnimation }) => {
         />
   
         <MotionHomeHero
-          className="loader-hero"
-          direction="left"
-          startAnimation={readyToAnimate}
-        />
-
-        <MotionHomeHeader
           className="loader-hero"
           direction="left"
           startAnimation={readyToAnimate}
