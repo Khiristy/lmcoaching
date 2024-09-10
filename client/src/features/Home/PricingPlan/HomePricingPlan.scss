@@ -5,6 +5,8 @@
 .pricing_plan_section {
     width: 1452px;
     min-height: 700px;
+    max-height: 1000px;
+
     border: 1px solid #FFFFFF1A;
     border-radius: 20px;
     background-color: #1E1E1E;
@@ -12,7 +14,7 @@
     display: flex;
     gap: 40px;
 
-    padding: 100px 65px 105px 65px;
+    padding: 65px;
     &-left {
        width: 383px;
 

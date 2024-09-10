@@ -11,7 +11,6 @@ const Journey = () => {
           discipline, la résilience, le respect des autres ainsi que le
           dépassement de soi.
           <br />
-          <br />
           Aujourd&apos;hui, je souhaite transmettre cette passion et ces valeurs
           à tous ceux qui souhaitent les découvrir.
         </p>

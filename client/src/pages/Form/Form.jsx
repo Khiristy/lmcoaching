@@ -1,5 +1,5 @@
 import "./Form.scss";
-import MainForm from "../features/Form/MainForm/MainForm.jsx";
+import MainForm from "../../features/Form/MainForm/MainForm.jsx";
 
 
 

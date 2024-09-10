@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import LoaderLayout from './LoaderLayout'; // Import du composant Loader
-import Home from '../pages/Home'; // Import de la page Home
+import Home from '../pages/Home/Home'; // Import de la page Home
 
 
 const LoaderWrapper = () => {

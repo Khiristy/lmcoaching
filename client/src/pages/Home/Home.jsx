@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
-import LoaderLayout from "../features/Shared/Loader/MainLoader/LoaderLayout";
-import MotionHomeHeader from "../features/Shared/Loader/MotionHomeHeader.jsx";
+import LoaderLayout from "../../features/Shared/Loader/MainLoader/LoaderLayout.jsx";
+import MotionHomeHeader from "../../features/Shared/Loader/MotionHomeHeader.jsx";
 
-import HomeHero from "../features/Home/Hero/HomeHero.jsx";
-import HomeJourney from "../features/Home/Journey/HomeJourney.jsx";
-import HomePersoCard from "../features/Home/PersoCard/HomePersoCard.jsx";
-import HomePricingPlan from "../features/Home/PricingPlan/HomePricingPlan.jsx";
-import HomeTransformation from "../features/Home/Transformation/HomeTransformation.jsx";
-import HomeFaq from "../features/Home/Faq/HomeFaq.jsx";
-import HomeReview from "../features/Home/Review/HomeReview.jsx";
+import HomeHero from "../../features/Home/Hero/HomeHero.jsx";
+import HomeJourney from "../../features/Home/Journey/HomeJourney.jsx";
+import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard.jsx";
+import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan.jsx";
+import HomeTransformation from "../../features/Home/Transformation/HomeTransformation.jsx";
+import HomeFaq from "../../features/Home/Faq/HomeFaq.jsx";
+import HomeReview from "../../features/Home/Review/HomeReview.jsx";
 import "./Home.scss";
 
 const Home = () => {
