@@ -5,7 +5,7 @@ const Journey = () => {
   return (
     <section className="journey">
       <div className="journey_content">
-        <h3>Êtes-vous prêt à vous dépasser vos limites?</h3>
+        <h3>Êtes-vous prêt à dépasser vos limites?</h3>
         <p>Eux l&apos;ont fait ! Pourquoi pas vous ?</p>
       </div>
       <div className="journey_content-carrousel">

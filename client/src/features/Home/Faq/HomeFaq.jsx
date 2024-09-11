@@ -1,21 +1,17 @@
 import "./HomeFaq.scss";
-import CollapsibleFaq from "../../Shared/FaqComponents/CollapsibleFaq.jsx";
+import CollapsibleFaq from "../../Shared/FaqComponents/CollapsibleFaqLayer.jsx";
 import faqImg from "/media/faq_img.webp";
 
 const FaqSection = () => {
   return (
     <section className="faq">
       <h3>FAQ</h3>
+      <img src={faqImg} alt="" className="faq_img" />
       <div className="faq_content">
-        <img src={faqImg} alt="" className="faq_content-img" />
-
         <div className="faq_content-collapsible">
           <CollapsibleFaq />
-          <CollapsibleFaq />
-          <CollapsibleFaq />
-          <CollapsibleFaq />
-          <CollapsibleFaq />
         </div>
+
       </div>
     </section>
   );

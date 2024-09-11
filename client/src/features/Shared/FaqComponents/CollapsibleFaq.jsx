@@ -1,19 +1,26 @@
 import "./CollapsibleFaq.scss";
 import Collapsible from "react-collapsible";
+import PropTypes from "prop-types";
 
-const CollapsibleFaq = () => {
+const CollapsibleFaq = ({ question, answer, isOpen, onClick }) => {
   return (
-    <Collapsible trigger="Start here" transitionTime="250"  >
-      <p>
-        This is the collapsible content. It can be any element or React
-        component you like.
-      </p>
-      <p>
-        It can even be another Collapsible component. Check out the next
-        section!
-      </p>
+    <div onClick={onClick}>
+    <Collapsible
+      trigger={question}
+      transitionTime="250"
+      open={isOpen}
+     
+    >
+      <p>{answer}</p>
     </Collapsible>
+     </div>
   );
 };
 
+CollapsibleFaq.propTypes = {
+  question: PropTypes.string.isRequired,
+  answer: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired, // Gérer si le collapsible est ouvert ou non
+  onClick: PropTypes.func.isRequired, // Fonction pour gérer le clic
+};
 export default CollapsibleFaq;

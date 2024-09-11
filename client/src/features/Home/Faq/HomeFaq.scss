@@ -5,32 +5,45 @@
 
 .faq {
     width: 1600px;
-    height: 95vh;
+    min-height: 95vh;
     border-radius: 20px;
     margin: auto;
     background-color: #3D1313;
     margin-bottom: 100px;
-    padding-bottom: 100px;
+    position: relative;
 
+    
     h3 {
         @include strong-font2;
         margin-left: 65px;
         padding-top: 70px;
     }
+
+    &_img {
+        position: absolute;
+        bottom: 90px;
+        right: 45px;
+        height: 700px;
+        border-radius: 16px;
+    }
+
     &_content {
+        min-height: 700px;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
 
-        &-img {
-            border-radius: 16px;
-        }
-
+        
         &-collapsible {
-            margin-top: -60px;
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1019607843);            
+            background-color: #1E1E1E;            
+            width: 60%;
+            min-height: 100%;
+            padding: 55px 0 55px 0;
+            margin: 45px;
             
         }
     }

@@ -1,0 +1,45 @@
+{
+    "collapsibles": [
+      {
+        "question": "Quels services proposez-vous ?",
+        "answer": "Nous offrons des programmes personnalisés pour la prise de masse, la perte de poids, et le développement des capacités physiques (force, endurance, etc.). Chaque programme est adapté à vos objectifs et à votre niveau."
+      },
+      {
+        "question": "Comment fonctionne le coaching en ligne ?",
+        "answer": "Après une évaluation initiale de vos objectifs et de votre condition physique, nous élaborons un plan personnalisé que vous pouvez suivre à votre rythme. Vous avez accès à des vidéos explicatives, un suivi régulier et une assistance pour ajuster votre programme en fonction de vos progrès."
+      },
+      {
+        "question": "Ai-je besoin d'équipement spécifique pour suivre votre programme ?",
+        "answer": "Nos programmes sont conçus pour s'adapter à votre équipement disponible. Que vous ayez accès à une salle de sport complète ou seulement à des équipements de base à la maison, nous créerons un programme qui répond à vos besoins."
+      },
+      {
+        "question": "Combien de temps faut-il pour voir des résultats ?",
+        "answer": "Les résultats dépendent de nombreux facteurs, notamment de votre engagement, de votre alimentation et de votre régularité. En général, vous pouvez commencer à voir des changements en 4 à 6 semaines avec un suivi assidu du programme."
+      },
+      {
+        "question": "Puis-je annuler ou suspendre mon abonnement à tout moment ?",
+        "answer": "Oui, vous pouvez annuler ou suspendre votre abonnement à tout moment directement depuis votre compte en ligne."
+      },
+      {
+        "question": "Quelle est la durée d'un programme de coaching ?",
+        "answer": "Nos programmes sont flexibles et peuvent durer de 4 semaines à plusieurs mois, selon vos objectifs. Nous recommandons un engagement d'au moins 12 semaines pour des résultats optimaux."
+      },
+      {
+        "question": "Offrez-vous des consultations nutritionnelles ?",
+        "answer": "Oui, en complément de votre programme de musculation, nous proposons des conseils nutritionnels personnalisés pour maximiser vos résultats, que vous cherchiez à perdre du poids, prendre de la masse musculaire, ou simplement améliorer votre santé globale."
+      },
+      {
+        "question": "Comment puis-je contacter mon coach pour des questions ou des ajustements au programme ?",
+        "answer": "Vous pouvez contacter votre coach à tout moment via l'application de coaching, par e-mail ou lors de nos sessions de suivi hebdomadaires."
+      },
+      {
+        "question": "Proposez-vous des séances en direct ou en personne ?",
+        "answer": "Actuellement, nous nous concentrons sur le coaching en ligne, mais des sessions en direct via visioconférence peuvent être arrangées sur demande."
+      },
+      {
+        "question": "Quels types de paiements acceptez-vous ?",
+        "answer": "Nous acceptons les paiements par carte de crédit, PayPal, et d'autres moyens de paiement en ligne sécurisés. Vous pouvez choisir entre un paiement unique ou un abonnement mensuel."
+      }
+    ]
+  }
+  
