@@ -27,8 +27,15 @@ const MotionHomeHeader = ({ startAnimation }) => {
           capacités physiques : force, endurance, et bien plus encore.
         </p>
         <MainBtn />
-
+        <div className="motionHeader_socialLink">
+        <a href=""><i className="fa fa-facebook fa-4x icon-3d"></i></a>
+        <a href=""><i className="fa fa-instagram fa-4x icon-3d"></i></a>
+        <a href=""><i className="fa-brands fa-snapchat fa-4x icon-3d"></i></a>
+        <a href=""><i className="fa-brands fa-tiktok fa-4x icon-3d"></i></a>
       </div>
+      </div>
+
+
       </div>
 
       {/* Si besoin, décommentez le menu */}

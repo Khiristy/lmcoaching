@@ -5,8 +5,10 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="right_side-container">
+        <div className="hero_img-bckgrd"></div>
         <img src={heroImg} alt="hero" className="hero_img" />
       </div>
+
     </section>
   );
 };

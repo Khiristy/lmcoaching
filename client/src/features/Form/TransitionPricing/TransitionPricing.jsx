@@ -5,6 +5,7 @@ import transistionImg from "/media/transition_pricing.webp";
 
 
 
+
 const TransitionPricing = () => {
   return (
     <motion.div className="transition">
