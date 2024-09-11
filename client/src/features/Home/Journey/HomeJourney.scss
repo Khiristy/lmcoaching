@@ -29,28 +29,23 @@
         margin-bottom: 30px;
 
 
-        & h2 {
+        & h3 {
+            margin-top: 120px;
             @include strong-font2;
             text-align: center;
 
         }
 
-        & h3 {
-
+        & p {
+            margin-top: 10px;
             font-size: 24px;
             font-weight: 500;
             line-height: 28px;
             text-align: center;
+            margin-bottom: 20px;
            
         }
 
-        & p {
-
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 30px;
-            text-align: center;
-        }
 
         &-carrousel {
             width: 100%;

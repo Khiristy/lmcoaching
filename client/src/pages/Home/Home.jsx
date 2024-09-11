@@ -36,11 +36,11 @@ const Home = () => {
                 <>
                 <MotionHomeHeader startAnimation={true} />
                     <HomeHero />
-                    <HomeJourney />
                     <HomePersoCard />
                     <HomePricingPlan />
-                    <HomeTransformation />
+                    <HomeJourney /> 
                     <HomeFaq />
+                    <HomeTransformation />
                     <HomeReview />
                 </>
             )}

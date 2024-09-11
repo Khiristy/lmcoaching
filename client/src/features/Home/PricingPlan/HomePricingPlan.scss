@@ -3,9 +3,9 @@
 
 
 .pricing_plan_section {
-    width: 1452px;
+    width: 1600px;
     min-height: 700px;
-    max-height: 1000px;
+    max-height: 95vh;
 
     border: 1px solid #FFFFFF1A;
     border-radius: 20px;
@@ -13,10 +13,12 @@
     margin: auto;
     display: flex;
     gap: 40px;
-
     padding: 65px;
+    justify-content: center;
+
     &-left {
-       width: 383px;
+        margin-right: 50px;
+        width: 383px;
 
         h3 {
             margin-top: 15px;

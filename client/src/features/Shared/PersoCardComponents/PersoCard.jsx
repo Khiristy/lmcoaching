@@ -13,8 +13,8 @@ const PersoCard = ({ title, icon, description }) => {
   };
 
   return (
-    <div className="perso_card">
-      <img src={icon} alt="" className="perso_card-img" />
+    <div className="persoCard">
+      <img src={icon} alt="" className="persoCard-img" />
       <h3>{title}</h3>
       <p>
         {isExpanded ? description : `${description.substring(0, MAX_LENGTH)}...`}

@@ -1,6 +1,55 @@
-.perso_card-layer {
-    width: 1452px;
-    display: flex;
-    margin: auto;
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
 
+
+
+
+
+.persoCard {
+
+    &_content {
+        margin-top: 45px;
+        width: 1452px;
+        display: flex;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding-top: 90px;
+
+    }
+
+
+    &_text {
+        margin-top: 90px;
+        width: 1200px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 30px;
+        margin: auto;
+
+
+        & h2 {
+            @include strong-font2;
+            text-align: center;
+
+        }
+
+        & p {
+
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 75px;
+        }
+    }
+
+    &_layer {
+        display: flex;
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
 }

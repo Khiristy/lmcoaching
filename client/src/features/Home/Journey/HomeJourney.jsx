@@ -5,15 +5,8 @@ const Journey = () => {
   return (
     <section className="journey">
       <div className="journey_content">
-        <h2>Bienvenue sur mon site !</h2>
-        <p>
-          Ma passion pour le judo, la boxe et le basket m&apos;ont appris la
-          discipline, la résilience, le respect des autres ainsi que le
-          dépassement de soi.
-          <br />
-          Aujourd&apos;hui, je souhaite transmettre cette passion et ces valeurs
-          à tous ceux qui souhaitent les découvrir.
-        </p>
+        <h3>Êtes-vous prêt à vous dépasser vos limites?</h3>
+        <p>Eux l&apos;ont fait ! Pourquoi pas vous ?</p>
       </div>
       <div className="journey_content-carrousel">
         <JourneyCarrousel />
