@@ -14,8 +14,8 @@ const PricingPlanSection = () => {
           option flexible qui s&apos;adapte à votre emploi du temps, nous avons ce
           qu&apos;il vous faut.
         </h4>
-        <MainBtn href={Transition} />
-        <p>voir plus d&apos;offres</p>
+        <MainBtn text="Voir toutes nos offres !"  href={Transition} />
+       
       </div>
       <PriceCardLayer />
     </section>

@@ -1,19 +1,25 @@
 import './MainBtn.scss';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const MainBtn = () => {
+const MainBtn = ({ text,  }) => {
   const navigate = useNavigate();
-
   const handleClick = () => {
-    window.scrollTo(0, 0); // Scroller en haut de la page
-    navigate("/Form"); // Rediriger vers le formulaire
+    window.scrollTo(0, 0);
+    navigate("/Form");
   };
 
   return (
-    <button className="main_btn" onClick={handleClick} >
-      Réserver maintenant !
-    </button>
+    <div className="mainBtn">
+      <button className="mainBtn-btn" onClick={handleClick}>
+        <span className="mainBtn-text">{text}</span>
+      </button>
+    </div>
   );
+};
+
+MainBtn.propTypes = {
+  text: PropTypes.string.isRequired,
 };
 
 export default MainBtn;

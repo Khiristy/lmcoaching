@@ -1,4 +1,7 @@
 /* FONT */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
 
 @mixin strong-font1 {
   font-family: $typo-1;
@@ -21,4 +24,17 @@
 @mixin empty-hover {
   background-color: #E20D0F;
   border: 1px solid #FFFFFF;
+}
+
+@mixin button($bcolor,
+$url,
+$x1,
+$y1,
+$bor,
+) {
+//  background: $bcolor;
+ -webkit-mask: url($url);
+ mask: url($url);
+ -webkit-mask-size: $x1 $y1;
+ mask-size: $x1 $y1;
 }
