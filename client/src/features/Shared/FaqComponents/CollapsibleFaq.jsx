@@ -6,6 +6,7 @@ const CollapsibleFaq = ({ question, answer, isOpen, onClick }) => {
   return (
     <div onClick={onClick}>
     <Collapsible
+    className="collapsible collapsible-trigger"
       trigger={question}
       transitionTime="250"
       open={isOpen}

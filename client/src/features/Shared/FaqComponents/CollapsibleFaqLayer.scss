@@ -11,12 +11,10 @@
     text-align: left;
     position: relative;
     border-bottom: 1px solid #FFFFFF1A;
-
-    padding-top: 30px;
+    cursor: pointer;
     padding-top: 30px;
     color: white;
-
-
+    position: relative;
 
     &:after {
         font-family: 'FontAwesome';
@@ -28,7 +26,8 @@
         top: 15px;
         display: block;
         transition: transform 300ms;
-
+        transition: all 0.3s ease;
+        transform: scale(0.85);
     }
 
     &.is-open {
@@ -47,7 +46,7 @@
 
 .Collapsible__contentInner {
     padding: 30px;
-    background-color: #282828;
+    background-color: #5A1A1A;
     border-top: 0;
     max-height: 200px;
     width: 800px;

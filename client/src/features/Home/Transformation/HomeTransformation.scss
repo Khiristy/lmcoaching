@@ -2,25 +2,23 @@
 @import "../../../styles/mixins.scss";
 
 
-.transformation_section {
+.transformation {
     width: 1452px;
-    height: 1028px;
+    height: 95vh;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    position: relative;
+
 
     &-layer {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        padding-bottom: 100px;
     }
     &-title {
-        position: absolute;
+        
         @include strong-font2;
-        top: 0;
-        left: 67px;
+
     }
 }
 

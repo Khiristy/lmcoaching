@@ -4,9 +4,9 @@ import "./HomeTransformation.scss";
 
 const TransformationSection = () => {
   return (
-    <section className="transformation_section">
-    <h3 className="transformation_section-title">TRANSFORMATIONS</h3>
-      <div className="transformation_section-layer">
+    <section className="transformation">
+    <h3 className="transformation-title">TRANSFORMATIONS</h3>
+      <div className="transformation-layer">
         <TransformationCard />
         <img src={VersusLogo} alt="" className="versus_logo" />
         <TransformationCard />

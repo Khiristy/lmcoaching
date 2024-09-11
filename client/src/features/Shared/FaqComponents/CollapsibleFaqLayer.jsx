@@ -19,7 +19,7 @@ const CollapsibleFaqLayer = () => {
 
   return (
     <section className="collapsibleFaq-layer">
-      {collapsibles.slice(0, 5).map((faq, index) => ( 
+      {collapsibles.slice(0, 7).map((faq, index) => ( 
         <CollapsibleFaq
           key={index}
           question={faq.question}

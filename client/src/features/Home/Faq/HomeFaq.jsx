@@ -5,13 +5,12 @@ import faqImg from "/media/faq_img.webp";
 const FaqSection = () => {
   return (
     <section className="faq">
-      <h3>FAQ</h3>
       <img src={faqImg} alt="" className="faq_img" />
       <div className="faq_content">
+        <h3>FAQ</h3>
         <div className="faq_content-collapsible">
           <CollapsibleFaq />
         </div>
-
       </div>
     </section>
   );

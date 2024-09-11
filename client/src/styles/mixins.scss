@@ -7,10 +7,12 @@
   font-family: $typo-1;
   font-size: 100px;
 }
+
 @mixin strong-font2 {
   font-family: $typo-1;
   font-size: 70px;
 }
+
 @mixin strong-font3 {
   font-family: $typo-1;
   font-size: 36px;
@@ -27,14 +29,14 @@
 }
 
 @mixin button($bcolor,
-$url,
-$x1,
-$y1,
-$bor,
+  $url,
+  $x1,
+  $y1,
+  $bor,
 ) {
-//  background: $bcolor;
- -webkit-mask: url($url);
- mask: url($url);
- -webkit-mask-size: $x1 $y1;
- mask-size: $x1 $y1;
+  //  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
 }
