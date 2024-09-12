@@ -1,8 +1,8 @@
 import "./Home.scss";
 
-// import { useState, useEffect } from "react";
-import PropTypes from "prop-types"; // Import de PropTypes
-import { useLoading } from "../../features/Hooks/Loader/useLoading";
+import {useState, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { stopLoading } from '../../redux/loadingSlice';
 
 import Header from "../../features/Home/Header/Header";
 import HomeHero from "../../features/Home/Hero/HomeHero";
@@ -14,9 +14,18 @@ import HomeTransformation from "../../features/Home/Transformation/HomeTransform
 import HomeReview from "../../features/Home/Review/HomeReview";
 
 const Home = () => {
-  const isLoading = useLoading();
+  const isLoading = useSelector((state) => state.loading.isLoading);
+  const dispatch = useDispatch();
+  const [startAnimation, setStartAnimation] = useState(false);  // Définir l'état pour l'animation
 
-  console.log("Home - isLoading:", isLoading); // Log pour vérifier la valeur reçue
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      dispatch(stopLoading());
+      setStartAnimation(true);  // Activer l'animation après le chargement
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [dispatch]);
 
   return (
     <div className="home">
@@ -25,7 +34,7 @@ const Home = () => {
       ) : (
         <>
           <h1>Bienvenue sur la page Home</h1>
-          <Header />
+          <Header startAnimation={startAnimation}/>
           <HomeHero />
           <HomePersoCard />
           <HomePricingPlan />
@@ -38,7 +47,5 @@ const Home = () => {
     </div>
   );
 };
-Home.propTypes = {
-  isLoading: PropTypes.bool.isRequired, // isLoading doit être un booléen
-};
+
 export default Home;

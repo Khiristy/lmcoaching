@@ -6,8 +6,9 @@ import Contact from "./pages/Contact/Contact";
 import Faq from "./pages/Faq/Faq";
 import Form from "./pages/Form/Form";
 import { useState, useEffect } from "react";
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import PropTypes from "prop-types";
-import LoadingProvider  from "./features/Utils/contexts/LoadingProvider";
 
 const App = () => {
   const [isFirstMount, setIsFirstMount] = useState(true);
@@ -35,8 +36,9 @@ const App = () => {
   };
 
   return (
-    <LoadingProvider  >
+    <Provider store={store}>
     <AnimatePresence mode="wait">
+      
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
@@ -80,7 +82,7 @@ const App = () => {
         />
       </Routes>
     </AnimatePresence>
-    </ LoadingProvider  >
+    </Provider>
   );
 };
 
