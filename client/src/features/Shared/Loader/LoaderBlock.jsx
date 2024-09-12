@@ -25,9 +25,6 @@ const LoaderBlock = ({ direction, startAnimation, delay = 0 }) => {
     }
   };
 
-  // Ajout d'un log pour vérifier si startAnimation est bien reçu
-  ("startAnimation dans LoaderBlock:", startAnimation);
-
   return (
     <motion.div
       className={`loader-block-${direction}`}

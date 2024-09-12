@@ -1,9 +1,20 @@
 import "./HomeReview.scss";
 import ReviewCard from "../../Shared/ReviewComponents/ReviewCard.jsx";
 
-const ReviewSection = () => {
+import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx";
+import { motion } from "framer-motion";
+
+
+const HomeReview = () => {
+  const { ref, controls } = useScrollAnimation(0.5);
+
   return (
-    <section className="review_section">
+    <motion.section className="section review_section"
+    ref={ref}
+    initial={{ opacity: 0, y: 50 }}
+    animate={controls}
+    transition={{ duration: 0.5 }}
+    >
       <div className="review_section-title">
         <h3>Témoinages de nos clients</h3>
         <p>
@@ -15,8 +26,8 @@ const ReviewSection = () => {
         <ReviewCard />
         <ReviewCard />
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default ReviewSection;
+export default HomeReview;

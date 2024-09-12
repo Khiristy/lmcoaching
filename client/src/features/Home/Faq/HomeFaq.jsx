@@ -2,9 +2,20 @@ import "./HomeFaq.scss";
 import CollapsibleFaq from "../../Shared/FaqComponents/CollapsibleFaqLayer.jsx";
 import faqImg from "/media/faq/faq_img.webp";
 
-const FaqSection = () => {
+import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx";
+import { motion } from "framer-motion";
+
+const HomeFaq = () => {
+  const { ref, controls } = useScrollAnimation(0.5);
+
   return (
-    <section className="faq">
+    <motion.section
+      className="section faq"
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
+      transition={{ duration: 0.5 }}
+    >
       <img src={faqImg} alt="" className="faq_img" />
       <div className="faq_content">
         <h3>FAQ</h3>
@@ -12,8 +23,8 @@ const FaqSection = () => {
           <CollapsibleFaq />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default FaqSection;
+export default HomeFaq;

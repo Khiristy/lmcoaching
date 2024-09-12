@@ -11,5 +11,15 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: auto;
+  scroll-snap-type: y mandatory; /* Active le snapping vertical */
+  overflow-y: scroll; /* Assure un défilement fluide */
 }
 
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start; /* Pour un effet de snapping */
+  scroll-snap-stop: always;
+}

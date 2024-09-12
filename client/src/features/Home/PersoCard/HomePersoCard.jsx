@@ -2,7 +2,11 @@ import "./HomePersoCard.scss";
 import PersoCard from "../../Shared/PersoCardComponents/PersoCard.jsx";
 import { useEffect, useState } from "react";
 
-const PersoCardLayer = () => {
+import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx";
+import { motion } from "framer-motion";
+
+const HomePersoCard = () => {
+  const { ref, controls } = useScrollAnimation(0.5);
   const [persoCards, setPersoCards] = useState([]);
 
   useEffect(() => {
@@ -18,7 +22,13 @@ const PersoCardLayer = () => {
   }, []); // Tableau de dépendances vide pour éviter la boucle infinie
 
   return (
-    <section className="persoCard_content">
+    <motion.section 
+    className="persoCard_content"
+    ref={ref}
+    initial={{ opacity: 0, y: 50 }}
+    animate={controls}
+    transition={{ duration: 0.5 }}
+    >
       <div className="persoCard_text">
         <h2>Bienvenue sur mon site !</h2>
         <p>
@@ -30,7 +40,7 @@ const PersoCardLayer = () => {
           à tous ceux qui souhaitent les découvrir.
         </p>
       </div>
-      <div className="persoCard_layer">
+      <div className="section persoCard_layer">
         {persoCards.map((card, index) => (
           <PersoCard
             key={index}
@@ -38,12 +48,10 @@ const PersoCardLayer = () => {
             icon={card.icon}
             description={card.description}
           />
-        )
-        )
-        }
+        ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default PersoCardLayer;
+export default HomePersoCard;
