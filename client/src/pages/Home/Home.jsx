@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import LoaderLayout from "../../features/Shared/Loader/MainLoader/LoaderLayout";
-import MotionHomeHeader from "../../features/Shared/Loader/MotionHomeHeader";
+import MotionHomeHeader from "../../features/Home/Header/Header";
 import HomeHero from "../../features/Home/Hero/HomeHero";
 import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard";
 import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";

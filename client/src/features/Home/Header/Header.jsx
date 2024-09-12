@@ -2,8 +2,8 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import mainLogo from "/media/main_logo.png";
-import MainBtn from "../Buttons/MainBtn/MainBtn.jsx";
-import "./MotionHomeHeader.scss"; // Vos styles actuels
+import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
+import "./Header.scss"; // Vos styles actuels
 
 const MotionHomeHeader = ({ startAnimation }) => {
   return (
@@ -29,7 +29,10 @@ const MotionHomeHeader = ({ startAnimation }) => {
             pour la prise de masse, la perte de poids, ou le développement de
             tes capacités physiques : force, endurance, et bien plus encore.
           </p>
-          <MainBtn className="mainBtn_motionHeader" text="Réserver maintenant !" />
+          <MainBtn
+            className="mainBtn_motionHeader"
+            text="Réserver maintenant !"
+          />
           <div className="motionHeader_socialLink">
             <a href="">
               <i className="fa fa-facebook fa-4x icon-3d"></i>

@@ -1,0 +1,47 @@
+.loader {
+  position: relative;
+  height: 100vh; // Hauteur pleine
+  width: 100vw;  // Largeur pleine
+  overflow: hidden; // Masquer les débordements
+
+  .loader-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+
+    &-top {
+      top: 0;
+    }
+
+    &-center {
+      top: 0;
+      z-index: 1; // Sous les autres éléments
+    }
+
+    &-bottom {
+      bottom: 0;
+    }
+  }
+
+  // Logo et titre positionnés à gauche, superposés à l'image centrale
+  .loader-content {
+    position: absolute;
+    top: 50%; // Centré verticalement
+    left: 10%; // Positionné sur la gauche
+    transform: translateY(-50%); // Centrage vertical parfait
+    z-index: 2; // Superposé à l'image centrale
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .loader-logo {
+      width: 100px; // Ajuste la taille du logo
+      margin-bottom: 10px;
+    }
+
+    .loader-title {
+      font-size: 24px;
+      color: white;
+    }
+  }
+}

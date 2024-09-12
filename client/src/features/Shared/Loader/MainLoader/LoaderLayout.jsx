@@ -1,80 +1,36 @@
-import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import LoaderBlock from "../LoaderBlock";
-import LoaderImage from "../LoaderImage";
-import LoaderHero from "../LoaderHero";
+import PropTypes from 'prop-types';
 
+const LoaderLayout = ({ isLoading }) => {
+  if (!isLoading) return null; // Si le chargement est terminé, ne rien afficher
 
-import "./LoaderLayout.scss";
-
-const LoaderLayout = ({ startAnimation }) => {
-    const [readyToAnimate, setReadyToAnimate] = useState(false);
-    const [animationEnded, setAnimationEnded] = useState(false); // Nouvel état pour suivre la fin de l'animation
-  
-    useEffect(() => {
-      if (startAnimation) {
-        
-        setTimeout(() => {
-          setReadyToAnimate(true);
-  
-          setTimeout(() => {
-            // Définir la fin de l'animation après le temps géré par LoaderWrapper
-            setAnimationEnded(true);
-          }, 3000); // Le temps ici doit correspondre au temps de LoaderWrapper
-        }, 500); // Ajoute un délai avant que l'animation ne démarre
-      } else {
-        console.log("startAnimation is false, LoaderLayout not starting.");
-      }
-    }, [startAnimation]);
-  
-  
-    return (
-      <div
-        className="loader"
-        style={{ display: animationEnded ? "none" : "block" }} // Appliquer display: none quand l'animation est terminée
-      >
-        <LoaderBlock
-          className="loader-block-left"
-          direction="left"
-          startAnimation={readyToAnimate}
-          delay={0}
-        />
-  
-        <LoaderImage
-          className="loader-image-right"
-          src="/media/loader/loader_img.png"
-          direction="right"
-          startAnimation={readyToAnimate}
-          delay={0}
-        />
-  
-        <LoaderImage
-          className="loader-image-top"
-          src="/media/loader/slide_loader_top.png"
-          direction="top"
-          startAnimation={readyToAnimate}
-          delay={0}
-        />
-  
-        <LoaderImage
-          className="loader-image-bottom"
-          src="/media/loader/slide_loader_bot.png"
-          direction="bottom"
-          startAnimation={readyToAnimate}
-          delay={0}
-        />
-  
-        <LoaderHero
-          className="loader-hero"
-          direction="left"
-          startAnimation={readyToAnimate}
-        />
+  return (
+    <div className="loader">
+      {/* Image du haut */}
+      <div className="loader-image loader-image-top">
+        <img src="/media/top_image.png" alt="Top loader" />
       </div>
-    );
-  };
-  
-  LoaderLayout.propTypes = {
-    startAnimation: PropTypes.bool.isRequired,
-  };
-  
-  export default LoaderLayout;
+
+      {/* Image du milieu */}
+      <div className="loader-image loader-image-center">
+        <img src="/media/center_image.png" alt="Center loader" />
+      </div>
+
+      {/* Image du bas */}
+      <div className="loader-image loader-image-bottom">
+        <img src="/media/bottom_image.png" alt="Bottom loader" />
+      </div>
+
+      {/* Logo et Titre à gauche, superposés à l'image centrale */}
+      <div className="loader-content">
+        <img src="/media/main_logo.png" alt="Logo" className="loader-logo" />
+        <h1 className="loader-title">Mon Site</h1>
+      </div>
+    </div>
+  );
+};
+
+LoaderLayout.propTypes = {
+  isLoading: PropTypes.bool.isRequired, // Le loader est affiché si isLoading est vrai
+};
+
+export default LoaderLayout;
