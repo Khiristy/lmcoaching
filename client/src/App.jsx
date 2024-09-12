@@ -5,7 +5,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Faq from "./pages/Faq/Faq";
 import Form from "./pages/Form/Form";
-import Footer from "./features/Shared/Footer/Footer";
+import Footer from "@shared/Footer/Footer";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
