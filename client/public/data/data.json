@@ -2,17 +2,17 @@
     "persoCards": [
         {
             "title": "Expérience en Basketball",
-            "icon": "/media/basketball_card.png",
+            "icon": "/media/persoCard/basketball_card.png",
             "description": "Par la suite, je me suis tourné vers le basketball, où j'ai joué en tant que meneur pendant plusieurs années. Ce sport m'a inculqué l'importance du travail d'équipe, de l'équité, et du respect des autres. Grâce au basketball, j'ai développé une compréhension plus profonde de la coopération et du leadership sur le terrain."
         },
         {
             "title": "Passion pour la Musculation",
-            "icon": "/media/weight_card.png",
+            "icon": "/media/persoCard/weight_card.png",
             "description": "Cherchant de nouveaux défis, j'ai découvert une véritable passion pour la musculation. Ce sport m'a apporté une transformation physique et mentale significative. Il m'a permis de repousser mes limites, d'adopter une discipline stricte et de cultiver une force intérieure autant qu'extérieure."
         },
         {
             "title": "Succès en Compétition",
-            "icon": "/media/medal_card.png",
+            "icon": "/media/persoCard/medal_card.png",
             "description": "Pour ma première compétition, j'ai concouru dans la catégorie Men's Physique et terminé vice-champion de France, me qualifiant ainsi pour la compétition de Mister Univers (APF-WPF). Cette expérience a marqué le début d'un parcours riche en compétitions et en succès sportifs."
         }
     ],

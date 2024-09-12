@@ -1,5 +1,5 @@
 import TransformationCard from "../../Shared/TransformationComponents/TransformationCard.jsx";
-import VersusLogo from "/media/versus_logo_1.png";
+import VersusLogo from "/media/transformation/versus_logo.jpg";
 import "./HomeTransformation.scss";
 
 const TransformationSection = () => {
@@ -9,7 +9,6 @@ const TransformationSection = () => {
       <div className="transformation-layer">
         <TransformationCard />
         <img src={VersusLogo} alt="" className="versus_logo" />
-        <TransformationCard />
       </div>
     </section>
   );

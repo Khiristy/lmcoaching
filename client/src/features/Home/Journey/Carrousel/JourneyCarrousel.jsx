@@ -13,10 +13,10 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 const JourneyCarrousel = () => {
   const images = [
-    "/media/journey_img-1.webp",
-    "/media/journey_img-2.webp",
-    "/media/journey_img-3.webp",
-    "/media/journey_img-4.webp",
+    "/media/journey/journey_img-1.webp",
+    "/media/journey/journey_img-2.webp",
+    "/media/journey/journey_img-3.webp",
+    "/media/journey/journey_img-4.webp",
   ];
 
   return (

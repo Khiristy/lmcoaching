@@ -1,7 +1,7 @@
 import "./TransitionPricing.scss";
 import { motion } from "framer-motion";
 
-import transistionImg from "/media/transition_pricing.webp";
+import transistionImg from "/media/transition/transition_pricing.webp";
 
 
 

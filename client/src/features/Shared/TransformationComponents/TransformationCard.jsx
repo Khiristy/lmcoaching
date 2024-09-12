@@ -1,9 +1,13 @@
 import "./TransformationCard.scss";
-import TransformationCardTest from "/media/transformation_card_test.png";
+import TransformationCardBronze from "/media/transformation/transformation_card-bronze.png";
+import TransformationCardSilver from "/media/transformation/transformation_card-silver.png";
 
 const TransformationCard = () => {
   return (
-    <img src={TransformationCardTest} alt="" className="transformation_card-img" />
+    <div>
+    <img src={TransformationCardBronze} alt="" className="transformation_card-img" />
+    <img src={TransformationCardSilver} alt="" className="transformation_card-img" />
+    </div>
   );
 };
 

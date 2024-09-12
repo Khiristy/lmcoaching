@@ -7,16 +7,15 @@
     height: 95vh;
     margin: auto;
 
-
     &-layer {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding-bottom: 100px;
+
     }
     &-title {
-        
+        padding-bottom: 40px;
         @include strong-font2;
 
     }

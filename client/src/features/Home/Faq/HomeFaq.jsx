@@ -1,6 +1,6 @@
 import "./HomeFaq.scss";
 import CollapsibleFaq from "../../Shared/FaqComponents/CollapsibleFaqLayer.jsx";
-import faqImg from "/media/faq_img.webp";
+import faqImg from "/media/faq/faq_img.webp";
 
 const FaqSection = () => {
   return (

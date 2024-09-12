@@ -42,7 +42,7 @@ const LoaderLayout = ({ startAnimation }) => {
   
         <LoaderImage
           className="loader-image-right"
-          src="/media/loader_img.png"
+          src="/media/loader/loader_img.png"
           direction="right"
           startAnimation={readyToAnimate}
           delay={0}
@@ -50,7 +50,7 @@ const LoaderLayout = ({ startAnimation }) => {
   
         <LoaderImage
           className="loader-image-top"
-          src="/media/slide_loader_top.png"
+          src="/media/loader/slide_loader_top.png"
           direction="top"
           startAnimation={readyToAnimate}
           delay={0}
@@ -58,7 +58,7 @@ const LoaderLayout = ({ startAnimation }) => {
   
         <LoaderImage
           className="loader-image-bottom"
-          src="/media/slide_loader_bot.png"
+          src="/media/loader/slide_loader_bot.png"
           direction="bottom"
           startAnimation={readyToAnimate}
           delay={0}
