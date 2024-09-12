@@ -1,5 +1,5 @@
 import "./HomeReview.scss";
-import ReviewCard from "../../Shared/ReviewComponents/ReviewCard.jsx";
+import ReviewCard from "../../Shared/Components/Review/ReviewCard.jsx";
 
 import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx";
 import { motion } from "framer-motion";

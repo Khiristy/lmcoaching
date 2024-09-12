@@ -1,5 +1,5 @@
 import "./HomePricingPlan.scss";
-import PriceCardLayer from "../../Shared/PriceCardComponents/PriceCardContainer.jsx";
+import PriceCardLayer from "../../Shared/Components/PriceCard/PriceCardContainer.jsx";
 import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
 import Transition from "../../Form/TransitionPricing/TransitionPricing.jsx";
 

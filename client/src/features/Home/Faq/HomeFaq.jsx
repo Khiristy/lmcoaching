@@ -1,5 +1,5 @@
 import "./HomeFaq.scss";
-import CollapsibleFaq from "../../Shared/FaqComponents/CollapsibleFaqLayer.jsx";
+import CollapsibleFaq from "../../Shared/Components/Faq/CollapsibleFaqLayer.jsx";
 import faqImg from "/media/faq/faq_img.webp";
 
 import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx";

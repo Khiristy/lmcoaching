@@ -1,9 +1,9 @@
 import "./PriceCard.scss";
-import PriceBtn from "../Buttons/PriceBtn/PriceBtn.jsx";
+import PriceBtn from "../../Buttons/PriceBtn/PriceBtn.jsx";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
-import Transition from "../../Form/TransitionPricing/TransitionPricing.jsx";
+import Transition from "../../../Form/TransitionPricing/TransitionPricing.jsx";
 
 const PriceCard = ({ type, description, price, details, note }) => {
   return (

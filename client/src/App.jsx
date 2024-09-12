@@ -5,16 +5,16 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Faq from "./pages/Faq/Faq";
 import Form from "./pages/Form/Form";
-import Footer from "@shared/Footer/Footer";
+import Footer from "@shared/Footer/Footer.jsx";
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const App = () => {
   const [isFirstMount, setIsFirstMount] = useState(true);
-  const location = useLocation();  // Just use useLocation for the current path
+  const location = useLocation(); // Just use useLocation for the current path
 
   useEffect(() => {
-    setIsFirstMount(false);  // Update the state as needed without listen
+    setIsFirstMount(false); // Update the state as needed without listen
   }, []);
 
   const PageWrapper = ({ children }) => {
@@ -42,7 +42,7 @@ const App = () => {
       </motion.div>
     );
   };
-  
+
   PageWrapper.propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -53,12 +53,44 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route
             path="/"
-            element={<PageWrapper><Home isFirstMount={isFirstMount} /></PageWrapper>}
+            element={
+              <PageWrapper>
+                <Home isFirstMount={isFirstMount} />
+              </PageWrapper>
+            }
           />
-          <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-          <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-          <Route path="/faq" element={<PageWrapper><Faq /></PageWrapper>} />
-          <Route path="/form" element={<PageWrapper><Form /></PageWrapper>} />
+          <Route
+            path="/about"
+            element={
+              <PageWrapper>
+                <About />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <PageWrapper>
+                <Contact />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/faq"
+            element={
+              <PageWrapper>
+                <Faq />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/form"
+            element={
+              <PageWrapper>
+                <Form />
+              </PageWrapper>
+            }
+          />
         </Routes>
       </AnimatePresence>
       <AnimatedFooter />

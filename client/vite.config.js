@@ -1,31 +1,34 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 import viteSass from 'vite-plugin-sass';
-import path from 'path';
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), viteSass()],
+
+  plugins: [
+    react(),
+    viteSass()
+  ],
+
   css: {
     modules: {
-      scopeBehaviour: 'global',
+      scopeBehaviour: 'global', // Utilisez "global" si vous ne voulez pas de CSS Modules
+    },
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/styles/variables.scss";`
+      }
+    }
     },
 
-  },
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-      '@features': path.resolve(new URL('./src/features', import.meta.url).pathname),
-      '@home': path.resolve(new URL('./src/features/Home', import.meta.url).pathname),
-      '@shared': path.resolve(new URL('./src/features/Shared', import.meta.url).pathname),
-      '@hooks': path.resolve(new URL('./src/hooks', import.meta.url).pathname),
-      '@utils': path.resolve(new URL('./src/utils', import.meta.url).pathname),
-    },
   },
+
   server: {
     mimeTypes: {
       '.jsx': 'application/javascript',
     },
-    allowedHosts: ['.localhost'],
+    allowedHosts: [".localhost"],
     host: true,
     port: 3000,
     proxy: {

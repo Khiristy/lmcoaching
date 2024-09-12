@@ -1,55 +1,46 @@
 import { useState, useEffect } from "react";
-
-import LoaderLayout from "../../features/Shared/Loader/MainLoader/LoaderLayout.jsx";
-import MotionHomeHeader from "../../features/Shared/Loader/MotionHomeHeader.jsx";
-
-import HomeHero from "../../features/Home/Hero/HomeHero.jsx";
-import HomeJourney from "../../features/Home/Journey/HomeJourney.jsx";
-import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard.jsx";
-import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan.jsx";
-import HomeTransformation from "../../features/Home/Transformation/HomeTransformation.jsx";
-import HomeFaq from "../../features/Home/Faq/HomeFaq.jsx";
-import HomeReview from "../../features/Home/Review/HomeReview.jsx";
-
+import LoaderLayout from "../../features/Shared/Loader/MainLoader/LoaderLayout";
+import MotionHomeHeader from "../../features/Shared/Loader/MotionHomeHeader";
+import HomeHero from "../../features/Home/Hero/HomeHero";
+import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard";
+import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";
+import HomeJourney from "../../features/Home/Journey/HomeJourney";
+import HomeFaq from "../../features/Home/Faq/HomeFaq";
+import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
+import HomeReview from "../../features/Home/Review/HomeReview";
 import "./Home.scss";
-// import { motion } from 'framer-motion';
 
 const Home = () => {
-  const [startAnimation, setStartAnimation] = useState(false); // Déclarez un état pour l'animation
-  const [loading, setLoading] = useState(true); // Déclarez un état pour le chargement
+  const [startAnimation, setStartAnimation] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulez un délai avant que l'animation du Loader ne soit terminée
+    // Simule un délai avant l'animation du Loader
     setTimeout(() => {
-      setStartAnimation(true); // Déclencher l'animation
+      setStartAnimation(true);
       setTimeout(() => {
-        setLoading(false); // Arrêtez le Loader et affichez le contenu
-      }, 2900); // Délai de l'animation du Loader (modifiable)
-    }); // Délai initial avant le début de l'animation
+        setLoading(false);
+      }, 2000); // Délai modifiable
+    }, []);
   }, []);
 
   return (
     <div className="home">
       {loading ? (
-        // Affichez LoaderLayout tant que loading est true
+        // Affiche Loader tant que loading est true
         <LoaderLayout startAnimation={startAnimation} />
       ) : (
-        // Affichez les autres composants une fois le chargement terminé
+        // Affiche les autres composants après le chargement
         <>
           <MotionHomeHeader startAnimation={true} />
-
-          <HomeHero />
-
-          <HomePersoCard />
-
+          <HomeHero>
+            <h1>Home</h1>
+          </HomeHero>
+          <HomePersoCard></HomePersoCard>
           <HomePricingPlan />
-
           <HomeJourney />
-
           <HomeFaq />
-
           <HomeTransformation />
-
           <HomeReview />
         </>
       )}

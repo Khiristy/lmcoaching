@@ -1,5 +1,5 @@
 import "./HomeTransformation.scss";
-import TransformationCard from "../../Shared/TransformationComponents/TransformationCard.jsx";
+import TransformationCard from "../../Shared/Components/Transformation/TransformationCard.jsx";
 import VersusLogo from "/media/transformation/versus_logo.jpg";
 
 import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx";
