@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PersoCard from '../Shared/PersoCardComponents/PersoCard';
+import PersoCard from '../../Shared/Components/PersoCard/PersoCard';
 
 const PersoCardList = () => {
   const [persoCards, setPersoCards] = useState([]);

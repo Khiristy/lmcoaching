@@ -1,24 +1,24 @@
-// import { useAnimation } from 'framer-motion';
-// import { useEffect } from 'react';
+import { useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 
-// const useFade = (initialOpacity = 0, finalOpacity = 1, duration = 1) => {
-//   const controls = useAnimation();
+const useFade = (initialOpacity = 0, finalOpacity = 1, duration = 1) => {
+  const controls = useAnimation();
 
-//   useEffect(() => {
-//     controls.start({
-//       opacity: finalOpacity,
-//       transition: { duration }
-//     });
+  useEffect(() => {
+    controls.start({
+      opacity: [initialOpacity, finalOpacity],
+      transition: { duration }
+    });
 
-//     return () => {
-//       controls.stop();
-//     };
-//   }, [controls, finalOpacity, duration]);
+    return () => {
+      controls.stop();
+    };
+  }, [controls, initialOpacity, finalOpacity, duration]);
 
-//   return controls;
-// };
+  return controls;
+};
 
-// export default useFade;
+export default useFade;
 
 // import { motion } from 'framer-motion';
 // import useFade from './useFade';
