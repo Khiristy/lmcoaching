@@ -34,10 +34,10 @@ const Home = () => {
         <>
           <MotionHomeHeader startAnimation={true} />
           <HomeHero>
-            <div>Home</div>
+            
           </HomeHero>
           <HomePersoCard>
-          <h1>qvvqvqscv</h1>
+          
           </HomePersoCard>
           <HomePricingPlan />
           <HomeJourney />

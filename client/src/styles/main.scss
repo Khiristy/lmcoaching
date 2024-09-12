@@ -15,12 +15,8 @@ body {
   overflow-y: scroll; /* Assure un défilement fluide */
 }
 
-.section {
+.hero_layer {
+  width: 100%;
   height: 100vh;
-  background-color: aqua;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // scroll-snap-align: start; /* Pour un effet de snapping */
-  // scroll-snap-stop: always;
+  background-color: pink;
 }

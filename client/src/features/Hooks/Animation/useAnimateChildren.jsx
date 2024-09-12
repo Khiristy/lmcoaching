@@ -1,7 +1,12 @@
-import { useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import { useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
-const useAnimateChildren = (inView, initial = { opacity: 0, y: 50 }, animateTo = { opacity: 1, y: 0 }, transition = { duration: 1 }) => {
+const useAnimateChildren = (
+  inView,
+  initial = { opacity: 0, y: 50 },
+  animateTo = { opacity: 1, y: 0 },
+  transition = { duration: 1 }
+) => {
   const controls = useAnimation();
 
   useEffect(() => {

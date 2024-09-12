@@ -17,15 +17,17 @@ const HomeHero = ({ children }) => {
 
   return (
     <motion.section
-      className="section hero"
+      className="hero hero_layer"
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={controls} // Utilisation de controls retourné par useFade
       transition={{ duration: 0.5 }}
     >
-      <div className="right_side-container">
-        <div className="hero_img-bckgrd"></div>
-        <img src={heroImg} alt="hero" className="hero_img" />
+      <div className="hero_container">
+        <div className="right_side-container">
+          <div className="hero_img-bckgrd"></div>
+          <img src={heroImg} alt="hero" className="hero_img" />
+        </div>
       </div>
       <motion.div
         initial={{ opacity: 1, y: 50 }}

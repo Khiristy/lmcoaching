@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import PriceCard from './PriceCard.jsx';
 import "./PriceCardContainer.scss";
 
-const PriceCardLayer = () => {
+const PriceCardContainer = () => {
   const [priceCards, setPriceCards] = useState([]);
 
   useEffect(() => {
@@ -33,4 +33,4 @@ const PriceCardLayer = () => {
   );
 };
 
-export default PriceCardLayer;
+export default PriceCardContainer;
