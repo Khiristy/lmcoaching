@@ -1,25 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const useLoader = (minLoadTime = 5000) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true); // Par défaut, le chargement commence à true
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
-      setIsPageLoaded(true);
+      setIsPageLoaded(true);  // La page est maintenant chargée
     };
 
-    // Écouter l'événement de chargement de la page
     window.addEventListener('load', handleLoad);
 
-    // Timer pour s'assurer que le loader est affiché pendant un minimum de 5 secondes
     const timer = setTimeout(() => {
-      setIsLoading(false);
+      setIsLoading(false);  // Après le délai minimum, le chargement est terminé
     }, minLoadTime);
 
     return () => {
       window.removeEventListener('load', handleLoad);
-      clearTimeout(timer);
+      clearTimeout(timer); // Nettoyage du timer
     };
   }, [minLoadTime]);
 

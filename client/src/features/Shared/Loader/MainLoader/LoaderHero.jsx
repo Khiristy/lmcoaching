@@ -1,8 +1,8 @@
-import HomeHero from "../../Home/Hero/HomeHero";
+import HomeHero from "../../../Home/Hero/HomeHero";
 import { forwardRef } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import useMotionHeader from "../../Hooks/Animation/useMotionHeader"; // Le hook que nous venons de créer
+import useMotionHeader from "../../../Hooks/Animation/useMotionHeader"; // Le hook que nous venons de créer
 
 const LoaderHero = forwardRef(
   ({ children, direction, startAnimation }, ref) => {

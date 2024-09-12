@@ -1,15 +1,20 @@
 import LoaderLayout from './LoaderLayout';
-import Home from './Home'; // Composant de la page principale
-import useLoader from './hooks/useLoader'; // Import du hook personnalisé
+import Home from './Home';
+import { useLoading } from '../../../Utils/contexts/LoadingProvider'; 
 
 const LoaderWrapper = () => {
-  const { isLoading, isPageLoaded } = useLoader(50000); // 5 secondes minimum pour le loader
+  const isLoading  = useLoading(); // 5 secondes minimum pour le loader
+
+  console.log("LoaderWrapper - isLoading:", isLoading); // Log pour vérifier isLoading
 
   return (
-    <>
-      <LoaderLayout isLoading={isLoading || !isPageLoaded} />
-      {!isLoading && isPageLoaded && <Home />} 
-    </>
+      <>
+          {isLoading  ? (
+              <LoaderLayout isLoading={isLoading} /> // Transmettre isLoading à LoaderLayout
+          ) : (
+              <Home isLoading={isLoading} /> // Transmettre isLoading à Home
+          )}
+      </>
   );
 };
 

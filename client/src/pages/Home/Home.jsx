@@ -1,6 +1,10 @@
-import { useState, useEffect } from "react";
-import LoaderLayout from "../../features/Shared/Loader/MainLoader/LoaderLayout";
-import MotionHomeHeader from "../../features/Home/Header/Header";
+import "./Home.scss";
+
+// import { useState, useEffect } from "react";
+import PropTypes from "prop-types"; // Import de PropTypes
+import { useLoading } from "../../features/Hooks/Loader/useLoading";
+
+import Header from "../../features/Home/Header/Header";
 import HomeHero from "../../features/Home/Hero/HomeHero";
 import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard";
 import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";
@@ -8,37 +12,22 @@ import HomeJourney from "../../features/Home/Journey/HomeJourney";
 import HomeFaq from "../../features/Home/Faq/HomeFAQ";
 import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
 import HomeReview from "../../features/Home/Review/HomeReview";
-import "./Home.scss";
 
 const Home = () => {
-  const [startAnimation, setStartAnimation] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const isLoading = useLoading();
 
-  useEffect(() => {
-    // Simule un délai avant l'animation du Loader
-    setTimeout(() => {
-      setStartAnimation(true);
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000); // Délai modifiable
-    }, []);
-  }, []);
+  console.log("Home - isLoading:", isLoading); // Log pour vérifier la valeur reçue
 
   return (
     <div className="home">
-      {loading ? (
-        // Affiche Loader tant que loading est true
-        <LoaderLayout startAnimation={startAnimation} />
+      {isLoading ? (
+        "Chargement..." // Afficher un message de chargement
       ) : (
-        // Affiche les autres composants après le chargement
         <>
-          <MotionHomeHeader startAnimation={true} />
-          <HomeHero>
-            
-          </HomeHero>
-          <HomePersoCard>
-          
-          </HomePersoCard>
+          <h1>Bienvenue sur la page Home</h1>
+          <Header />
+          <HomeHero />
+          <HomePersoCard />
           <HomePricingPlan />
           <HomeJourney />
           <HomeFaq />
@@ -49,5 +38,7 @@ const Home = () => {
     </div>
   );
 };
-
+Home.propTypes = {
+  isLoading: PropTypes.bool.isRequired, // isLoading doit être un booléen
+};
 export default Home;

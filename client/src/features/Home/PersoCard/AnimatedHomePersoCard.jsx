@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { forwardRef } from "react";
 
 const AnimatedHomePersoCard = forwardRef(({ children, controls }, ref) => {
-    console.log("Ref dans AnimatedHomePersoCard:", ref);
-    console.log("Controls dans AnimatedHomePersoCard:", controls);
+
 
     return (
         <motion.section

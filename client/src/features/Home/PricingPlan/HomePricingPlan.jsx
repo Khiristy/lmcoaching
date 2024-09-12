@@ -14,9 +14,6 @@ const HomePricingPlan = () => {
     // Utilisation du hook pour l'animation des enfants
     const { controls: childrenControls, transition: childrenTransition } = useAnimateChildren(true);
 
-    console.log("Section Controls:", sectionControls);
-    console.log("Children Controls:", childrenControls);
-    console.log("Children Transition:", childrenTransition);
 
     return (
         <motion.section
