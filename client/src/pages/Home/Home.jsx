@@ -5,7 +5,7 @@ import HomeHero from "../../features/Home/Hero/HomeHero";
 import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard";
 import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";
 import HomeJourney from "../../features/Home/Journey/HomeJourney";
-import HomeFaq from "../../features/Home/Faq/HomeFaq";
+import HomeFaq from "../../features/Home/Faq/HomeFAQ";
 import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
 import HomeReview from "../../features/Home/Review/HomeReview";
 import "./Home.scss";

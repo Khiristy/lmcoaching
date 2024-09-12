@@ -2,39 +2,42 @@ import "./HomeHero.scss";
 import { motion } from "framer-motion";
 import heroImg from "/media/homeHero/hero_img.webp";
 import PropTypes from "prop-types";
-import useFade from "../../Hooks/Animation/useFade";
-import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren";
+import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Animation des enfants
 import { useRef } from "react";
 
 const HomeHero = ({ children }) => {
   const ref = useRef(null);
-  const controls = useFade(0, 1, 0.5); // Utilisation de useFade
-  const childrenControls = useAnimateChildren(); // Utilisation actuelle non modifiée
-
-  console.log("ref:", ref.current);
-  console.log("controls (useFade):", controls);
-  console.log("childrenControls:", childrenControls);
+  // Suppression de l'utilisation de useFade
+  const { childrenControls, transition: childrenTransition } =
+    useAnimateChildren(true);
 
   return (
     <motion.section
       className="hero hero_layer"
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={controls} // Utilisation de controls retourné par useFade
+      initial={{ opacity: 1, y: 0 }} // Retrait du translateY
+      animate={childrenControls}
       transition={{ duration: 0.5 }}
     >
       <div className="hero_container">
-        <div className="right_side-container">
-          <div className="hero_img-bckgrd"></div>
-          <img src={heroImg} alt="hero" className="hero_img" />
-        </div>
+       
+        <motion.img
+          src={heroImg}
+          alt="hero"
+          className="hero_container-img"
+          initial={{ opacity: 1, y: 0 }} // Retrait du translateY
+          animate={childrenControls}
+          transition={childrenTransition}
+        />
+         <div className="hero_container-img--bckgrd"></div>
       </div>
+
       <motion.div
-        initial={{ opacity: 1, y: 50 }}
-        animate={childrenControls.controls}
-        transition={childrenControls.transition}
+        initial={{ opacity: 1, y: 0 }} // Retrait du translateY
+        animate={childrenControls}
+        transition={childrenTransition}
       >
-        {children || <div>Default content</div>}
+        {children}
       </motion.div>
     </motion.section>
   );

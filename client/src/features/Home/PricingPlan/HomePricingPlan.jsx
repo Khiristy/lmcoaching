@@ -1,7 +1,7 @@
 import "./HomePricingPlan.scss";
 import { motion } from "framer-motion";
-import PriceCardLayer from "../Shared/Components/PriceCard/PriceCardContainer.jsx";
-import MainBtn from "../Shared/Buttons/MainBtn/MainBtn.jsx";
+import PriceCardContainer from "../../Shared/Components/PriceCard/PriceCardContainer.jsx";
+import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
 import Transition from "../../Form/TransitionPricing/TransitionPricing.jsx";
 import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation"; // Import du hook d'animation au scroll
 import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Import du hook pour les enfants animés
@@ -36,7 +36,7 @@ const HomePricingPlan = () => {
 
             {/* Section animée pour les cartes */}
             <AnimatedChildren controls={childrenControls} transition={childrenTransition}>
-                <PriceCardLayer />
+                <PriceCardContainer />
             </AnimatedChildren>
         </motion.section>
     );

@@ -1,30 +1,44 @@
-import "./HomeFaq.scss";
-import CollapsibleFaq from "../../Shared/Components/Faq/CollapsibleFaqLayer.jsx";
-import faqImg from "/media/faq/faq_img.webp";
-
-import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx";
+import "./HomeFAQ.scss";
+import FAQItems from "../../Shared/Components/Faq/FAQItems"; // Import du nouveau composant FAQItems
+import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation"; // Import du hook d'animation au scroll
+import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Import du hook pour les enfants animés
+import AnimatedChildren from "../../Shared/Animation/AnimatedChildren"; // Import du composant AnimatedChildren
 import { motion } from "framer-motion";
 
-const HomeFaq = () => {
-  const { ref, controls } = useScrollAnimation(0.5);
+const HomeFAQ = () => {
+  // Utilisation du hook pour l'animation principale de la section
+  const { ref, controls: sectionControls } = useScrollAnimation(0.5);
+
+  // Utilisation du hook pour l'animation des enfants
+  const { controls: childrenControls, transition: childrenTransition } =
+    useAnimateChildren(true);
+
+  console.log("Section Controls:", sectionControls);
+  console.log("Children Controls:", childrenControls);
+  console.log("Children Transition:", childrenTransition);
 
   return (
     <motion.section
       className="section faq"
-      ref={ref}
+      ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
       initial={{ opacity: 0, y: 50 }}
-      animate={controls}
+      animate={sectionControls}
       transition={{ duration: 0.5 }}
     >
-      <img src={faqImg} alt="" className="faq_img" />
       <div className="faq_content">
-        <h3>FAQ</h3>
-        <div className="faq_content-collapsible">
-          <CollapsibleFaq />
-        </div>
+        <h3>Questions Fréquentes</h3>
+        <p>Retrouvez ici les réponses aux questions les plus posées.</p>
+
+        {/* Section animée pour les questions/réponses */}
+        <AnimatedChildren
+          controls={childrenControls}
+          transition={childrenTransition}
+        >
+          <FAQItems />
+        </AnimatedChildren>
       </div>
     </motion.section>
   );
 };
 
-export default HomeFaq;
+export default HomeFAQ;

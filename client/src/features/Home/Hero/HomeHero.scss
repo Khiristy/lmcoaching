@@ -10,28 +10,30 @@
     height: 100%;
     margin: auto;
     background-color: #1E1E1E;
-    border-radius: 20px;
-    position: relative;
 
-}
+    &_container {
+        width: 1600px;
+        height: 95vh;
+        background-color: black;
+        margin: auto;
+        &-img {
+            
+            width: 100%;
+            
+            z-index: 1;
+        
+            border-radius: 20px;
 
-.hero_img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    border-radius: 20px;
-
-    &-bckgrd {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        border-radius: 20px;
-        background-image: linear-gradient(270deg, rgba(30, 30, 30, 0) 39.35%, #1E1E1E 100%);
+            &-bckgrd {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                border-radius: 20px;
+                background-image: linear-gradient(270deg, rgba(30, 30, 30, 0) 39.35%, #1E1E1E 100%);
+            }
+        }
     }
 }
