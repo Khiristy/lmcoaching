@@ -15,6 +15,7 @@ const HomePersoCard = () => {
 
   return (
       <AnimatedHomePersoCard ref={ref} controls={sectionControls}>
+        <div className="persoCard_container">
           <div className="persoCard_text">
               <h2 className="persoCard_title">Bienvenue sur mon site !</h2>
               <p className="persoCard_description">
@@ -30,6 +31,7 @@ const HomePersoCard = () => {
           >
               <PersoCardList />
           </AnimatedChildren>
+          </div>
       </AnimatedHomePersoCard>
   );
 };

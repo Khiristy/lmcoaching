@@ -4,7 +4,7 @@
 
 
 
-.review_section {
+.review {
     width: 1320px;
     max-height: 691px;
     margin: auto;
@@ -29,7 +29,7 @@
 
         }
     }
-    &-card_pos {
+    &_card_pos {
         display: flex;
         justify-content: center;
         gap: 100px;

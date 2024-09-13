@@ -7,9 +7,9 @@ const AnimatedHomePersoCard = forwardRef(({ children, controls }, ref) => {
 
     return (
         <motion.section
-            className="section persoCard_content animated-home-persocard"
+            className="persoCard_layer persoCard_content animated-home-persocard"
             ref={ref} // Correctement utilisé ici avec forwardRef
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 0}}
             animate={controls}
             transition={{ duration: 0.5 }}
         >
@@ -26,3 +26,4 @@ AnimatedHomePersoCard.propTypes = {
 };
 
 export default AnimatedHomePersoCard;
+// 

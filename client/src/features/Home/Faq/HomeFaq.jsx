@@ -4,6 +4,7 @@ import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation"; // Im
 import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Import du hook pour les enfants animés
 import AnimatedChildren from "../../Shared/Animation/AnimatedChildren"; // Import du composant AnimatedChildren
 import { motion } from "framer-motion";
+import faqImg from "/media/faq/faq_img.webp"
 
 const HomeFAQ = () => {
   // Utilisation du hook pour l'animation principale de la section
@@ -15,7 +16,7 @@ const HomeFAQ = () => {
 
   return (
     <motion.section
-      className="section faq"
+      className="faq faq_layer"
       ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
       initial={{ opacity: 0, y: 50 }}
       animate={sectionControls}
@@ -24,8 +25,7 @@ const HomeFAQ = () => {
       <div className="faq_content">
         <h3>Questions Fréquentes</h3>
         <p>Retrouvez ici les réponses aux questions les plus posées.</p>
-
-        {/* Section animée pour les questions/réponses */}
+        <img src={faqImg} alt="" className="faq_img" />
         <AnimatedChildren
           controls={childrenControls}
           transition={childrenTransition}

@@ -12,7 +12,7 @@ const PersoCardList = () => {
   }, []);
 
   return (
-    <div className="persoCard-list">
+    <div className="persoCard_list">
       {persoCards.map((card, index) => (
         <PersoCard
           key={index}

@@ -1,4 +1,5 @@
 import "./HomeJourney.scss";
+
 import JourneyCarrousel from "./Carrousel/JourneyCarrousel";
 import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation"; // Import du hook d'animation au scroll
 import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Import du hook pour les enfants animés
@@ -15,7 +16,7 @@ const HomeJourney = () => {
 
     return (
         <motion.section
-            className="section journey"
+            className="journey journey_layer"
             ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
             initial={{ opacity: 0, y: 50 }}
             animate={sectionControls}

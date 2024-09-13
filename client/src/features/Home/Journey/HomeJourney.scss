@@ -5,7 +5,7 @@
 
 .journey {
     width: 95%;
-    min-height: 1000px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,24 +20,24 @@
 
     &_content {
         margin: auto;
-        width: 1200px;
+        width:100%;
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 25px;
-        margin-bottom: 30px;
+  
 
 
         & h3 {
-            margin-top: 120px;
+            margin-top: 20px;
             @include strong-font2;
             text-align: center;
 
         }
 
         & p {
-            margin-top: 10px;
+            
             font-size: 24px;
             font-weight: 500;
             line-height: 28px;

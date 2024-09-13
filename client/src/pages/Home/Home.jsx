@@ -33,7 +33,6 @@ const Home = () => {
         "Chargement..." // Afficher un message de chargement
       ) : (
         <>
-          <h1>Bienvenue sur la page Home</h1>
           <Header startAnimation={startAnimation}/>
           <HomeHero />
           <HomePersoCard />

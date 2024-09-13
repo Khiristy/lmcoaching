@@ -14,13 +14,13 @@ const HomeReview = () => {
 
     return (
         <motion.section
-            className="section review_section"
+            className="review review_layer"
             ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
             initial={{ opacity: 0, y: 50 }}
             animate={sectionControls}
             transition={{ duration: 0.5 }}
         >
-            <div className="review_section-title">
+            <div className="review_-title">
                 <h3>Témoignages de nos clients</h3>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -30,7 +30,7 @@ const HomeReview = () => {
 
             {/* Section animée pour les cartes de témoignages */}
             <AnimatedChildren controls={childrenControls} transition={childrenTransition}>
-                <div className="review_section-card_pos">
+                <div className="review_card_pos">
                     <ReviewCard />
                     <ReviewCard />
                 </div>

@@ -2,38 +2,42 @@
 @import "../../../styles/mixins.scss";
 
 
-.pricing_plan_section {
-    width: 1600px;
-    min-height: 700px;
-    max-height: 95vh;
-
-    border: 1px solid #FFFFFF1A;
-    border-radius: 20px;
-    background-color: #1E1E1E;
+.pricingPlan {
+    height: 100vh;
+    width: 100%;
+    background-color: green; // Pour tester si les styles s'appliquent bien
     margin: auto;
-    display: flex;
-    gap: 40px;
-    padding: 65px;
-    justify-content: center;
 
-    &-left {
+    &_container {
+        margin-top: 25px;
+        width: 1600px;
+        padding: 55px;
+        max-height: 95vh;
+        border: 1px solid #FFFFFF1A;
+        border-radius: 20px;
+        background-color: #1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    &_left {
         margin-right: 50px;
-        width: 383px;
+        width: 370px;
 
-        h3 {
+        &-title {
             margin-top: 15px;
             @include strong-font2;
             margin-bottom: 45px;
         }
 
-        h4 {
-
-            font-size: 18px;
+        &-txt {
+          font-size: 18px;
             font-weight: 400;
             line-height: 28px;
             text-align: left;
-            margin-bottom: 75px;
-
+            margin-bottom: 145px;
         }
     }
 }

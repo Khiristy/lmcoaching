@@ -15,7 +15,7 @@ const HomeTransformation = () => {
 
     return (
         <motion.section
-            className="section transformation"
+            className="transformation transformation_layer"
             ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
             initial={{ opacity: 0, y: 50 }}
             animate={sectionControls}
