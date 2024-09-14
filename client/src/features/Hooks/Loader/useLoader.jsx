@@ -1,3 +1,3 @@
 import { useContext } from "react";
-import { LoaderContext } from "../../Utils/contexts/LoadingProvider";
+import { LoaderContext } from "../../Shared/Utils/contexts/LoadingProvider";
 export const useLoader = () => useContext(LoaderContext);

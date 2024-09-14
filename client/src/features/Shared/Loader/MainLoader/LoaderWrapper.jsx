@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useLoader from "../../../Hooks/Loader/useLoader";  // Utilise ton hook personnalisé
+import {useLoader} from "../../../Hooks/Loader/useLoader";  // Utilise ton hook personnalisé
 import LoaderLayout from "../MainLoader/LoaderLayout";
 import Header from "../../../Home/Header/Header";
 import Home from "../../../../pages/Home/Home";  // Assure-toi que l'import du composant Home est correct
