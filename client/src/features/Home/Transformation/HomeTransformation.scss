@@ -1,11 +1,10 @@
-
 @import "../../../styles/mixins.scss";
 
 
 .transformation {
- 
 
-    
+
+
     width: 100%;
 
     &-container {
@@ -17,6 +16,7 @@
         justify-content: center;
 
     }
+
     &-title {
         padding-bottom: 40px;
         @include strong-font2;
@@ -25,6 +25,6 @@
 }
 
 .versus_logo {
-    width: 200px;
+    width: 150px;
     height: 230px;
 }

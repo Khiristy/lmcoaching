@@ -1,8 +1,8 @@
 import "./TransformationCard.scss";
 // import TransformationCardBronze from "/media/transformation/transformation_card-bronze.png";
-import TransformationCardSilver from "/media/transformation/transformation_card-diamond.png";
+import TransformationCardSilver from "/media/transformation/transformation_card-diamond-test.png";
 import TransformationCardSMaster from "/media/transformation/transformation_card-master.png";
-import VersusLogo from "/media/transformation/versus_logo.jpg"; // Logo Versus
+import VersusLogo from "/media/transformation/versus_logo.png"; // Logo Versus
 
 const TransformationCard = () => {
   return (

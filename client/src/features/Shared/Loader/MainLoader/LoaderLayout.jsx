@@ -1,25 +1,23 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const LoaderLayout = ({ isLoading }) => {
-  console.log('LoaderLayout - isLoading:', isLoading);
+const LoaderLayout = ({ isLoading = false }) => {
+  console.log("LoaderLayout - isLoading:", isLoading);
 
   if (!isLoading) return null;
 
   return (
     <div className="loader">
-      {/* Images du loader */}
-      <div className="loader-image loader-image-top">
+      <div className="loader-image-top">
         <img src="/media/top_image.png" alt="Top loader" />
       </div>
-      <div className="loader-image loader-image-center">
+      <div className="loader-image-center">
         <img src="/media/center_image.png" alt="Center loader" />
       </div>
-      <div className="loader-image loader-image-bottom">
+      <div className="loader-image-bottom">
         <img src="/media/bottom_image.png" alt="Bottom loader" />
       </div>
-      {/* Logo et titre */}
       <div className="loader-content">
-        <img src="/media/main_logo.png" alt="Logo" className="loader-logo" />
+        <img src="/media/main_logo.png" alt="logo" className="loader-logo" />
         <h1 className="loader-title">Mon Site</h1>
       </div>
     </div>

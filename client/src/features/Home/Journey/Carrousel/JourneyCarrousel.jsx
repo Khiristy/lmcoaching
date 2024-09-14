@@ -17,6 +17,7 @@ const JourneyCarrousel = () => {
     "/media/journey/journey_img-2.webp",
     "/media/journey/journey_img-3.webp",
     "/media/journey/journey_img-4.webp",
+    "/media/journey/journey_img-5.webp",
   ];
 
   return (

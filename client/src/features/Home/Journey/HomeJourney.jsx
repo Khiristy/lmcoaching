@@ -7,34 +7,37 @@ import AnimatedChildren from "../../Shared/Animation/AnimatedChildren"; // Impor
 import { motion } from "framer-motion";
 
 const HomeJourney = () => {
-    // Utilisation du hook pour l'animation principale de la section
-    const { ref, controls: sectionControls } = useScrollAnimation(0.5);
+  // Utilisation du hook pour l'animation principale de la section
+  const { ref, controls: sectionControls } = useScrollAnimation(0.5);
 
-    // Utilisation du hook pour l'animation des enfants
-    const { controls: childrenControls, transition: childrenTransition } = useAnimateChildren(true);
+  // Utilisation du hook pour l'animation des enfants
+  const { controls: childrenControls, transition: childrenTransition } =
+    useAnimateChildren(true);
 
+  return (
+    <motion.section
+      className="journey journey_layer"
+      ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
+      initial={{ opacity: 0, y: 50 }}
+      animate={sectionControls}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="journey_content">
+        <h3>Êtes-vous prêt à dépasser vos limites?</h3>
+        <p>Eux l&apos;ont fait ! Pourquoi pas vous ?</p>
 
-    return (
-        <motion.section
-            className="journey journey_layer"
-            ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
-            initial={{ opacity: 0, y: 50 }}
-            animate={sectionControls}
-            transition={{ duration: 0.5 }}
+        {/* Section animée pour le carrousel */}
+        <AnimatedChildren
+          controls={childrenControls}
+          transition={childrenTransition}
         >
-            <div className="journey_content">
-                <h3>Êtes-vous prêt à dépasser vos limites?</h3>
-                <p>Eux l&apos;ont fait ! Pourquoi pas vous ?</p>
-
-                {/* Section animée pour le carrousel */}
-                <AnimatedChildren controls={childrenControls} transition={childrenTransition}>
-                    <div className="journey_content-carrousel">
-                        <JourneyCarrousel />
-                    </div>
-                </AnimatedChildren>
-            </div>
-        </motion.section>
-    );
+          <div className="journey_content-carrousel">
+            <JourneyCarrousel />
+          </div>
+        </AnimatedChildren>
+      </div>
+    </motion.section>
+  );
 };
 
 export default HomeJourney;
