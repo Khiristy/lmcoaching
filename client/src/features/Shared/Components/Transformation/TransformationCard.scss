@@ -1,6 +1,12 @@
 .transformation_card {
     &-img {
-       width: 600px; 
-       height: 800px;
+       width: 500px; 
+       height: 700px;
+    }
+    &-items {
+        width: 80%;
+       display: flex;
+       justify-content: space-between; 
+       align-items: center;
     }
 }

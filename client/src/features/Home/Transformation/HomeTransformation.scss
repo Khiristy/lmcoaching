@@ -3,15 +3,18 @@
 
 
 .transformation {
-    width: 1452px;
-    height: 95vh;
-    margin: auto;
+ 
 
-    &-layer {
+    
+    width: 100%;
+
+    &-container {
+        margin: auto;
+        margin: auto;
+        width: 1600px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 100%;
+        justify-content: center;
 
     }
     &-title {

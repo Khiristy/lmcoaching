@@ -5,18 +5,41 @@
 
 .faq {
     width: 1600px;
-    min-height: 95vh;
-    border-radius: 20px;
+
     margin: auto;
     margin-bottom: 100px;
     position: relative;
-    background-color: #1E1E1E;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 0 50px 0 50px;
 
-    h3 {
+    &_container {
+        
+        border: 1px solid #FFFFFF1A;
+        min-height: 95vh;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 95px;
+        width: 1600px;
+        padding-left: 80px;
+        background-color: #3D1313;
+
+    }
+
+    &_title {
         @include strong-font2;
         // margin-left: 65px;
         margin-top: 0px;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
+    }
+
+    &_txt {
+        padding-bottom: 70px;
     }
 
     &_img {
@@ -30,7 +53,6 @@
         min-height: 700px;
         width: 100%;
         margin: auto;
-        
 
         &-collapsible {
             display: flex;
@@ -39,10 +61,9 @@
             align-items: center;
             border-radius: 16px;
             border: 2px solid rgba(255, 255, 255, 0.1019607843);
-            background-color: #3D1313;
+            
             max-width: 100%;
             min-height: 100%;
-            padding: 35px 0 45px 0;
 
         }
     }
