@@ -27,7 +27,6 @@ const LoaderBlock = ({ direction, startAnimation, delay = 0 }) => {
 
   return (
     <motion.div
-      className={`loader-block-${direction}`}
       variants={slideVariants}
       initial="initial"
       animate={startAnimation ? getVariant() : "initial"} // Utilisation de startAnimation ici
@@ -37,13 +36,12 @@ const LoaderBlock = ({ direction, startAnimation, delay = 0 }) => {
       }}
     >
       <motion.div
-        className={`loader-block-${direction}-content`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut", delay }} // Applique un fondu à tout le contenu
       >
         <img src="/media/main_logo.png" alt="Logo" />
-        <h1 className={`loader-block-${direction}-content-title`}>LmCoaching</h1>
+        <h1 className={`loader-logo`}>LmCoaching</h1>
       </motion.div>
     </motion.div>
   );

@@ -14,10 +14,8 @@ import HomeReview from "../../features/Home/Review/HomeReview";
 import Footer from "../../features/Home/Footer/Footer";
 
 const Home = () => {
-
-
   return (
-    <div className="home">      
+    <div className="home">
       <HomeHero />
       <HomePersoCard />
       <HomePricingPlan />
