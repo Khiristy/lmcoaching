@@ -12,10 +12,12 @@ import HomeFaq from "../../features/Home/Faq/HomeFAQ";
 import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
 import HomeReview from "../../features/Home/Review/HomeReview";
 import Footer from "../../features/Home/Footer/Footer";
+import Header from "../../features/Home/Header/Header";
 
 const Home = () => {
   return (
     <div className="home">
+      <Header />
       <HomeHero />
       <HomePersoCard />
       <HomePricingPlan />

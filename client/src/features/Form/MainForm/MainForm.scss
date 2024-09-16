@@ -1,5 +1,5 @@
-@import "@style/styles/variables.scss";
-@import "@style/styles/mixins.scss";
+// @import "@style/styles/variables.scss";
+// @import "@style/styles/mixins.scss";
 
 // @import "../../../../styles/variables.scss";
 
@@ -339,6 +339,6 @@ html {
     transition: 500ms;
 
     &:hover {
-        @include red-hover;
+        // @include red-hover;
     }
 }

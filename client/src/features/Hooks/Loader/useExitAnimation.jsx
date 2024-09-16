@@ -1,24 +1,18 @@
-import { useSpring } from '@react-spring/web';
+import { useEffect, useState } from "react";
 
-const useExitAnimation = (isOut, direction = "X", distance = "100vw", duration = 2000) => {
-  // Validation pour s'assurer que la distance contient une unité correcte
-  const validatedDistance = distance.includes("vw") || distance.includes("vh")
-    ? distance
-    : `${distance}vw`;
+// Hook pour gérer l'animation de sortie
+const useExitAnimation = (globalAnimationTimer) => {
+  const [isOut, setIsOut] = useState(false);
 
-  const axis = direction === "X" ? "translateX" : "translateY";
-  const initialTransform = `${axis}(0)`;
-  const exitTransform = `${axis}(${validatedDistance})`;
+  useEffect(() => {
+    const exitTimer = setTimeout(() => {
+      setIsOut(true); // Déclencher l'animation de sortie
+    }, globalAnimationTimer); // Utilisation du globalAnimationTimer
 
-  console.log(
-    `Exit animation: isOut=${isOut}, transform=${isOut ? exitTransform : initialTransform}`
-  );
+    return () => clearTimeout(exitTimer); // Nettoyer le timer
+  }, [globalAnimationTimer]);
 
-  return useSpring({
-    transform: isOut ? exitTransform : initialTransform,
-    config: { tension: 200, friction: 20, duration }, // Spécifier les paramètres de durée et fluidité
-    delay: isOut ? 1000 : 0,  // Synchronisation avec un délai de 1 seconde pour la sortie
-  });
+  return isOut;
 };
 
 export default useExitAnimation;

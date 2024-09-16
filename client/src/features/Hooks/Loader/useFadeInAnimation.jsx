@@ -1,13 +1,19 @@
-import { useSpring } from '@react-spring/web';
+import { useEffect, useState } from "react";
 
-// Hook personnalisé pour les animations d'apparition
-const useFadeInAnimation = (delay = 0, duration = 1000) => {
-  return useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration },  // Durée de l'animation (en ms) 
-    delay,  // Optionnel : délai pour différer l'animation
-  });
+// Hook pour gérer l'animation de fade-in
+const useFadeInAnimation = (fadeAnimationTimer) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Démarrer le fade-in
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, fadeAnimationTimer * 1000); // Timer en millisecondes
+
+    return () => clearTimeout(timer); // Nettoyer le timer
+  }, [fadeAnimationTimer]);
+
+  return isVisible;
 };
 
 export default useFadeInAnimation;

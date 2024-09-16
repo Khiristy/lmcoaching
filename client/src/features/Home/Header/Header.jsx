@@ -1,15 +1,14 @@
 // import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import mainLogo from "/media/main_logo.png";
 import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
 import "./Header.scss"; // Vos styles actuels
 
-const Header = ({ startAnimation = false }) => {
+const Header = () => {
   return (
     <motion.header
       initial={{ opacity: 0 }} // Commence avec une opacité de 0 et hors écran vers le haut
-      animate={startAnimation ? { opacity: 1, y: 0 } : {}} // Anime vers une opacité de 1 et revient à sa position d'origine
+      animate={ { opacity: 1, y: 0 } } // Anime vers une opacité de 1 et revient à sa position d'origine
       transition={{ duration: 2 }} // L'animation dure 2 secondes
       style={{ willChange: "opacity, transform" }}
       className="motionHeader"
@@ -53,9 +52,6 @@ const Header = ({ startAnimation = false }) => {
   );
 };
 
-Header.propTypes = {
-  startAnimation: PropTypes.bool.isRequired, // Vérifie que startAnimation est un booléen et obligatoire
-};
 
 export default Header;
 

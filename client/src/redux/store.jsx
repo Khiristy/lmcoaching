@@ -1,10 +1,11 @@
+// src/redux/store.jsx
 import { configureStore } from '@reduxjs/toolkit';
-import loadingReducer from './Slices/loadingSlice';
+import loadingReducer from './Slices/loadingSlice'; // Assure-toi d'avoir l'import correct
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     loading: loadingReducer,
   },
 });
 
-export default store;
+export default store; // Ceci est l'export par défaut
