@@ -1,92 +1,36 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-// import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import Faq from "./pages/Faq/Faq";
-import Form from "./pages/Form/Form";
-import { useState, useEffect } from "react";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import LoaderWrapper from "./features/Shared/Loader/MainLoader/LoaderWrapper"; // Assure-toi que le chemin est correct
-import PropTypes from "prop-types";
-import { LoadingProvider } from "./features/Shared/Utils/contexts/LoadingProvider"; // Assurez-vous que le chemin est correct
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { useDispatch } from 'react-redux';
+import { stopLoading } from './redux/Slices/loadingSlice';
+import Loader from './features/Shared/Loader/Loader';
+// import Home from './pages/Home/Home';
+
 const App = () => {
-  const [isFirstMount, setIsFirstMount] = useState(true);
+  const dispatch = useDispatch();
   const location = useLocation();
 
   useEffect(() => {
-    setIsFirstMount(false); // Cela met à jour l'état après le premier rendu
-  }, []);
+    const timer = setTimeout(() => {
+      dispatch(stopLoading()); // Arrête le chargement après 3 secondes
+    }, 3000);
 
-  const PageWrapper = ({ children }) => (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {children}
-    </motion.div>
-  );
-
-  PageWrapper.propTypes = {
-    children: PropTypes.node.isRequired,
-  };
+    return () => clearTimeout(timer);
+  }, [dispatch]);
 
   return (
-    <Provider store={store}>
-      <LoadingProvider>
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route
-              path="/"
-              element={
-                <PageWrapper>
-                  {isFirstMount ? (
-                    <div>Chargement initial...</div> // Affiche un contenu spécial au premier rendu
-                  ) : (
-                    <LoaderWrapper /> // Affiche le LoaderWrapper après le premier rendu
-                  )}
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <PageWrapper>
-                  <About />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <PageWrapper>
-                  <Contact />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/faq"
-              element={
-                <PageWrapper>
-                  <Faq />
-                </PageWrapper>
-              }
-            />
-            <Route
-              path="/form"
-              element={
-                <PageWrapper>
-                  <Form />
-                </PageWrapper>
-              }
-            />
-          </Routes>
-        </AnimatePresence>
-      </LoadingProvider>
-    </Provider>
+    <>
+      <Loader /> {/* Le loader est affiché ici */}
+      <AnimatePresence mode="wait">
+        <Routes location={location.pathname}>
+          <Route path="/" element={<div>Home</div>} />
+          <Route path="/about" element={<div>À propos</div>} />
+          <Route path="/contact" element={<div>Contact</div>} />
+          <Route path="/faq" element={<div>FAQ</div>} />
+          <Route path="/form" element={<div>Formulaire</div>} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 };
 

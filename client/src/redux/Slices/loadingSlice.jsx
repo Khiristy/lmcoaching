@@ -1,13 +1,8 @@
-// src/redux/loadingSlice.js
 import { createSlice } from '@reduxjs/toolkit';
-
-const initialState = {
-  isLoading: true,
-};
 
 const loadingSlice = createSlice({
   name: 'loading',
-  initialState,
+  initialState: { isLoading: true }, // L'état initial est `true` pour que le loader apparaisse au démarrage
   reducers: {
     startLoading: (state) => {
       state.isLoading = true;

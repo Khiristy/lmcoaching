@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+.pricingPlan {
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+  margin: auto;
+}
+.pricingPlan_container {
+  margin-top: 25px;
+  width: 1600px;
+  padding: 55px;
+  max-height: 95vh;
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  border-radius: 20px;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.pricingPlan_left {
+  margin-right: 50px;
+  width: 370px;
+}
+.pricingPlan_left-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 70px;
+  margin-bottom: 45px;
+}
+.pricingPlan_left-txt {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 300px;
+}/*# sourceMappingURL=HomePricingPlan.css.map */
