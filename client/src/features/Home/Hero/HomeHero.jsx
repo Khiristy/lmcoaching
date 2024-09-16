@@ -3,24 +3,23 @@ import { motion } from "framer-motion";
 import heroImg from "/media/homeHero/hero_img.webp";
 import PropTypes from "prop-types";
 import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Animation des enfants
-import { useRef } from "react";
+import { forwardRef } from "react"; // Import de forwardRef
+// import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
 
-const HomeHero = ({ children }) => {
-  const ref = useRef(null);
-  // Suppression de l'utilisation de useFade
+const HomeHero = forwardRef(({ children }, ref) => {
+  // Utilisation du hook d'animation des enfants
   const { childrenControls, transition: childrenTransition } =
     useAnimateChildren(true);
 
   return (
     <motion.section
       className="hero hero_layer"
-      ref={ref}
+      ref={ref} // Utilisation de ref ici
       initial={{ opacity: 1, y: 0 }} // Retrait du translateY
       animate={childrenControls}
       transition={{ duration: 0.5 }}
     >
       <div className="hero_container">
-       
         <motion.img
           src={heroImg}
           alt="hero"
@@ -29,7 +28,35 @@ const HomeHero = ({ children }) => {
           animate={childrenControls}
           transition={childrenTransition}
         />
-         <div className="hero_container-img--bckgrd"></div>
+                {/* <div className="motionHeader_content-leftSide">
+          <h1>
+            Atteignez vos objectifs <br /> plus rapidement
+          </h1>
+          <p>
+            Transforme ton corps avec notre coaching en musculation, que ce soit
+            pour la prise de masse, la perte de poids, ou le développement de
+            tes capacités physiques : force, endurance, et bien plus encore.
+          </p>
+          <MainBtn
+            className="mainBtn_motionHeader"
+            text="Réserver maintenant !"
+          />
+          <div className="motionHeader_socialLink">
+            <a href="">
+              <i className="fa fa-facebook fa-4x icon-3d"></i>
+            </a>
+            <a href="">
+              <i className="fa fa-instagram fa-4x icon-3d"></i>
+            </a>
+            <a href="">
+              <i className="fa-brands fa-snapchat fa-4x icon-3d"></i>
+            </a>
+            <a href="">
+              <i className="fa-brands fa-tiktok fa-4x icon-3d"></i>
+            </a>
+          </div>
+        </div> */}
+        <div className="hero_container-img--bckgrd"></div>
       </div>
 
       <motion.div
@@ -41,7 +68,10 @@ const HomeHero = ({ children }) => {
       </motion.div>
     </motion.section>
   );
-};
+});
+
+// Ajout du displayName pour éviter l'avertissement ESLint
+HomeHero.displayName = "HomeHero";
 
 HomeHero.propTypes = {
   children: PropTypes.node,

@@ -1,7 +1,6 @@
 // import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import mainLogo from "/media/main_logo.png";
-import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
 import "./Header.scss"; // Vos styles actuels
 
 const Header = () => {
@@ -13,40 +12,23 @@ const Header = () => {
       style={{ willChange: "opacity, transform" }}
       className="motionHeader"
     >
+      
+       <nav>
+        <ul className="main_menu">
+          <li><a href="/accueil">Accueil</a></li>
+          <li><a href="/about">Qui suis-je ?</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/result">Avant/Après</a></li>
+        </ul>
+      </nav>
       <div className="motionHeader_content">
         <img
           src={mainLogo}
           alt="Logo"
           className="motionHeader_content-mainLogo"
         />
-        <div className="motionHeader_content-leftSide">
-          <h1>
-            Atteignez vos objectifs <br /> plus rapidement
-          </h1>
-          <p>
-            Transforme ton corps avec notre coaching en musculation, que ce soit
-            pour la prise de masse, la perte de poids, ou le développement de
-            tes capacités physiques : force, endurance, et bien plus encore.
-          </p>
-          <MainBtn
-            className="mainBtn_motionHeader"
-            text="Réserver maintenant !"
-          />
-          <div className="motionHeader_socialLink">
-            <a href="">
-              <i className="fa fa-facebook fa-4x icon-3d"></i>
-            </a>
-            <a href="">
-              <i className="fa fa-instagram fa-4x icon-3d"></i>
-            </a>
-            <a href="">
-              <i className="fa-brands fa-snapchat fa-4x icon-3d"></i>
-            </a>
-            <a href="">
-              <i className="fa-brands fa-tiktok fa-4x icon-3d"></i>
-            </a>
-          </div>
-        </div>
+
       </div>
     </motion.header>
   );

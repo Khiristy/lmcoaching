@@ -2,7 +2,7 @@
 @import "../../../styles/mixins.scss";
 
 .motionHeader {
-    position: absolute;
+    position: fixed;
     width: 1550px;
     height: 150px;
     z-index: 3;
@@ -111,41 +111,41 @@
 
 
 
-// .main_menu {
+.main_menu {
 
-//     width: 566px;
-//     height: 48px;
-//     top: 16px;
-//     left: 20px;
-//     margin-top: 16px;
-//     margin-left: 15px;
-//     padding: 10px 30px 10px 30px;
-//     gap: 30px;
-//     border-radius: 10px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background: #69696933;
+    width: 566px;
+    height: 48px;
+    top: 16px;
+    left: 20px;
+    margin-top: 16px;
+    margin-left: 15px;
+    padding: 10px 30px 10px 30px;
+    gap: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #69696933;
 
 
 
-//     li {
-//         list-style-type: none;
+    li {
+        list-style-type: none;
 
-//         a {
-//             text-decoration: none;
-//             color: white;
-//             transition: 400ms;
-//             border-radius: 10px;
-//             padding: 5px;
-//             &:hover {
-//                 @include red-hover;
-//                 border: none;
-//             }
-//         }
-//     }
+        a {
+            text-decoration: none;
+            color: white;
+            transition: 400ms;
+            border-radius: 10px;
+            padding: 5px;
+            &:hover {
+                @include red-hover;
+                border: none;
+            }
+        }
+    }
 
-// }
+}
 
 // .btn_header {
 //     padding: 0px 10px 0px 10px;

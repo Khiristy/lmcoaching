@@ -4,12 +4,14 @@ import PriceCardContainer from "../../Shared/Components/PriceCard/PriceCardConta
 import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
 import Transition from "../../Form/TransitionPricing/TransitionPricing.jsx";
 import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation"; // Import du hook d'animation au scroll
+// import useScrollTo from "../../Hooks/Navigation/useScrollTo.jsx"; // Import du hook d'animation au scroll
 import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Import du hook pour les enfants animés
 import AnimatedChildren from "../../Shared/Animation/AnimatedChildren"; // Import du composant AnimatedChildren
 
 const HomePricingPlan = () => {
   // Utilisation du hook pour l'animation principale de la section
   const { ref, controls: sectionControls } = useScrollAnimation(0.5);
+  console.log(ref)
 
   // Utilisation du hook pour l'animation des enfants
   const { controls: childrenControls, transition: childrenTransition } =
