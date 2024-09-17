@@ -1,68 +1,62 @@
-import { useRef } from "react";
+// Home.js
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Header from "../../features/Home/Header/Header";
 import HomeHero from "../../features/Home/Hero/HomeHero";
 import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard";
 import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";
 import HomeJourney from "../../features/Home/Journey/HomeJourney";
-import HomeFaq from "../../features/Home/Faq/HomeFAQ";
+import HomeFaq from "../../features/Home/Faq/HomeFaq";
 import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
 import HomeReview from "../../features/Home/Review/HomeReview";
-import Footer from "../../features/Home/Footer/Footer";
-import Header from "../../features/Home/Header/Header";
-import ScrollTest from "../../features/Home/ScrollTest";
-// Import the custom scroll hook
-import useScrollTo from "../../features/Hooks/Navigation/useScrollTo";
+// import Footer from "../../features/Home/Footer/Footer";
+import "./Home.scss";
+
+const sections = [
+  { id: "hero", component: <HomeHero /> },
+  { id: "persoCard", component: <HomePersoCard /> },
+  { id: "pricing", component: <HomePricingPlan /> },
+  { id: "journey", component: <HomeJourney /> },
+  { id: "faq", component: <HomeFaq /> },
+  { id: "transformation", component: <HomeTransformation /> },
+  { id: "review", component: <HomeReview /> },
+];
 
 const Home = () => {
-  // Create references for each section
-  const heroRef = useRef(null);
-  const persoCardRef = useRef(null);
-  const pricingPlanRef = useRef(null);
-  const journeyRef = useRef(null);
-  const faqRef = useRef(null);
-  const transformationRef = useRef(null);
-  const reviewRef = useRef(null);
-  const footerRef = useRef(null);
+  const [currentSection, setCurrentSection] = useState(0);
 
-  // Use the custom hook to handle scrolling
-  const scrollToSection = useScrollTo();
+  const nextSection = () => {
+    setCurrentSection((prev) => (prev + 1) % sections.length); // passe à la section suivante
+  };
+
+  const prevSection = () => {
+    setCurrentSection((prev) => (prev - 1 + sections.length) % sections.length); // retourne à la section précédente
+  };
 
   return (
     <div className="home">
       <Header />
-      <button onClick={() => scrollToSection(heroRef)}>Go to Hero</button>
-      <button onClick={() => scrollToSection(persoCardRef)}>
-        Go to Perso Card
-      </button>
-      <button onClick={() => scrollToSection(pricingPlanRef)}>
-        Go to Pricing Plan
-      </button>
+      <AnimatePresence mode="wait">
+        {" "}
+        {/* Utilisation de mode="wait" */}
+        <motion.div
+          key={sections[currentSection].id}
+          className="section"
+          initial={{ opacity: 0, y: "100vh" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: "-100vh" }}
+          transition={{ duration: 0.8 }}
+        >
+          {sections[currentSection].component}
+        </motion.div>
+      </AnimatePresence>
 
-      <div ref={heroRef}>
-        <HomeHero />
-        
-      </div>
-      <div ref={persoCardRef}>
-        <HomePersoCard />
-      </div>
-      <div ref={pricingPlanRef}>
-        <HomePricingPlan />
-      </div>
-      <div ref={journeyRef}>
-        <HomeJourney />
-      </div>
-      <div ref={faqRef}>
-        <HomeFaq />
-      </div>
-      <div ref={transformationRef}>
-        <HomeTransformation />
-      </div>
-      <div ref={reviewRef}>
-        <HomeReview />
-      </div>
-      <div ref={reviewRef}>
-        <ScrollTest />
-      </div>
-      <Footer ref={footerRef} />
+      {/* <div className="navigation-buttons">
+        <button onClick={prevSection}>Précédent</button>
+        <button onClick={nextSection}>Suivant</button>
+      </div> */}
+
+      {/* <Footer /> */}
     </div>
   );
 };

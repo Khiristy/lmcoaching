@@ -10,7 +10,7 @@ const MainBtn = ({ text,  }) => {
   };
 
   return (
-    <div className="mainBtn">
+    <div className="mainBtn hero_container-img--mainBtn">
       <button className="mainBtn-btn" onClick={handleClick}>
         <span className="mainBtn-text">{text}</span>
       </button>

@@ -1,18 +1,36 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-// .home {
-//     max-width: 100%;
-//     padding-top: 20px;
-//     // min-height: fit-content;
-
-//     .journey {
-//         margin-top: 100px;
-//         margin-bottom: 100px;
-//     }
-
-//     .pricing_plan_section {
-//         margin-top: 100px;
-//         margin-bottom: 100px;
-//     }
-// }
+/* Home.css */
+.home {
+    height: 100vh;
+    overflow: hidden; /* Désactive le scrolling vertical */
+    position: relative;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navigation-buttons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
