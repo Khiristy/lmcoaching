@@ -45,10 +45,7 @@ const HomeHero = forwardRef(({ children }, ref) => {
             className=""
             text="Réserver maintenant !"
           />
-        {/* <img src={slideBot} alt="" className="hero_container-img--slideBot" />
-        <img src={slideTop} alt="" className="hero_container-img--slideTop" /> */}
-
-        {/* 
+      {/* 
         <div className="hero_container-socialLink">
             <a href="">
               <i className="fa fa-facebook fa-4x icon-3d"></i>

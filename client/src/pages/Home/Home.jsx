@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import BackgroundAnimation from "../../features/Shared/Animation/BackgroundAnimation"; // Composant d'animation en fond
 import Header from "../../features/Home/Header/Header";
 import HomeHero from "../../features/Home/Hero/HomeHero";
-import HomePersoCard from "../../features/Home/PersoCard/HomePersoCard";
+import HomePersoCard from "../../features/Home/PersoCard/HomeAbout";
 import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";
 import HomeJourney from "../../features/Home/Journey/HomeJourney";
 import HomeFaq from "../../features/Home/Faq/HomeFaq";

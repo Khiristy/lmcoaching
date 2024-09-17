@@ -1,29 +1,29 @@
-import { useEffect, useState } from 'react';
-import PersoCard from '../../Shared/Components/PersoCard/PersoCard';
+// import { useEffect, useState } from 'react';
+// import PersoCard from '../../Shared/Components/PersoCard/PersoCard';
 
-const PersoCardList = () => {
-  const [persoCards, setPersoCards] = useState([]);
+// const PersoCardList = () => {
+//   const [persoCards, setPersoCards] = useState([]);
 
-  useEffect(() => {
-    fetch('/data/data.json')
-      .then((response) => response.json())
-      .then((data) => setPersoCards(data.persoCards))
-      .catch((error) => console.error("Erreur lors du chargement des données :", error));
-  }, []);
+//   useEffect(() => {
+//     fetch('/data/data.json')
+//       .then((response) => response.json())
+//       .then((data) => setPersoCards(data.persoCards))
+//       .catch((error) => console.error("Erreur lors du chargement des données :", error));
+//   }, []);
 
-  return (
-    <div className="persoCard_list">
-      {persoCards.map((card, index) => (
-        <PersoCard
-          key={index}
-          title={card.title}
-          icon={card.icon}
-          description={card.description}
-          className="persoCard-item"
-        />
-      ))}
-    </div>
-  );
-};
+//   return (
+//     <div className="persoCard_list">
+//       {persoCards.map((card, index) => (
+//         <PersoCard
+//           key={index}
+//           title={card.title}
+//           icon={card.icon}
+//           description={card.description}
+//           className="persoCard-item"
+//         />
+//       ))}
+//     </div>
+//   );
+// };
 
-export default PersoCardList;
+// export default PersoCardList;

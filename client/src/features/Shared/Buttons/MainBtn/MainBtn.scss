@@ -13,7 +13,7 @@
     // font-family: 'Lato', sans-serif;
     transition: 0.5s;
     letter-spacing: 1px;
-    border-radius: 8px;
+    border-radius: 10px;
 
     &-text {
         transition: color 0.3s ease; 
@@ -26,13 +26,13 @@
 
     &-btn {
         position: relative;
-        width: 101%;
+        width: 103%;
         height: 100%;
         background: red;
         color: #fff;
         border: none;
         cursor: pointer;
-        border-radius: 8px;
+        border-radius: 10px;
         
 
 
