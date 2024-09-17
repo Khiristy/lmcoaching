@@ -7,7 +7,7 @@ body {
   font-family: "Inter", sans-serif;
   text-decoration: none;
   background-color: #141414;
-  color: white;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   // overflow-y: auto;
@@ -43,5 +43,14 @@ body {
 .review_layer {
   width: 100%;
   height: 100vh;
-  background-color: brown;
+  background-color: #a52a2a;
+}
+
+#tsparticles {
+  height: 100vh !important; /* Force la hauteur à 100% de la hauteur de la fenêtre */
+  width: 100% !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: -1 !important;  /* S'assurer que le canvas reste en arrière-plan */
 }

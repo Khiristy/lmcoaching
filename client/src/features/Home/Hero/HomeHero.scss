@@ -13,16 +13,16 @@
     &_leftSide {
         position: absolute;
         top: 230px;
-        left: 105px;
+        left: 115px;
         width: 648px;
         display: flex;
         flex-direction: column;
         gap: 55px;
         z-index: 3;
         justify-content: flex-start;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, .3);
 
         & h1 {
-
             font-size: 130px;
             font-weight: 400;
             line-height: 120px;
@@ -43,11 +43,12 @@
         border-radius: 20px;
         position: absolute;
         bottom: 55px;
-        right: 55px;
+        right: 135px;
         width: 70vw;
         height: 80vh;
         margin: auto;
         z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.2) 3px 9px 18px;
 
         &-img {
             border-radius: 20px;
@@ -55,6 +56,7 @@
             width: 100%;
             height: 100%;
             z-index: 2;
+
             &--slideBot {
                 position: absolute;
                 bottom: 0;
@@ -62,16 +64,17 @@
                 width: 30%;
                 z-index: 3;
             }
-    
+
             &--slideTop {
-                
-                    position: absolute;
-                    right: 0;
-                    bottom: 0px;
-                    width: 23%;
-                    z-index: 3;
-                
+
+                position: absolute;
+                right: 0;
+                bottom: 0px;
+                width: 23%;
+                z-index: 3;
+
             }
+
             &--bckgrd {
                 border-radius: 20px;
                 position: absolute;
@@ -80,8 +83,10 @@
                 z-index: 2;
                 top: 0;
                 left: 0;
+                opacity: 90%;
                 background-image: linear-gradient(270deg, rgba(30, 30, 30, 0) 39.35%, #1E1E1E 100%);
             }
+
             &--mainBtn {
                 position: absolute !important;
                 bottom: 40px;
@@ -148,4 +153,3 @@
 
     }
 }
-
