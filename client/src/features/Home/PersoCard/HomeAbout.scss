@@ -10,19 +10,20 @@
     justify-content: center;
     align-items: center;
     padding-top: 100px;
-    
+
 }
 
 
 .HomeAbout_container {
     position: relative;
-    width: 1450px;
-    height: 85vh;
+    width: 1545px;
+    height: 700px;
     margin: auto;
 
 
 
     &-left {
+        @include img-shadow;
         z-index: 2;
         position: absolute;
         bottom: 0;
@@ -30,6 +31,7 @@
         height: 640px;
         width: 740px;
         background-color: aqua;
+        display: flex;
 
         &--img {
             z-index: 2;
@@ -39,30 +41,194 @@
             height: 100%;
         }
     }
-    & i {
-        font-size: 20px;
-    }
+
+
+
     &-right {
-        padding: 70px 0 0 130px;
         z-index: 1;
         position: absolute;
-        height: 640px;
+        height: 520px;
         width: 760px;
         top: 0;
         right: 0;
-        
+        @include text-shadow;
+
+        & i {
+            
+            display: block;
+            font-size: 50px;
+            color: #E20D0F;
+        }
 
         &--title {
+            margin-top: 15px;
             @include strong-font2;
             text-align: left;
+            margin-bottom: 30px;
         }
 
         &--text {
+            font-style: italic;
             font-size: 18px;
             font-weight: 400;
             line-height: 30px;
             text-align: left;
-            margin-bottom: 75px;
+
         }
+    }
+}
+
+.fa-quote-left {
+    position: absolute;
+    top: -40px;
+    left: -50px;
+}
+
+.fa-quote-right {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+}
+
+.social_link {
+
+    ul {
+        position: absolute;
+        bottom: 0;
+        right: 5cap;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li a {
+        display: block;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: none;
+        color: #404040;
+        margin: 0 30px;
+        transition: .5s;
+    }
+
+    ul li a span {
+        position: absolute;
+        transition: transform .5s;
+    }
+
+    ul li a span:nth-child(1),
+    ul li a span:nth-child(3) {
+        width: 100%;
+        height: 3px;
+        background: #404040;
+    }
+
+    ul li a span:nth-child(1) {
+        top: 0;
+        left: 0;
+        transform-origin: right;
+    }
+
+    ul li a:hover span:nth-child(1) {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .5s;
+    }
+
+    ul li a span:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        transform-origin: left;
+    }
+
+    ul li a:hover span:nth-child(3) {
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s;
+    }
+
+    ul li a span:nth-child(2),
+    ul li a span:nth-child(4) {
+        width: 3px;
+        height: 100%;
+        background: #404040;
+    }
+
+    ul li a span:nth-child(2) {
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        transform-origin: bottom;
+    }
+
+    ul li a:hover span:nth-child(2) {
+        transform: scale(1);
+        transform-origin: top;
+        transition: transform .5s;
+    }
+
+    ul li a span:nth-child(4) {
+        top: 0;
+        right: 0;
+        transform: scale(0);
+        transform-origin: top;
+    }
+
+    ul li a:hover span:nth-child(4) {
+        transform: scale(1);
+        transform-origin: bottom;
+        transition: transform .5s;
+    }
+
+    .facebook:hover {
+        color: #3b5998;
+    }
+
+    .facebook:hover span {
+        background: #3b5998;
+    }
+
+    .tiktok:hover {
+        color: #EE1D52;
+    }
+
+    .tiktok:hover span {
+        background: #EE1D52;
+    }
+
+    .instagram:hover {
+        color: #c32aa3;
+    }
+
+    .instagram:hover span {
+        background: #c32aa3;
+    }
+
+    .snapchat:hover {
+        color: #FFFC00;
+    }
+
+    .snapchat:hover span {
+        background: #FFFC00;
+    }
+
+    ul li a .tiktok {
+        color: #EE1D52;
+    }
+
+    ul li a:hover:nth-child(3) {
+        color: #c32aa3;
+    }
+
+    ul li a:hover:nth-child(4) {
+        color: #FFFC00;
     }
 }

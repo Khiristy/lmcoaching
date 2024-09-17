@@ -16,7 +16,6 @@
             "description": "Pour ma première compétition, j'ai concouru dans la catégorie Men's Physique et terminé vice-champion de France, me qualifiant ainsi pour la compétition de Mister Univers (APF-WPF). Cette expérience a marqué le début d'un parcours riche en compétitions et en succès sportifs."
         }
     ],
-
     "priceCards": [
         {
             "type": "Coaching en ligne",
@@ -41,7 +40,6 @@
             "note": "Résiliez à tout moment."
         }
     ],
-
     "reviewSections": [
         {
             "title": "Témoignages de nos clients",
