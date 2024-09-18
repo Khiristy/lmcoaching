@@ -1,8 +1,13 @@
-import { useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-const useScrollAnimation = (threshold = 0.5, initial = { opacity: 0, y: 50 }, animateTo = { opacity: 1, y: 0 }, transition = { duration: 0.5 }) => {
+const useScrollAnimation = (
+  threshold = 0.5,
+  initial = { opacity: 0, y: 50 },
+  animateTo = { opacity: 1, y: 0 },
+  transition = { duration: 1 }
+) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold, // Déclenche l'animation lorsque 50% du composant est visible

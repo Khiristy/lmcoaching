@@ -6,7 +6,7 @@ import { stopLoading } from "./redux/Slices/loadingSlice"; // Import de l'action
 import Loader from "./features/Shared/Loader/Loader"; // Loader
 import Home from "./pages/Home/Home"
 import Form from "./pages/Form/Form"
-import BackgroundAnimation from "./features/Shared/Animation/BackgroundAnimation"
+import ParticlesComponent from "./features/Shared/Animation/ParticlesComponent"
 const App = () => {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -30,7 +30,7 @@ const App = () => {
       <AnimatePresence mode="wait">
         {!isLoading && (
           <>
-            <BackgroundAnimation />  {/* Composant des particules */}
+            <ParticlesComponent id="particles-background"/>  {/* Composant des particules */}
             <Routes location={location.pathname}>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<div>À propos</div>} />

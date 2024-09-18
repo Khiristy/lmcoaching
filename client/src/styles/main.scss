@@ -13,9 +13,9 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  // overflow-y: auto;
-  // scroll-snap-type: y mandatory; /* Active le snapping vertical */
-  // overflow-y: scroll; /* Assure un défilement fluide */
+  overflow-y: auto;
+  scroll-snap-type: y mandatory; /* Active le snapping vertical */
+  overflow-y: scroll; /* Assure un défilement fluide */
 }
 
 .hero_layer {

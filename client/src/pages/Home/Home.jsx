@@ -1,5 +1,4 @@
-import { useState, useEffect, useCallback, useRef  } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Header from "../../features/Home/Header/Header";
 import HomeHero from "../../features/Home/Hero/HomeHero";
 import HomeAbout from "../../features/Home/About/HomeAbout";
@@ -8,81 +7,52 @@ import HomeJourney from "../../features/Home/Journey/HomeJourney";
 import HomeFaq from "../../features/Home/Faq/HomeFaq";
 import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
 import HomeReview from "../../features/Home/Review/HomeReview";
+import { useScrollSections } from "../../features/Hooks/Animation/useScrollSections";
+import { getSectionAnimation } from "../../features/Shared/Utils/getSectionAnimation";
 import "./Home.scss";
 
 const Home = () => {
-  const [isScrolling, setIsScrolling] = useState(false);
+  const { sectionRefs, activeIndex, scrollToSection } = useScrollSections(7); // 7 sections
 
-  // Create refs for each section
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const pricingRef = useRef(null);
-  const journeyRef = useRef(null);
-  const faqRef = useRef(null);
-  const transformationRef = useRef(null);
-  const reviewRef = useRef(null);
-
-  // Scroll handler
-  const handleScroll = useCallback(() => {
-    if (!isScrolling) {
-      setIsScrolling(true);
-      // You can add any additional scrolling logic here if needed
-      setTimeout(() => setIsScrolling(false), 800); // Delay to prevent continuous scroll
-    }
-  }, [isScrolling]);
-
-  useEffect(() => {
-    window.addEventListener("wheel", handleScroll);
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, [handleScroll]);
+  // Tableau de sections pour éviter la répétition
+  const sections = [
+    { id: "hero", component: <HomeHero />, ref: sectionRefs.current[0] },
+    { id: "about", component: <HomeAbout />, ref: sectionRefs.current[1] },
+    { id: "pricing", component: <HomePricingPlan />, ref: sectionRefs.current[2] },
+    { id: "journey", component: <HomeJourney />, ref: sectionRefs.current[3] },
+    { id: "faq", component: <HomeFaq />, ref: sectionRefs.current[4] },
+    { id: "transformation", component: <HomeTransformation />, ref: sectionRefs.current[5] },
+    { id: "review", component: <HomeReview />, ref: sectionRefs.current[6] },
+  ];
 
   return (
     <div className="home">
-
+      {/* Ajoutez des boutons dans le Header pour scroller vers chaque section */}
       <Header
+        scrollToSection={scrollToSection}
         refs={{
-          heroRef,
-          aboutRef,
-          pricingRef,
-          journeyRef,
-          faqRef,
-          transformationRef,
-          reviewRef,
+          heroRef: sectionRefs.current[0],
+          aboutRef: sectionRefs.current[1],
+          pricingRef: sectionRefs.current[2],
+          journeyRef: sectionRefs.current[3],
+          faqRef: sectionRefs.current[4],
+          transformationRef: sectionRefs.current[5],
+          reviewRef: sectionRefs.current[6],
         }}
       />
-      <AnimatePresence mode="wait">
+
+      {/* Boucle sur les sections pour éviter la répétition */}
+      {sections.map((section, index) => (
         <motion.div
-          id="hero"
-          ref={heroRef} // Assign the ref
-          className="section"
-          initial={{ opacity: 0, y: "100vh" }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: "-100vh" }}
-          transition={{ duration: 0.8 }}
+          key={section.id}
+          id={section.id}
+          ref={section.ref}
+          {...getSectionAnimation(activeIndex, index)} // Utilisation de l'utilitaire pour l'animation
+          className="section" // Chaque section a déjà une hauteur 100vh via la classe CSS
         >
-          <HomeHero />
+          {section.component}
         </motion.div>
-        <motion.div id="HomeAbout" ref={aboutRef}>
-          <HomeAbout />
-        </motion.div>
-        <motion.div id="pricing" ref={pricingRef}>
-          <HomePricingPlan />
-        </motion.div>
-        <motion.div id="journey" ref={journeyRef}>
-          <HomeJourney />
-        </motion.div>
-        <motion.div id="faq" ref={faqRef}>
-          <HomeFaq />
-        </motion.div>
-        <motion.div id="transformation" ref={transformationRef}>
-          <HomeTransformation />
-        </motion.div>
-        <motion.div id="review" ref={reviewRef}>
-          <HomeReview />
-        </motion.div>
-      </AnimatePresence>
+      ))}
     </div>
   );
 };

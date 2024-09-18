@@ -1,17 +1,9 @@
-import mainLogo from "/media/logo_test.png";
 import { motion } from "framer-motion";
-import PropTypes from 'prop-types';
+import mainLogo from "/media/logo_test.png";
+import PropTypes from "prop-types";
 
-import "./Header.scss";
-
-const Header = ({ refs }) => {
-  console.log(refs)
-  const scrollToSection = (ref) => {
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+import "./Header.scss"
+const Header = ({ scrollToSection }) => { // Suppression de refs ici
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -23,28 +15,29 @@ const Header = ({ refs }) => {
       <div className="header_content">
         <img src={mainLogo} alt="Logo" className="header_content-mainLogo" />
       </div>
-      <nav>
-        <ul className="header_content-menu">
+
+      <nav className="header_content-menu">
+        <ul>
           <li>
-            <button onClick={() => scrollToSection(refs.heroRef)}>Accueil</button>
+            <button onClick={() => scrollToSection(0)}>Accueil</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(refs.aboutRef)}>Présentation</button>
+            <button onClick={() => scrollToSection(1)}>Présentation</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(refs.pricingRef)}>Tarifs</button>
+            <button onClick={() => scrollToSection(2)}>Tarifs</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(refs.journeyRef)}>Gallerie</button>
+            <button onClick={() => scrollToSection(3)}>Gallerie</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(refs.faqRef)}>FAQ</button>
+            <button onClick={() => scrollToSection(4)}>FAQ</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(refs.transformationRef)}>Transformation</button>
+            <button onClick={() => scrollToSection(5)}>Transformation</button>
           </li>
           <li>
-            <button onClick={() => scrollToSection(refs.reviewRef)}>Avis</button>
+            <button onClick={() => scrollToSection(6)}>Avis</button>
           </li>
         </ul>
       </nav>
@@ -52,8 +45,9 @@ const Header = ({ refs }) => {
   );
 };
 
+// Validation des PropTypes
 Header.propTypes = {
-  refs: PropTypes.object.isRequired,
+  scrollToSection: PropTypes.func.isRequired, // On ne valide que scrollToSection
 };
 
 export default Header;
