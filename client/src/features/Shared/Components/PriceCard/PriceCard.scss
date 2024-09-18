@@ -12,8 +12,6 @@
     // border-radius: 16px;
     border: 2px solid #FFFFFF1A;
     position: relative;
-    // background: rgba(26, 0, 0, 0.25);
-    
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -41,7 +39,7 @@
         font-weight: 400;
         line-height: 26px;
         text-align: left;
-        margin-top: -20px;
+        margin-top: -10px;
         margin-bottom: 20px;
     }
 
@@ -86,18 +84,19 @@
 }
 
 
-.pricecard.silver-card {
-    background-color: #c0c0c0 !important;  // Ajouter !important pour tester
-  }
-  
-  .gold-card {
-    background-color: #ffd700; // Exemple pour carte Gold
-  }
-  
-  .diamant-card {
-    background-color: #b9f2ff; // Exemple pour carte Diamant
-  }
-  
-  .maitre-card {
-// box-shadow: 0 8px 32px 0 rgba( 146, 7, 8, 0.5 );
-  }
+.silver-card {
+    box-shadow: 0px 0px 35px 0px #73818a; // Ajouter !important pour tester
+}
+
+.gold-card {
+    box-shadow: 0px 0px 35px 0px #9f7e51; // Exemple pour carte Gold
+}
+
+.diamant-card {
+    box-shadow: 0px 0px 35px 0px #82a4da;
+
+}
+
+.maitre-card {
+    box-shadow: 0px 0px 35px 0px #b9090a;
+}

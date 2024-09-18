@@ -16,7 +16,7 @@ const HomeFAQ = () => {
 
   return (
     <motion.section
-      className="faq faq_layer"
+      className="faq"
       ref={ref} // Utilisation du ref pour déclencher l'animation au scroll
       initial={{ opacity: 0, y: 50 }}
       animate={sectionControls}

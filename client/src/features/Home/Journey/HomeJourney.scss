@@ -15,7 +15,6 @@
 
     &_img {
         width: 1280px;
-        border-radius: 16px;
     }
 
     &_content {
@@ -25,6 +24,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 105px;
         gap: 25px;
   
 
@@ -37,12 +37,12 @@
         }
 
         & p {
-            
+            margin-top: -10px;
             font-size: 24px;
             font-weight: 500;
             line-height: 28px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
            
         }
 

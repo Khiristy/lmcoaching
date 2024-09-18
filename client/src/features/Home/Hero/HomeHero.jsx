@@ -15,7 +15,7 @@ const HomeHero = forwardRef(({ children }, ref) => {
 
   return (
     <motion.section
-      className="hero hero_layer"
+      className="hero"
       ref={ref} // Utilisation de ref ici
       initial={{ opacity: 1, y: 0 }} // Retrait du translateY
       animate={childrenControls}
