@@ -1,0 +1,57 @@
+// @import "../../../styles/variables.scss";
+// @import "../../../styles/mixins.scss";
+
+
+// .loader-container {
+//   position: relative;
+//   width: 100vw;
+//   height: 100vh;
+//     overflow: hidden;
+
+
+
+
+//   .left-div {
+//     position: absolute;
+//     left: 5%;
+//     top: 45%;
+//     text-align: center;
+//     z-index: 2;
+
+//     .logo {
+//       width: 200px;
+//       height: auto;
+//     }
+
+//     h1 {
+//       margin-top: 15px;
+//       @include strong-font2;
+//     }
+//   }
+
+//   // Image du haut
+//   .top-image {
+//     z-index: 2;
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+
+//   }
+
+//   // Image du centre
+//   .center-image {
+//     z-index: 1;
+//     height: 100vh;
+//     position: absolute;
+//     width: 100%;
+//   }
+
+//   // Image du bas
+//   .bottom-image {
+//     z-index: 2;
+
+//     bottom: 0;
+//     width: 100%;
+//     position: absolute;
+//   }
+// }

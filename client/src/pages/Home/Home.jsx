@@ -8,7 +8,7 @@ import HomeFaq from "../../features/Home/Faq/HomeFaq";
 import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
 import HomeReview from "../../features/Home/Review/HomeReview";
 import { useScrollSections } from "../../features/Hooks/Animation/useScrollSections";
-import { getSectionAnimation } from "../../features/Shared/Utils/getSectionAnimation";
+import { getSectionAnimation } from "../../features/Utils/getSectionAnimation";
 import "./Home.scss";
 
 const Home = () => {

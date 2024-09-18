@@ -1,48 +1,37 @@
-import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux"; // Import Redux hooks
-import { stopLoading } from "./redux/Slices/loadingSlice"; // Import de l'action Redux
-import Loader from "./features/Shared/Loader/Loader"; // Loader
-import Home from "./pages/Home/Home"
-import Form from "./pages/Form/Form"
-import ParticlesComponent from "./features/Shared/Animation/ParticlesComponent"
+import { useMemo } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Form from "./pages/Form/Form";
+import ParticlesComponent from "./features/Shared/Animation/ParticlesComponent";
+import Preloader from './features/Shared/Components/Preloader/Preloader';
+import { useResourceLoader } from './features/Hooks/useResourceLoader';
+
 const App = () => {
-  const dispatch = useDispatch();
-  const location = useLocation();
-  const isLoading = useSelector((state) => state.loading.isLoading); // Sélection de l'état de chargement
+  const resources = useMemo(() => [
+    { type: 'image', src: '/images/image1.jpg' },
+    { type: 'image', src: '/images/image2.jpg' },
+  ], []);
 
-  useEffect(() => {
-    // Simule l'arrêt du chargement après 3 secondes
-    const timer = setTimeout(() => {
-      dispatch(stopLoading()); // Dispatch l'action pour arrêter le chargement
-    }, 90000);
+  // Utilisation du hook pour charger les ressources et récupérer le temps de chargement
+  const { loading, resourcesLoaded, totalResources, loadingTime } = useResourceLoader(resources);
 
-    return () => clearTimeout(timer); // Nettoie le timer
-  }, [dispatch]);
+  if (loading) {
+    return <Preloader resourcesLoaded={resourcesLoaded} totalResources={totalResources} loadingTime={loadingTime} />;
+  }
+
 
   return (
     <>
-      {/* Le loader s'affiche uniquement si isLoading est true */}
-      {isLoading && <Loader />}
-      
-      {/* Affiche le contenu des routes après le chargement */}
-      <AnimatePresence mode="wait">
-        {!isLoading && (
-          <>
-            <ParticlesComponent id="particles-background"/>  {/* Composant des particules */}
-            <Routes location={location.pathname}>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<div>À propos</div>} />
-              <Route path="/contact" element={<div>Contact</div>} />
-              <Route path="/faq" element={<div>FAQ</div>} />
-              <Route path="/form" element={<Form />} />
-            </Routes>
-          </>
-        )}
-      </AnimatePresence>
+      <ParticlesComponent id="particles-background" /> {/* Composant des particules */}
+      <Routes location={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<div>À propos</div>} />
+        <Route path="/contact" element={<div>Contact</div>} />
+        <Route path="/faq" element={<div>FAQ</div>} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
     </>
   );
-}
+};
 
 export default App;

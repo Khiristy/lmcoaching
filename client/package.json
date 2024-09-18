@@ -3,13 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Khiristy.github.io/lmcoaching",  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",   
+    "deploy": "gh-pages -d dist"    
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -54,6 +57,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^6.1.1",
     "jest": "^27.5.1",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.78.0",
