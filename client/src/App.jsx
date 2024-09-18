@@ -6,7 +6,7 @@ import { stopLoading } from "./redux/Slices/loadingSlice"; // Import de l'action
 import Loader from "./features/Shared/Loader/Loader"; // Loader
 import Home from "./pages/Home/Home"
 import Form from "./pages/Form/Form"
-
+import BackgroundAnimation from "./features/Shared/Animation/BackgroundAnimation"
 const App = () => {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -28,18 +28,21 @@ const App = () => {
       
       {/* Affiche le contenu des routes après le chargement */}
       <AnimatePresence mode="wait">
-        {!isLoading && ( // Les routes ne sont rendues qu'après la fin du chargement
-          <Routes location={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<div>À propos</div>} />
-            <Route path="/contact" element={<div>Contact</div>} />
-            <Route path="/faq" element={<div>FAQ</div>} />
-            <Route path="/form" element={<Form />} />
-          </Routes>
+        {!isLoading && (
+          <>
+            <BackgroundAnimation />  {/* Composant des particules */}
+            <Routes location={location.pathname}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<div>À propos</div>} />
+              <Route path="/contact" element={<div>Contact</div>} />
+              <Route path="/faq" element={<div>FAQ</div>} />
+              <Route path="/form" element={<Form />} />
+            </Routes>
+          </>
         )}
       </AnimatePresence>
     </>
   );
-};
+}
 
 export default App;

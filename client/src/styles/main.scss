@@ -2,6 +2,9 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Inter", sans-serif;

@@ -51,17 +51,18 @@ const HomeAbout = () => {
               début d&apos;un parcours riche en compétitions et en succès
               sportifs.
               <br />
-              <br /> Aujourd&apos;hui, ma mission est de partager cette passion
-              et ces valeurs avec ceux qui souhaitent transformer leur mode de
-              vie à travers le sport, tout en atteignant leurs objectifs
-              physiques et mentaux.
+              <br /> Aujourd&apos;hui, je souhaite transmettre cette passion et
+              ces valeurs à tous ceux qui souhaitent les découvrir.
             </p>
             <i className="fa-solid fa-quote-right"></i>
           </div>
           <div className="social_link">
             <ul>
               <li>
-                <a className="facebook" href="https://www.facebook.com/loiicc.m">
+                <a
+                  className="facebook"
+                  href="https://www.facebook.com/loiicc.m"
+                >
                   <span></span>
                   <span></span>
                   <span></span>
@@ -70,7 +71,10 @@ const HomeAbout = () => {
                 </a>
               </li>
               <li>
-                <a className="tiktok" href="https://www.tiktok.com/@lm.coaching10?_t=8pTBK3sd7ui&_r=1">
+                <a
+                  className="tiktok"
+                  href="https://www.tiktok.com/@lm.coaching10?_t=8pTBK3sd7ui&_r=1"
+                >
                   <span></span>
                   <span></span>
                   <span></span>
@@ -79,7 +83,10 @@ const HomeAbout = () => {
                 </a>
               </li>
               <li>
-                <a className="instagram" href="https://www.instagram.com/loiicc.m?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <a
+                  className="instagram"
+                  href="https://www.instagram.com/loiicc.m?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                >
                   <span></span>
                   <span></span>
                   <span></span>
@@ -88,7 +95,10 @@ const HomeAbout = () => {
                 </a>
               </li>
               <li>
-                <a className="snapchat" href="https://www.snapchat.com/add/lm.coaching?share_id=kBKPRoB3UZ0&locale=fr-FR">
+                <a
+                  className="snapchat"
+                  href="https://www.snapchat.com/add/lm.coaching?share_id=kBKPRoB3UZ0&locale=fr-FR"
+                >
                   <span></span>
                   <span></span>
                   <span></span>

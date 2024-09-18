@@ -1,15 +1,22 @@
-// import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import mainLogo from "/media/logo_test.png";
-import "./Header.scss"; // Vos styles actuels
-// import Menu from "../../Shared/Components/Menu/Menu";
+import { motion } from "framer-motion";
+import PropTypes from 'prop-types';
 
-const Header = () => {
+import "./Header.scss";
+
+const Header = ({ refs }) => {
+  console.log(refs)
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.header
-      initial={{ opacity: 0 }} // Commence avec une opacité de 0 et hors écran vers le haut
-      animate={{ opacity: 1, y: 0 }} // Anime vers une opacité de 1 et revient à sa position d'origine
-      transition={{ duration: 2 }} // L'animation dure 2 secondes
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
       style={{ willChange: "opacity, transform" }}
       className="header"
     >
@@ -19,27 +26,34 @@ const Header = () => {
       <nav>
         <ul className="header_content-menu">
           <li>
-            <a href="/accueil">Accueil</a>
+            <button onClick={() => scrollToSection(refs.heroRef)}>Accueil</button>
           </li>
           <li>
-            <a href="/about">présentation</a>
+            <button onClick={() => scrollToSection(refs.aboutRef)}>Présentation</button>
           </li>
           <li>
-            <a href="/contact">Tarifs</a>
+            <button onClick={() => scrollToSection(refs.pricingRef)}>Tarifs</button>
           </li>
           <li>
-            <a href="/faq">Gallerie</a>
+            <button onClick={() => scrollToSection(refs.journeyRef)}>Gallerie</button>
           </li>
           <li>
-            <a href="/result">Faq</a>
+            <button onClick={() => scrollToSection(refs.faqRef)}>FAQ</button>
           </li>
           <li>
-            <a href="/result">Transformation</a>
+            <button onClick={() => scrollToSection(refs.transformationRef)}>Transformation</button>
+          </li>
+          <li>
+            <button onClick={() => scrollToSection(refs.reviewRef)}>Avis</button>
           </li>
         </ul>
       </nav>
     </motion.header>
   );
+};
+
+Header.propTypes = {
+  refs: PropTypes.object.isRequired,
 };
 
 export default Header;

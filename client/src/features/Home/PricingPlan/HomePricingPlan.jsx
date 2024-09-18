@@ -11,7 +11,6 @@ import AnimatedChildren from "../../Shared/Animation/AnimatedChildren"; // Impor
 const HomePricingPlan = () => {
   // Utilisation du hook pour l'animation principale de la section
   const { ref, controls: sectionControls } = useScrollAnimation(0.5);
-  console.log(ref)
 
   // Utilisation du hook pour l'animation des enfants
   const { controls: childrenControls, transition: childrenTransition } =
