@@ -5,7 +5,6 @@
 .HomeAbout {
     width: 100vw;
     height: 100vh;
-    // margin-top: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +15,7 @@
 
 .HomeAbout_container {
     position: relative;
-    width: 1545px;
+    width: 1600px;
     height: 700px;
     margin: auto;
 
@@ -54,7 +53,7 @@
         @include text-shadow;
 
         & i {
-            
+
             display: block;
             font-size: 50px;
             color: #E20D0F;
@@ -81,7 +80,7 @@
 .fa-quote-left {
     position: absolute;
     top: -40px;
-    left: -50px;
+    left: -80px;
 }
 
 .fa-quote-right {

@@ -18,7 +18,7 @@ const PriceCardContainer = () => {
   }, []);
 
   return (
-    <section className="price_card-layer">
+    <section>
       {priceCards.map((card, index) => (
         <PriceCard 
           key={index} 

@@ -18,37 +18,6 @@ body {
   overflow-y: scroll; /* Assure un défilement fluide */
 }
 
-.hero_layer {
-  width: 100%;
-  height: 100vh;
-}
-
-.journey_layer {
-  width: 100%;
-  height: 100vh;
-}
-.persoCard_layer {
-  width: 100%;
-  height: 100vh;
- 
-}
-.faq_layer {
-  width: 100%;
-  height: 100vh;
-
-}
-
-.transformation_layer {
-  width: 100%;
-  height: 100vh;
-  
-}
-.review_layer {
-  width: 100%;
-  height: 100vh;
-  background-color: #a52a2a;
-}
-
 #tsparticles {
   height: 100vh !important; /* Force la hauteur à 100% de la hauteur de la fenêtre */
   width: 100% !important;
