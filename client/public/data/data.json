@@ -18,26 +18,46 @@
     ],
     "priceCards": [
         {
-            "type": "Coaching en ligne",
-            "description": "Réservez maintenant pour profiter de ces offres et commencer votre aventure !",
+            "type": "SILVER",
+            "description": "Programme nutritionnel/entraînement",
+            "price": "80€/mois",
+            "details": [
+                "programme d'entrainement",
+                "programme nutritionnel"
+            ],
+            "note": "Sans engagement !"
+        },
+        {
+            "type": "GOLD",
+            "description": "Suivi en ligne",
             "price": "150€/mois",
+            "details": [
+                "",
+                "suivi de votre évolution via une application",
+                "bilan hebdomadaire en visio ou par téléphone"
+            ],
+            "note": "Sans engagement !"
+        },
+        {
+            "type": "DIAMANT",
+            "description": "Coaching à distance",
+            "price": "200€/mois",
             "details": [
                 "programme d'entrainement sur-mesure",
                 "programme nutritionnel adapté à vos besoins",
-                "suivi de votre évolution via une application dédiée",
-                "bilan hebdomadaire en visio ou par téléphone"
+                "suivi de votre évolution via une application dédiée"
             ],
-            "note": "Arrêtez votre abonnement à tout moment."
+            "note": "Sans engagement !"
         },
         {
-            "type": "Programme d'entrainements / nutritionnels personnalisés",
-            "description": "Venez rencontrer nos coachs en personne et bénéficiez d'un accompagnement personnalisé.",
-            "price": "80€/mois",
+            "type": "MAITRE",
+            "description": "Coaching en présentiel",
+            "price": "250€/mois",
             "details": [
                 "programme d'entrainement sur-mesure",
                 "programme nutritionnel adapté à vos besoins"
             ],
-            "note": "Résiliez à tout moment."
+            "note": "Sans engagement !"
         }
     ],
     "reviewSections": [

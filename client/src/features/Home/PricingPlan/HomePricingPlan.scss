@@ -5,15 +5,38 @@
 
 .pricingPlan {
 
-width: 100vw;
-height: 100vh;
-position: relative;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &_content {
-
-        height: 800px;
-        width: 100%;
-        background-color: green; // Pour tester si les styles s'appliquent bien
+        margin-top: 80px;
+        height: 750px;
+        width: 95%;
+        // background-color: green; // Pour tester si les styles s'appliquent bien
         // margin: auto;
+        &-top {
+            width: 100%;
+            padding-left: 250px;
+            &--title {
+                @include strong-font2;
+                margin-bottom: 20px
+            }
+
+            &--text {
+                @include text-font;
+                text-align: left;
+                margin-bottom: 30px
+            }
+        }
+    }
+    &_cardLayer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
     }
 }

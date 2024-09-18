@@ -31,10 +31,7 @@
         }
 
         & p {
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 28px;
-            text-align: left;
+            @include text-font;
             margin-bottom: 15px;
         }
     }

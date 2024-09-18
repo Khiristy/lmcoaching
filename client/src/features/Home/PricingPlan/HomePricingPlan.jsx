@@ -22,14 +22,14 @@ const HomePricingPlan = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="pricingPlan_content">
-        <div className="pricingPLan_left">
-          <h3 className="pricingPlan_left-title">Flexibilité et Simplicité</h3>
-          <h4 className="pricingPlan_left-txt">
+        <div className="pricingPlan_content-top">
+          <h3 className="pricingPlan_content-top--title">
+            Flexibilité et Simplicité
+          </h3>
+          <p className="pricingPlan_content-top--text">
             Choisissez le plan qui vous convient et commencez dès
-            aujourd&apos;hui. Que vous souhaitiez une expérience en ligne
-            accessible partout, ou une option flexible qui s&apos;adapte à votre
-            emploi du temps, nous avons ce qu&apos;il vous faut.
-          </h4>
+            aujourd&apos;hui.
+          </p>
         </div>
 
         {/* Section animée pour les cartes */}
@@ -37,7 +37,7 @@ const HomePricingPlan = () => {
           controls={childrenControls}
           transition={childrenTransition}
         >
-          <PriceCardContainer className="price_card-layer" />
+          <PriceCardContainer className="pricingPlan_cardLayer" />
         </AnimatedChildren>
       </div>
     </motion.section>

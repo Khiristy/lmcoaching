@@ -1,4 +1,6 @@
-// @import "../../../../styles/variables.scss";
-// @import "../../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
 
-// .pricingPlan_container {
+.priceCard.silver-card {
+    background-color: #c0c0c0 !important;  // Ajouter !important pour tester
+  }
