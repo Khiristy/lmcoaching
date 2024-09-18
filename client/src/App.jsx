@@ -7,18 +7,20 @@ import Preloader from './features/Shared/Components/Preloader/Preloader';
 import { useResourceLoader } from './features/Hooks/useResourceLoader';
 
 const App = () => {
+
+  // Utilisation de useMemo pour éviter de redéfinir les ressources à chaque rendu
   const resources = useMemo(() => [
     { type: 'image', src: '/images/image1.jpg' },
     { type: 'image', src: '/images/image2.jpg' },
+
   ], []);
 
-  // Utilisation du hook pour charger les ressources et récupérer le temps de chargement
-  const { loading, resourcesLoaded, totalResources, loadingTime } = useResourceLoader(resources);
+  // Utilisation du hook pour charger les ressources
+  const { loading, resourcesLoaded, totalResources } = useResourceLoader(resources);
 
   if (loading) {
-    return <Preloader resourcesLoaded={resourcesLoaded} totalResources={totalResources} loadingTime={loadingTime} />;
+    return <Preloader resourcesLoaded={resourcesLoaded} totalResources={totalResources} />;
   }
-
 
   return (
     <>
