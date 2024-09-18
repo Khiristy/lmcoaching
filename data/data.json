@@ -1,0 +1,75 @@
+{
+    "persoCards": [
+        {
+            "title": "Expérience en Basketball",
+            "icon": "/media/persoCard/basketball_card.png",
+            "description": "Par la suite, je me suis tourné vers le basketball, où j'ai joué en tant que meneur pendant plusieurs années. Ce sport m'a inculqué l'importance du travail d'équipe, de l'équité, et du respect des autres. Grâce au basketball, j'ai développé une compréhension plus profonde de la coopération et du leadership sur le terrain."
+        },
+        {
+            "title": "Passion pour la Musculation",
+            "icon": "/media/persoCard/weight_card.png",
+            "description": "Cherchant de nouveaux défis, j'ai découvert une véritable passion pour la musculation. Ce sport m'a apporté une transformation physique et mentale significative. Il m'a permis de repousser mes limites, d'adopter une discipline stricte et de cultiver une force intérieure autant qu'extérieure."
+        },
+        {
+            "title": "Succès en Compétition",
+            "icon": "/media/persoCard/medal_card.png",
+            "description": "Pour ma première compétition, j'ai concouru dans la catégorie Men's Physique et terminé vice-champion de France, me qualifiant ainsi pour la compétition de Mister Univers (APF-WPF). Cette expérience a marqué le début d'un parcours riche en compétitions et en succès sportifs."
+        }
+    ],
+    "priceCards": [
+        {
+            "type": "Coaching en ligne",
+            "description": "Réservez maintenant pour profiter de ces offres et commencer votre aventure !",
+            "price": "150€/mois",
+            "details": [
+                "programme d'entrainement sur-mesure",
+                "programme nutritionnel adapté à vos besoins",
+                "suivi de votre évolution via une application dédiée",
+                "bilan hebdomadaire en visio ou par téléphone"
+            ],
+            "note": "Arrêtez votre abonnement à tout moment."
+        },
+        {
+            "type": "Programme d'entrainements / nutritionnels personnalisés",
+            "description": "Venez rencontrer nos coachs en personne et bénéficiez d'un accompagnement personnalisé.",
+            "price": "80€/mois",
+            "details": [
+                "programme d'entrainement sur-mesure",
+                "programme nutritionnel adapté à vos besoins"
+            ],
+            "note": "Résiliez à tout moment."
+        }
+    ],
+    "reviewSections": [
+        {
+            "title": "Témoignages de nos clients",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard."
+        },
+        {
+            "title": "Avis des participants",
+            "description": "Nos participants parlent de leurs expériences et des résultats obtenus après avoir suivi nos programmes d'entraînement."
+        }
+    ],
+    "faqSections": [
+        {
+            "title": "FAQ",
+            "questions": [
+                "Quels sont les horaires des cours en ligne ?",
+                "Puis-je changer de programme à tout moment ?",
+                "Comment suivre mes progrès dans l'application ?",
+                "Puis-je annuler mon abonnement sans frais ?",
+                "Est-ce qu'il y a des coachs spécialisés dans certaines disciplines ?"
+            ]
+        },
+        {
+            "title": "Questions fréquentes",
+            "questions": [
+                "Quels sont les équipements nécessaires pour le coaching en ligne ?",
+                "Est-ce qu'un suivi nutritionnel est inclus ?",
+                "Combien de temps avant de voir des résultats ?",
+                "Y a-t-il des options de coaching personnalisé ?",
+                "Comment puis-je contacter mon coach ?"
+            ]
+        }
+    ]
+}
