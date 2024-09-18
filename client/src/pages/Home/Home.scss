@@ -7,12 +7,19 @@
     overflow: hidden; /* Désactive le scrolling vertical */
     position: relative;
   }
-  
+
+
   .section {
-    height: 100vh;
+    opacity: 1;
+ 
+    min-height: 100vh;  /* Ensure the section takes up full viewport */
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  
+  .section-hidden {
+    opacity: 0;
   }
   
   .navigation-buttons {

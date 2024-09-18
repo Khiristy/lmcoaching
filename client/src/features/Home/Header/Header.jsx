@@ -47,7 +47,7 @@ const Header = ({ scrollToSection }) => { // Suppression de refs ici
 
 // Validation des PropTypes
 Header.propTypes = {
-  scrollToSection: PropTypes.func.isRequired, // On ne valide que scrollToSection
+  scrollToSection: PropTypes.func.isRequired, 
 };
 
 export default Header;
