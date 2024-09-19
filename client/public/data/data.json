@@ -18,7 +18,7 @@
     ],
     "priceCards": [
         {
-            "type": "SILVER",
+            "type": "ARGENT",
             "description": "Programme nutritionnel/entraînement",
             "price": "80€/mois",
             "details": [
@@ -28,7 +28,7 @@
             "note": "Sans engagement !"
         },
         {
-            "type": "GOLD",
+            "type": "OR",
             "description": "Suivi en ligne",
             "price": "150€/mois",
             "details": [

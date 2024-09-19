@@ -16,11 +16,12 @@
         margin-top: 80px;
         height: 750px;
         width: 95%;
-        // background-color: green; // Pour tester si les styles s'appliquent bien
-        // margin: auto;
+
         &-top {
             width: 100%;
-            padding-left: 250px;
+            margin-top: -50px;
+            padding-left: 300px;
+
             &--title {
                 @include strong-font2;
                 margin-bottom: 10px
@@ -29,10 +30,11 @@
             &--text {
                 @include text-font;
                 text-align: left;
-                margin-bottom: 40px;
+                margin-bottom: 60px;
             }
         }
     }
+
     &_cardLayer {
         width: 100%;
         display: flex;

@@ -4,7 +4,7 @@ import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation"; // Im
 import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren"; // Import du hook pour les enfants animés
 import AnimatedChildren from "../../Shared/Animation/AnimatedChildren"; // Import du composant AnimatedChildren
 import { motion } from "framer-motion";
-import faqImg from "/media/faq/faq_img.webp";
+import faqImg from "/media/faq/faq_img-2.webp";
 
 const HomeFAQ = () => {
   // Utilisation du hook pour l'animation principale de la section
@@ -23,20 +23,21 @@ const HomeFAQ = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="faq_container">
-        <img src={faqImg} alt="" className="faq_img" />
-        <div className="faq_content">
-          <h3 className="faq_title">Questions Fréquentes</h3>
-          <p className="faq_txt">
-            Retrouvez ici les réponses aux questions les plus posées.
-          </p>
+        <AnimatedChildren
+          controls={childrenControls}
+          transition={childrenTransition}
+        >
+          <img src={faqImg} alt="" className="faq_img" />
+          <div className="faq_bckgrd"></div>
+          <div className="faq_content">
+            <h3 className="faq_content-title">Questions Fréquentes</h3>
+            <p className="faq_content-txt">
+              Retrouvez ici les réponses aux questions les plus posées.
+            </p>
+          </div>
 
-          <AnimatedChildren
-            controls={childrenControls}
-            transition={childrenTransition}
-          >
-            <FAQItems />
-          </AnimatedChildren>
-        </div>
+          <FAQItems />
+        </AnimatedChildren>
       </div>
     </motion.section>
   );

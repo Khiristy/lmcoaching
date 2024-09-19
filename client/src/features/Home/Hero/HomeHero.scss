@@ -38,14 +38,13 @@
 
     &_container {
         position: absolute;
-        bottom: 55px;
+        bottom: 20px;
         right: 135px;
         width: 70vw;
-        height: 80vh;
+        height: 86vh;
         margin: auto;
         z-index: 1;
         box-shadow: rgba(0, 0, 0, 0.2) 3px 9px 18px;
-
         &-img {
             position: relative;
             width: 100%;

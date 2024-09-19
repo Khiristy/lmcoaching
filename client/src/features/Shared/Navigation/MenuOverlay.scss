@@ -1,8 +1,11 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/mixins.scss";
 
+.container {
+    background-color: #E20D0F;
 
-.menu_overlay {
+}
+.nav_overlay {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -12,8 +15,9 @@
     transform: translateY(-100%);
     transition: transform 0.5s ease;
     background: rgba(124, 65, 65, 0.6);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,8 +51,8 @@
                 transition: all 0.6s ease;
 
                 &:hover {
+                    cursor: pointer;
                     border-bottom: 2px solid red;
-                    // color: #E20D0F;
                 }
             }
         }
@@ -60,20 +64,21 @@
         top: 20px;
         font-size: 2.5rem;
         transition: all 0.3s ease;
-        z-index: 100;
+        z-index: 9988;
 
         &:hover {
+            cursor: pointer;
             color: #E20D0F;
             transform: scale(1.1) rotate(180deg);
         }
     }
 }
 
-.menu {
+.nav {
     position: absolute;
     right: 20px;
     top: 20px;
-
+    z-index: 9990;
     .fas {
         font-size: 2rem;
         color: white;
@@ -82,7 +87,16 @@
         right: 20px;
 
         &:hover {
+            cursor: pointer;
             color: #E20D0F;
         }
+    }
+    &_logo {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 115px;
+
     }
 }
