@@ -4,6 +4,10 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  // Désactive les barres de scroll
+  height: 100%;  
 }
 
 body {
@@ -13,9 +17,8 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory; /* Active le snapping vertical */
-  overflow-y: scroll; /* Assure un défilement fluide */
+  overflow: hidden;  // Désactive les barres de scroll
+  height: 100%;   /* Assure un défilement fluide */
 }
 
 #tsparticles {
@@ -25,4 +28,14 @@ body {
   top: 0 !important;
   left: 0 !important;
   z-index: -1 !important;  /* S'assurer que le canvas reste en arrière-plan */
+}
+.fp-section {
+  margin: 0;
+  padding: 0;
+  height: 100vh;  // Chaque section prend 100% de la hauteur de l'écran
+  width: 100%;    // Chaque section prend 100% de la largeur
+}
+
+.fp-watermark {
+  display: none;
 }

@@ -1,71 +1,118 @@
-@import "../../../styles/variables.scss";
-@import "../../../styles/mixins.scss";
-
 .header {
-    position: fixed;
-    width: 1600px;
-    height: 150px;
-    z-index: 3;
-    translate: -50% -50%;
-    top: 100px;
-    left: 50%;
+  width: 100%;
+  height: 200px;
+  position: fixed;
+  z-index: 1000;
+
+  &_content {
+    margin: auto;
+    top: 0;
+    width: 90%;
+    height: 100%;
     display: flex;
-    &_content {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: self-start;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 
-        &-menu {
-            padding: 0; 
-            list-style: none; 
-            display: table;
-            width: 600px;
-            text-align: center;
-          
-          li { 
-            display: table-cell; 
-            position: relative; 
-            padding: 15px 0;
-          }
-          button {
-            color: #fff;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 0.15em;
-            background-color: transparent;
-            display: inline-block;
-            padding: 15px 20px;
-            position: relative;
-          }
-          button:after {    
-            background: none repeat scroll 0 0 transparent;
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 2px;
-            left: 50%;
-            position: absolute;
-            background: #fff;
-            transition: width 0.3s ease 0s, left 0.3s ease 0s;
-            width: 0;
-          }
-          button:hover:after { 
-            width: 100%; 
-            left: 0; 
-          }
-        }
-    
-
-
-        &-mainLogo {
-            margin-top: -20px;
-           margin-left: -50px;
-            width: 200px;
-            height: 200px;
-            z-index: 2;
-        }
-
+    &-mainLogo {
+      width: 200px;
+      height: 200px;
+      z-index: 2;
     }
+  }
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.6s ease; // Animation de déplacement
+  list-style: none; 
+  display: table;
+  ul {
+    list-style: none;
+    display: flex; // Alignement des éléments en ligne
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 15px; // Espacement horizontal entre les éléments
+
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        background-color: transparent;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+
+        &:after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 2px;
+          left: 50%;
+          position: absolute;
+          background: #fff;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0;
+
+          &:hover:after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.open {
+    right: 0; // Fait apparaître le menu en le ramenant à gauche
+  }
+}
+
+.menu_icon {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu_icon .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.menu_icon.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.menu_icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu_icon.open .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
