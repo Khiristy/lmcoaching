@@ -5,7 +5,7 @@ import Form from "./pages/Form/Form";
 import ParticlesComponent from "./features/Shared/Animation/ParticlesComponent";
 import Preloader from './features/Shared/Components/Preloader/Preloader';
 import { useResourceLoader } from './features/Hooks/useResourceLoader';
-
+import MenuOverlay from "./features/Shared/Navigation/MenuOverlay"
 const App = () => {
 
   // Utilisation de useMemo pour éviter de redéfinir les ressources à chaque rendu
@@ -25,6 +25,7 @@ const App = () => {
   return (
     <>
       <ParticlesComponent id="particles-background" /> {/* Composant des particules */}
+      <MenuOverlay />
       <Routes location={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<div>À propos</div>} />

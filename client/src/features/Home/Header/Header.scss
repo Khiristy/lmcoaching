@@ -1,3 +1,5 @@
+
+
 .header {
   width: 100%;
   height: 200px;
@@ -24,66 +26,63 @@
 
 .menu {
   position: fixed;
-  top: 0;
-  right: -100%;
+  top: 20px;
+  right: 0; /* Hors de l'écran */
   width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: right 0.6s ease; // Animation de déplacement
-  list-style: none; 
-  display: table;
-  ul {
-    list-style: none;
-    display: flex; // Alignement des éléments en ligne
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  transition: right 0.6s ease; /* Animation de glissement */
+  z-index: 1;
+}
 
-    li {
-      margin: 0 15px; // Espacement horizontal entre les éléments
 
-      a {
-        color: #fff;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 0.15em;
-        background-color: transparent;
-        display: inline-block;
-        padding: 15px 20px;
-        position: relative;
 
-        &:after {
-          background: none repeat scroll 0 0 transparent;
-          bottom: 0;
-          content: "";
-          display: block;
-          height: 2px;
-          left: 50%;
-          position: absolute;
-          background: #fff;
-          transition: width 0.3s ease 0s, left 0.3s ease 0s;
-          width: 0;
+.menu ul {
+  list-style: none;
+  display: flex; /* Les éléments <li> sont en ligne */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
-          &:hover:after {
-            width: 100%;
-            left: 0;
-          }
-        }
-      }
-    }
-  }
+.menu ul li {
+  margin: 0 15px; /* Espacement horizontal entre les éléments */
+}
 
-  &.open {
-    right: 0; // Fait apparaître le menu en le ramenant à gauche
-  }
+.menu ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  background-color: transparent;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #E20D0F;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu ul li a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 .menu_icon {
-  position: absolute;
-  top: 60px;
+  position: fixed;
+  top: 35px;
   right: 60px;
   display: flex;
   flex-direction: column;
@@ -92,6 +91,7 @@
   height: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 .menu_icon .bar {

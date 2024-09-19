@@ -35,7 +35,9 @@ const Home = () => {
       render={() => {
         return (
           <div>
-            <Header />
+            <div id="Header">
+              <Header />
+            </div>
             <div className="section" data-anchor="hero">
               <HomeHero />
             </div>
