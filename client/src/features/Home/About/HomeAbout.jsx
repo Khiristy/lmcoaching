@@ -3,7 +3,7 @@ import useScrollAnimation from "../../Hooks/Animation/useScrollAnimation.jsx"; /
 import useAnimateChildren from "../../Hooks/Animation/useAnimateChildren.jsx"; // Hook d'animation pour les enfants
 import AnimatedChildren from "../../Shared/Animation/AnimatedChildren.jsx"; // Composant pour gérer les animations des enfants
 import { motion } from "framer-motion";
-import aboutImg from "/media/about/homeAbout_img.webp";
+import aboutImg from "/media/about/about_img.webp";
 
 const HomeAbout = () => {
   // Utilisation du hook pour l'animation principale de la section
