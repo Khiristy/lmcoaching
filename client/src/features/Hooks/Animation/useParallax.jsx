@@ -1,27 +1,20 @@
-import { useTransform, useScroll } from 'framer-motion';
+import { useMotionValue } from "framer-motion";
 
-const useParallax = (start = 0, end = -100) => {
-  const { scrollY } = useScroll(); // Capture du défilement vertical
-  const y = useTransform(scrollY, [0, 500], [start, end]); // Applique un déplacement en fonction du défilement
 
-  return y; // Retourne la valeur `y` qui pourra être appliquée à un élément
+export const useParallax = () => {
+  // Créer des valeurs de motion pour x et y
+  const xParallax = useMotionValue(0);
+  const yParallax = useMotionValue(0);
+
+  // Gérer le mouvement de la souris
+  const handleMouseMove = (e) => {
+    const x = (e.clientX / window.innerWidth) * 10 - 5; // Réduire l'amplitude à [-5, 5]
+    const y = (e.clientY / window.innerHeight) * 10 - 5; // Réduire l'amplitude à [-5, 5]
+
+    xParallax.set(x); // Mettre à jour les valeurs de motion
+    yParallax.set(y);
+  };
+
+  // Retourner les valeurs de parallax et le gestionnaire de mouvement de la souris
+  return { xParallax, yParallax, handleMouseMove };
 };
-
-export default useParallax;
-
-
-
-// import { motion } from 'framer-motion';
-// import useParallax from './useParallax';
-
-// const ParallaxComponent = () => {
-//   const y = useParallax(0, -100);
-
-//   return (
-//     <motion.div style={{ y }}>
-//       <img src="parallax-image.jpg" alt="Parallaxe" />
-//     </motion.div>
-//   );
-// };
-
-// export default ParallaxComponent;

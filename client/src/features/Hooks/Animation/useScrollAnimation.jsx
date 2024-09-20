@@ -1,27 +1,30 @@
-import { useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-const useScrollAnimation = (
-  threshold = 0.5,
-  initial = { opacity: 0, y: 50 },
-  animateTo = { opacity: 1, y: 0 },
-  transition = { duration: 3 }
-) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold, // Déclenche l'animation lorsque 50% du composant est visible
-  });
+export const useScrollAnimation = (threshold = 0.2) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
 
   useEffect(() => {
-    if (inView) {
-      controls.start(animateTo);
-    } else {
-      controls.start(initial);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold } // Se déclenche quand un pourcentage (threshold) de l'élément est visible
+    );
+
+    const currentRef = elementRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
-  }, [inView, controls, animateTo, initial]);
 
-  return { ref, controls, transition };
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [threshold]);
+
+  return { isVisible, elementRef };
 };
-
-export default useScrollAnimation;

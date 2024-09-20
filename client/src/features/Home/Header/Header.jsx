@@ -3,7 +3,6 @@ import mainLogo from "/media/logo_test.png";
 import "./Header.scss";
 
 const Header = () => {
-
   return (
     <header className="header">
       <div className="header_content">
@@ -20,39 +19,25 @@ const Header = () => {
         <nav className="menu">
           <ul>
             <li>
-              <a href="#hero">
-                Accueil
-              </a>
+              <a href="#hero">Accueil</a>
             </li>
             <li>
-              <a href="#about">
-                Présentation
-              </a>
+              <a href="#about">Présentation</a>
             </li>
             <li>
-              <a href="#pricing">
-                Tarifs
-              </a>
+              <a href="#pricing">Tarifs</a>
             </li>
             <li>
-              <a href="#journey">
-                Galerie
-              </a>
+              <a href="#journey">Galerie</a>
             </li>
             <li>
-              <a href="#faq">
-                FAQ
-              </a>
+              <a href="#faq">FAQ</a>
             </li>
             <li>
-              <a href="#transformation">
-                Transformation
-              </a>
+              <a href="#transformation">Transformation</a>
             </li>
             <li>
-              <a href="#review">
-                Avis
-              </a>
+              <a href="#review">Avis</a>
             </li>
           </ul>
         </nav>
