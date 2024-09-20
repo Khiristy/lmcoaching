@@ -9,6 +9,7 @@ const HomeTransformation = () => {
     <section className="transformation">
       
       <div className="transformation-container">
+
       <h3 className="transformation-title">TRANSFORMATIONS</h3>
         <TransformationCard />
       </div>

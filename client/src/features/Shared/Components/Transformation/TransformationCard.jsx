@@ -3,10 +3,14 @@ import "./TransformationCard.scss";
 import TransformationCardSilver from "/media/transformation/transformation_card-diamond-test.png";
 import TransformationCardSMaster from "/media/transformation/transformation_card-master.png";
 import VersusLogo from "/media/transformation/versus_logo.png"; // Logo Versus
+import slideBotL from "/media/transformation/slideBotL.png"
+import slideBotR from "/media/transformation/slideBotR.png"
 
 const TransformationCard = () => {
   return (
     <div className="transformation_card-items">
+          <img src={slideBotL} alt="" className="slide_left" />
+          <img src={slideBotR} alt="" className="slide_right" />
       <img
         src={TransformationCardSilver}
         alt=""
