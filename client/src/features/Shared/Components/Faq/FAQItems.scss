@@ -5,14 +5,12 @@
 .Collapsible__trigger {
     display: block;
     font-weight: 400;
-    width: 800px;
-    height: 80px;
     text-decoration: none;
     text-align: left;
     position: relative;
     border-bottom: 1px solid #FFFFFF1A;
     cursor: pointer;
-    padding-top: 30px;
+    padding: 25px;
     color: white;
     position: relative;
 
@@ -20,11 +18,10 @@
         font-family: 'FontAwesome';
         content: '\f107';
         position: absolute;
-        padding-top: 12px;
+        padding-top: 10px;
         font-size: 25px;
         right: 15px;
         top: 15px;
-        display: block;
         transition: transform 300ms;
         transition: all 0.3s ease;
         transform: scale(0.85);
@@ -45,11 +42,10 @@
 
 
 .Collapsible__contentInner {
-    padding: 30px;
+    padding: 20px;
     background-color: #5A1A1A;
     border-top: 0;
     max-height: 200px;
-    width: 800px;
 
     p {
         margin-bottom: 10px;

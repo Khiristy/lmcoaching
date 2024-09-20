@@ -7,8 +7,9 @@ const HomeTransformation = () => {
 
   return (
     <section className="transformation">
-      <h3 className="transformation-title">TRANSFORMATIONS</h3>
+      
       <div className="transformation-container">
+      <h3 className="transformation-title">TRANSFORMATIONS</h3>
         <TransformationCard />
       </div>
     </section>

@@ -12,63 +12,60 @@
 
 
     &_container {
-        position: relative;
         width: 90vw;
         height: 800px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+
     }
 
     &_bckgrd {
         position: absolute;
         width: 1100px;
         height: 733px;
-        top: 0;
-        right: 0;
+        top: 100px;
+        right: 100px;
         background-image: linear-gradient(270deg, rgba(30, 30, 30, 0) 50%, #1E1E1E 110%);
     }
 
     &_img {
         width: 1100px;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 100px;
+        right: 100px;
         object-fit: cover;
         opacity: 85%;
 
     }
 
     &_content {
-        position: absolute;
+        margin-top: 80px;
         z-index: 2;
         min-height: 700px;
         width: 1000px;
-        margin: auto;
-        top: 25px;
-        left: 250px;
+        margin-right: 1000px;
         @include text-shadow;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
 
         &-title {
             @include strong-font2;
             padding-bottom: 20px;
+            margin-top: -20px;
         }
 
         &-txt {
-            padding-bottom: 70px;
+
+            margin-bottom: 70px;
         }
     }
 
     &-items {
         padding: 25px;
         z-index: 3;
-        position: absolute;
-        bottom: -20px;
-        right: 50%;
-        background: rgba( 219, 50, 50, 0.25 );
+        background: rgba(219, 50, 50, 0.25);
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
-
         box-shadow: rgba(0, 0, 0, 0.2) 3px 9px 18px;
     }
 }

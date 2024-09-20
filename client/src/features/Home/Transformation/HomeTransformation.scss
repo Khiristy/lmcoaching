@@ -2,29 +2,33 @@
 
 
 .transformation {
-
-
-
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 
     &-container {
-        margin: auto;
-        margin: auto;
-        width: 1600px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+  
+        margin: auto;
+        width: 1600px;
+        text-align: center;
 
     }
 
     &-title {
-        padding-bottom: 40px;
+        width: 100%;
+       margin-bottom: 30px;
         @include strong-font2;
 
     }
 }
 
 .versus_logo {
-    width: 150px;
+    width: 130px;
     height: 230px;
 }

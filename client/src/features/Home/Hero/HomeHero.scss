@@ -10,6 +10,13 @@
     margin: auto;
     padding: 25px 0 25px 0;
 
+    .mainBtn {
+        position: absolute;
+        bottom: 40px;
+        right: 45px;
+        z-index: 3;
+    }
+
     &_leftSide {
         position: absolute;
         top: 230px;
@@ -78,13 +85,6 @@
                 left: 0;
                 opacity: 90%;
                 background-image: linear-gradient(270deg, rgba(30, 30, 30, 0) 39.35%, #1E1E1E 100%);
-            }
-
-            &--mainBtn {
-                position: absolute !important;
-                bottom: 40px;
-                right: 45px;
-                z-index: 3;
             }
         }
 

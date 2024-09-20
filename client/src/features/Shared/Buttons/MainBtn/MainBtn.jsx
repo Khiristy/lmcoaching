@@ -1,25 +1,14 @@
-import './MainBtn.scss';
-import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import "./MainBtn.scss";
 
-const MainBtn = ({ text,  }) => {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    window.scrollTo(0, 0);
-    navigate("/Form");
-  };
 
+const MainBtn = () => {
   return (
-    <div className="mainBtn hero_container-img--mainBtn">
-      <button className="mainBtn-btn" onClick={handleClick}>
-        <span className="mainBtn-text">{text}</span>
-      </button>
-    </div>
+
+      <button className="mainBtn">Réserver Maintenant !</button>
+
   );
 };
 
-MainBtn.propTypes = {
-  text: PropTypes.string.isRequired,
-};
+
 
 export default MainBtn;

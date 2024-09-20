@@ -13,9 +13,8 @@ const HomeFAQ = () => {
           <p className="faq_content-txt">
             Retrouvez ici les réponses aux questions les plus posées.
           </p>
+          <FAQItems />
         </div>
-
-        <FAQItems />
       </div>
     </section>
   );

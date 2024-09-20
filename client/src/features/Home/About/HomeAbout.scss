@@ -9,7 +9,10 @@
     justify-content: center;
     align-items: center;
     padding-top: 100px;
-
+    &_content {
+        position: relative;
+        width: 100%;
+    }
 }
 
 
@@ -18,22 +21,23 @@
     width: 1600px;
     height: 700px;
     margin: auto;
-
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
 
 
     &-left {
         @include img-shadow;
         z-index: 2;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        margin-top: 100px;
         height: 640px;
         width: 740px;
         display: flex;
 
         &--img {
             z-index: 2;
-            position: absolute;
+            
             object-fit: cover;
             width: 100%;
             height: 100%;
@@ -43,20 +47,13 @@
 
 
     &-right {
+        margin-top: -100px;
         z-index: 1;
-        position: absolute;
-        height: 520px;
-        width: 760px;
         top: 0;
         right: 0;
         @include text-shadow;
+        width: 800px;
 
-        & i {
-
-            display: block;
-            font-size: 50px;
-            color: #E20D0F;
-        }
 
         &--title {
             margin-top: 15px;
@@ -74,26 +71,32 @@
 
         }
     }
+
 }
 
 .fa-quote-left {
+    display: block;
+    font-size: 50px;
+    color: #E20D0F;
     position: absolute;
     top: -40px;
     left: -80px;
 }
 
 .fa-quote-right {
+    display: block;
+    font-size: 50px;
+    color: #E20D0F;
     position: absolute;
     bottom: -40px;
     right: -40px;
 }
 
 .social_link {
+    margin-top: 55px;
+    margin-left: -28px;
 
     ul {
-        position: absolute;
-        bottom: 0;
-        right: 5cap;
         margin: 0;
         padding: 0;
         display: flex;
@@ -112,7 +115,7 @@
         font-size: 40px;
         text-align: center;
         text-decoration: none;
-        color: #404040;
+        color: white;
         margin: 0 30px;
         transition: .5s;
     }

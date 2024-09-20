@@ -1,122 +1,55 @@
 @import "../../../../styles/variables.scss";
 @import "../../../../styles/mixins.scss";
 
-
+@import "https://unpkg.com/open-props";
 
 .mainBtn {
+    text-transform: uppercase;
+    font-weight: var(--font-weight-6);
+    font-size: 25px;
+    color: white;
+    background: $red-main;
+    border: 0;
+    padding: var(--size-4) var(--size-8);
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+    transition: transform 0.1s;
     position: relative;
-    width: 260px;
-    height: 70px;
-    height: 70px;
-    overflow: hidden;
-    border: 2px solid white;
-    // font-family: 'Lato', sans-serif;
-    transition: 0.5s;
-    letter-spacing: 1px;
-    border-radius: 10px;
-
-    &-text {
-        transition: color 0.3s ease; 
-    font-weight: 500;
-
-        &:hover {
-            color: white;
-        }
-    }
-
-    &-btn {
-        position: relative;
-        width: 103%;
-        height: 100%;
-        background: red;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        border-radius: 10px;
-        
-
-
-       
-        -webkit-mask: url('https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png');
-        mask: url('https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png');
-        -webkit-mask-size: 3000% 100%;
-        mask-size: 3000% 100%;
-        -webkit-animation: ani2 0.7 steps(29) forwards;
-        animation: ani2 0.7s steps(29) forwards;
-
-        &:hover {
-            -webkit-animation: ani 0.7s steps(29) forwards;
-            animation: ani 0.7s steps(29) forwards;
-            border: none;
-
-            &.mainBtn-text {
-                color: #fff;
-            }
-
-        }
-
-        &::after {
-            content: attr(data-hover-text);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.3s ease;
-            color: #fff;
-        }
-
-        &:hover::after {
-            opacity: 1;
-        }
-
-    }
 }
 
-
-@-webkit-keyframes ani {
-    from {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
-
-    to {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
+.mainBtn:hover {
+    --y: -10;
+    --scale: 1.1;
+    --border-scale: 1;
 }
 
-@keyframes ani {
-    from {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
-
-    to {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
+.mainBtn:active {
+    --y: 5%;
+    --scale: 0.9;
+    --border-scale: 0.9, 0.8;
 }
 
-@-webkit-keyframes ani2 {
-    from {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
+.mainBtn:before {
+    content: "";
+    position: absolute;
+    inset: calc(var(--size-3) * -1);
+    border: var(--size-2) solid var(--gray-0);
+    transform: scale(var(--border-scale, 0));
+    transition: transform 0.125s;
 
-    to {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
-}
+    --angle-one: 105deg;
+    --angle-two: 290deg;
+    --spread-one: 30deg;
+    --spread-two: 40deg;
+    --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+    --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+    --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+    --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
 
-@keyframes ani2 {
-    from {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
+    mask: conic-gradient(transparent 0 var(--start-one),
+            white var(--start-one) var(--end-one),
+            transparent var(--end-one) var(--start-two),
+            white var(--start-two) var(--end-two),
+            transparent var(--end-two));
 
-    to {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
+    z-index: -1;
 }

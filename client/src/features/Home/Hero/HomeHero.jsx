@@ -33,7 +33,7 @@ const HomeHero = () => {
 
         {/* Bouton sans parallax */}
         <div>
-          <MainBtn className="" text="Réserver maintenant !" />
+          <MainBtn text="Réserver maintenant !" />
         </div>
       </div>
     </section>

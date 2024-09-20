@@ -39,7 +39,7 @@ const PriceCardContainer = () => {
   return (
     <section className="pricingPlan_cardLayer" ref={elementRef}>
       {priceCards.map((card, index) => {
-        const cardClass = `priceCard ${card.type.toLowerCase()}-card`;
+        let cardClass = `priceCard ${card.type.toLowerCase()}-card`;
 
         // Utiliser les variantes d'animation générées uniquement si elles existent
         const slideVariants = animations[index] || {};

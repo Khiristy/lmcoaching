@@ -3,17 +3,36 @@
 
 
 .price_btn {
+
     color: white;
     cursor: pointer;
     width: 360px;
-    height: 56px !important;
+    height: 56px;
     gap: 10px;
-    border-radius: 10px;
-    border: 1px solid #E20D0F;
+
+    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
+
     transition: 500ms;
+
+    &.or {
+        background-color: red;
+        border: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     &:hover {
         @include empty-hover;
     }
