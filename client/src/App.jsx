@@ -32,14 +32,10 @@ const App = () => {
   return (
     <>
       <ParticlesComponent id="particles-background" />{" "}
-      {/* Composant des particules */}
       <MenuOverlay />
-      <Routes location={location.pathname}>
+      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<div>À propos</div>} />
-        <Route path="/contact" element={<div>Contact</div>} />
-        <Route path="/faq" element={<div>FAQ</div>} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/form" element={<Form />} />{" "}
       </Routes>
     </>
   );

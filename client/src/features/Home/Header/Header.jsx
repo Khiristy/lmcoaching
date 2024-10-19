@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header_content">
-        <img src={mainLogo} alt="Logo" className="header_content-mainLogo" />
+      <a href="#">
+        <img src={mainLogo} alt="logo principal" className="nav_logo" />
+      </a>
 
         {/* <div
           className={`menu_icon ${isOpen ? "open" : ""}`}

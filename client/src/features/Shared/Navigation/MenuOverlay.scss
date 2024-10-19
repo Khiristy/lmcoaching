@@ -30,7 +30,7 @@
 
     .list {
         height: 40%;
-        width: 40%;
+        width: 80%;
         position: relative;
         list-style: none;
         display: flex;
@@ -39,8 +39,7 @@
 
         li {
             height: 100px;
-            width: 150px;
-            padding: 20px;
+            padding: 30px;
 
             a {
                 font-size: 2rem;

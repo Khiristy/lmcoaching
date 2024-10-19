@@ -13,23 +13,34 @@ const NavOverlay = () => {
 
   return (
     <div className="container">
-      <img src={mainLogo} alt="" className="nav_logo" />
+      <a href="#">
+        <img src={mainLogo} alt="logo principal" className="nav_logo" />
+      </a>
       <div className={`nav_overlay ${navOpen ? "open" : ""}`}>
         <FontAwesomeIcon icon={faTimes} className="fas" onClick={toggleNav} />
         <ul className="list">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
+            <li>
+              <a href="#hero">Accueil</a>
+            </li>
+            <li>
+              <a href="#about">Présentation</a>
+            </li>
+            <li>
+              <a href="#pricing">Tarifs</a>
+            </li>
+            <li>
+              <a href="#journey">Galerie</a>
+            </li>
+            <li>
+              <a href="#faq">FAQ</a>
+            </li>
+            <li>
+              <a href="#transformation">Transformation</a>
+            </li>
+            <li>
+              <a href="#review">Avis</a>
+            </li>
+          </ul>
       </div>
 
       <div className="nav">

@@ -1,5 +1,6 @@
 import "./PriceBtn.scss";
 import { useNavigate } from "react-router-dom";
+import Form from "../../../../pages/Form/Form.jsx";
 import PropTypes from "prop-types";
 
 const PriceBtn = (props) => {
@@ -10,11 +11,11 @@ const PriceBtn = (props) => {
 
   const handleClick = () => {
     window.scrollTo(0, 0); // Scroller en haut de la page
-    navigate("/Form"); // Rediriger vers le formulaire
+    navigate("/form"); // Rediriger vers le formulaire
   };
 
   return (
-    <a className={className}  onClick={handleClick}>
+    <a className={className} href={Form} onClick={handleClick}>
       Je me lance !<i className="fa-solid fa-location-arrow"></i>
     </a>
   );
