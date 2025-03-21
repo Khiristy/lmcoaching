@@ -1,0 +1,9 @@
+- mise en forme login/loader
+- enlever mainlogo et menu overlay premiere slide
+- voir over pricecard
+- section transformation a construire
+-section avis a cacher
+- footer
+- mise en forme form
+- mise en place plateforme de payement 
+- 

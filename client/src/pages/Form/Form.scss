@@ -1,11 +1,19 @@
 .form {
-    max-width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Désactive le scrolling vertical */
     position: relative;
-    ;
-}
-.bckImg {
-    width: 100%;
-    z-index: 1;
-    object-fit: cover;
-    position: absolute;
+    opacity: 0.9;
+
+    &_container {
+display: flex;
+align-items: center;
+    }
+
+    .bckImg {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+        opacity: 0.9;
+    }
 }

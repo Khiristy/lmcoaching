@@ -4,6 +4,7 @@ import HomeAbout from "../../features/Home/About/HomeAbout";
 import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";
 import HomeJourney from "../../features/Home/Journey/HomeJourney";
 import HomeFaq from "../../features/Home/Faq/HomeFaq";
+import FormModal from "../../features/Form/MainForm/FormModal";
 import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
 import HomeReview from "../../features/Home/Review/HomeReview";
 import { motion } from "framer-motion";
@@ -66,6 +67,7 @@ const Home = () => {
                 transition={{ duration: 2 }}
               >
                 <HomePricingPlan />
+                <FormModal />
               </motion.div>
             </div>
             <div className="section" data-anchor="journey">
