@@ -5,8 +5,8 @@ import HomePricingPlan from "../../features/Home/PricingPlan/HomePricingPlan";
 import HomeJourney from "../../features/Home/Journey/HomeJourney";
 import HomeFaq from "../../features/Home/Faq/HomeFaq";
 import FormModal from "../../features/Form/MainForm/FormModal";
-import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
-import HomeReview from "../../features/Home/Review/HomeReview";
+// import HomeTransformation from "../../features/Home/Transformation/HomeTransformation";
+// import HomeReview from "../../features/Home/Review/HomeReview";
 import { motion } from "framer-motion";
 import ReactFullpage from "@fullpage/react-fullpage"; // Import React FullPage
 import "fullpage.js/dist/fullpage.css";
@@ -97,12 +97,13 @@ const Home = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 2 }}
               >
-                <HomeTransformation />
-              </motion.div> {/* <-- Balise de fermeture ajoutée */}
+                {/* <HomeTransformation /> */}
+              </motion.div>{" "}
+              {/* <-- Balise de fermeture ajoutée */}
             </div>
             <div className="section" data-anchor="review">
               <motion.div>
-                <HomeReview />
+                {/* <HomeReview /> */}
               </motion.div>
             </div>
           </div>

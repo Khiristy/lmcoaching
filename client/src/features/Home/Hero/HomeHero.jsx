@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import "./HomeHero.scss";
 import heroImg from "/media/homeHero/hero_img.webp";
 import PropTypes from "prop-types";
-import MainBtn from "../../Shared/Buttons/MainBtn/MainBtn.jsx";
+import MainBtn from "../../Form/MainForm/FormModal.jsx";
 import { useFadeIn } from "../../Hooks/Animation/useFadeIn.jsx";
 
 const HomeHero = () => {

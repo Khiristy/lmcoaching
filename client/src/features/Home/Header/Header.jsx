@@ -1,5 +1,4 @@
-import mainLogo from "/media/logo_test.png";
-
+// import mainLogo from "/media/logo_test.png";
 import "./Header.scss";
 
 const Header = () => {
@@ -7,7 +6,7 @@ const Header = () => {
     <header className="header">
       <div className="header_content">
       <a href="#">
-        <img src={mainLogo} alt="logo principal" className="nav_logo" />
+        {/* <img src={mainLogo} alt="logo principal" className="nav_logo" /> */}
       </a>
 
         {/* <div
